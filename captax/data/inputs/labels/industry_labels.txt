@@ -1,0 +1,62 @@
+Farms
+Forestry, Fishing, and Related Activities
+Oil and Gas Extraction
+Mining (Except Oil and Gas)
+Support Activities for Mining
+Utilities
+Construction
+Food, Beverage, and Tobacco Product Manufacturing
+Textile and Textile Product Mills
+Apparel, Leather, and Allied Products Manufacturing
+Wood Product Manufacturing
+Paper Manufacturing
+Printing and Related Support Activities
+Petroleum and Coal Products Manufacturing
+Chemical Manufacturing
+Plastics and Rubber Products Manufacturing
+Nonmetallic Mineral Product Manufacturing
+Primary Metal Manufacturing
+Fabricated Metal Product Manufacturing
+Machinery Manufacturing
+Computer and Electronic Product Manufacturing
+Electrical Equipment, Appliances, and Components Manufacturing
+Motor Vehicle and Parts Manufacturing
+Other Transportation Equipment Manufacturing
+Furniture and Related Products Manufacturing
+Miscellaneous Manufacturing
+Wholesale Trade
+Retail Trade
+Air Transportation
+Rail Transportation
+Water Transportation
+Truck Transportation
+Transit and Ground Passenger Transportation
+Pipeline Transportation
+Other Transportation and Support Activities
+Warehousing and Storage
+Publishing Industries (Except Internet)
+Motion Picture and Sound Recording Industries
+Broadcasting (Except Internet) and Telecommunications
+Data Processing, Hosting, and Other Information Services
+Credit Intermediation and Related Activities
+Securities, Commodity Contracts, and Other Financial Investments and Related Activities
+Insurance Carriers and Related Activities
+Funds, Trusts, and Other Financial Vehicles
+Real Estate
+Rental and Leasing (Including Nonfinancial Intangibles)
+Professional, Scientific, and Technical Services
+Management of Companies and Enterprises
+Administrative and Support Services
+Waste Management and Remediation Services
+Educational Services
+Ambulatory Health Care Services
+Hospitals
+Nursing and Residential Care Facilities
+Social Assistance
+Performing Arts, Spectator Sports, Museums, and Related Activities
+Amusement, Gambling, and Recreation Services
+Accommodation
+Food Services and Drinking Places
+Other Services (Except Public Administration)
+Owner-occupied Housing
+All Industries

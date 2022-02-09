@@ -1,0 +1,4 @@
+# Enter the policy files for the CapTax model to run.
+# Each line must start with '-' followed by a space, and then the filename:
+- policy_parameters_Current-Law_comprehensive.csv
+- policy_parameters_Current-Law_uniformity.csv

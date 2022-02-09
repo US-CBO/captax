@@ -1,0 +1,92 @@
+Computers and peripheral equipment
+Communication equipment
+Nonelectronic medical instruments
+Electronic medical instruments
+Nonmedical instruments
+Photocopy and related equipment
+Office and accounting equipment
+Nuclear fuel
+Other fabricated metal products
+Steam engines
+Internal combustion engines
+Metalworking machinery
+Special industrial machinery, n.e.c.
+General industrial equipment
+Electric transmission, distribution and industrial apparatus
+Light trucks (including utility vehicles)
+Other trucks, buses, and truck trailers
+Autos
+Aircraft
+Ships and boats
+Railroad equipment
+Household furniture
+Other furniture and fixtures
+Other agricultural machinery
+Farm tractors
+Other construction machinery
+Construction tractors
+Mining and oilfield machinery
+Service industry machinery
+Household appliances
+Other electrical equipment, n.e.c
+Other nonresidential equipment
+Office and medical buildings
+Hospitals and special care facilities
+Warehouses
+Mobile structures
+Other commercial buildings
+Manufacturing buildings
+Electric power structures
+Wind and solar power structures
+Gas power structures
+Petroleum pipelines
+Communication structures
+Depreciable petroleum and natural gas structures
+Depreciable mining structures
+Religious buildings
+Educational and vocational buildings
+Lodging buildings
+Amusement and recreation buildings
+Track replacement
+Other railroad structures
+Other transportation structures
+Farm buildings
+Water supply and sewer and waste disposal facilities
+Public safety, highways, conservation, and development
+Oil and gas exploration (geological and geophysical)--integrated
+Oil and gas exploration (geological and geophysical)--independent
+Oil and gas development (intangible drilling costs)--integrated
+Oil and gas development (intangible drilling costs)--independent
+Other mineral exploration--C corps
+Other mineral exploration--pass-throughs
+Other mineral development--C corps
+Other mineral development--pass-throughs
+Prepackaged software
+Custom software
+Credit-eligible own account software
+Other own-account software
+Credit-eligible research and development
+Other research and development
+Theatrical movies
+Long-lived television programs
+Books
+Music
+Other entertainment originals
+Reserved for non-BEA intangibles
+Reserved for non-BEA intangibles
+Residential equipment
+Residential buildings
+Inventories
+Land
+Reserved for non-BEA natural resources
+Reserved for non-BEA natural resources
+Reserved for non-BEA natural resources
+Nonresidential equipment
+Nonresidential structures
+Residential property
+R&D and own-account software
+Other intellectual property products
+All equipment, structures, IPP, and inventories
+All equipment, structures, IPP, inventories, and land
+All equipment, structures, and inventories
+All equipment, structures, inventories, and land
