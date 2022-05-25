@@ -318,8 +318,9 @@ class Policy():
 
         # Deduction parameters
         self.deduction = {
-            'pass_thru_inc_share_below_thresholds': pol['pass_thru_inc_share_below_thresholds'].to_numpy(),
-            'interest_deductible_shares': {
+            'pass_thru_inc_share_below_thresholds' :  pol['pass_thru_inc_share_below_thresholds'].to_numpy(),
+            'pass_thru_eligibility_below_thresholds' :  pol['pass_thru_eligibility_below_thresholds'].to_numpy(),
+            'interest_deductible_shares' : {
                 'c_corp' : pol['c_corp_interest_deductible_share'].to_numpy(),
                 'pass_thru' : pol['pass_thru_interest_deductible_share'].to_numpy()
             },

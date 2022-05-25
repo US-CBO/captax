@@ -831,8 +831,6 @@ class Writer():
 
         Parameters
         ----------
-        var_dict : dict
-            Dictionary containing information on variable to be written out.
         total_tax_wedges_dict : dict
             Dictionary containing information on total tax wedges to be written out.
         wgtd_avg_abs_diffs_dict : dict

@@ -14,6 +14,7 @@ ret_plan_nontaxable_tax_rate,0,1
 mortg_interest_deduction_tax_rate,0,1
 prop_tax_deduction_tax_rate,0,1
 pass_thru_inc_share_below_thresholds,0,1
+pass_thru_eligibility_below_thresholds,0,1
 c_corp_interest_deductible_share,0,1
 pass_thru_interest_deductible_share,0,1
 mortg_interest_deductible_share,0,1

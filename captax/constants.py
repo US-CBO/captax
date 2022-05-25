@@ -8,7 +8,7 @@ CURRENT_PATH = os.path.abspath(os.path.dirname(__file__))
 #-----------------------------------------------------------------------------------------
 NUM_YEARS = 11
 ALL_YEARS = np.arange(NUM_YEARS)
-START_YEAR = 2021
+START_YEAR = 2022
 END_YEAR = START_YEAR + NUM_YEARS - 1
 YEARS = np.arange(START_YEAR, START_YEAR + NUM_YEARS)
 

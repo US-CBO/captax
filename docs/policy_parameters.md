@@ -225,6 +225,19 @@ Each subdirectory contains `*.csv` files with values set to simulate current law
 >
 >**Note**: In addition to the amounts below the phaseout range, the value should account for amounts in the phaseout range that have not been phased out
 
+#### `pass_thru_eligibility_below_thresholds`
+>**Description**: Share of pass-through income below income thresholds for calculation of Section 199A deduction adjustments that is eligible for the deduction
+>
+>**Units**: Share (in decimal format)
+>
+>**Permitted Range**: 0.0000 to 1.0000
+>
+>**Dimensions**: Year
+>
+>**Source**: CBO's Microsimulation Tax Model
+>
+>**Note**: Accounts for portion of Section 199A deduction disallowed below income threshold because of taxable income limit
+
 #### `c_corp_interest_deductible_share`
 >**Description**: Share of interest paid by C Corporations that can be deducted in the year it is paid
 >
@@ -916,7 +929,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0 – 100.0
 >
->**File(s) Supplied**: </br>`recovery_periods_CLaw_temp.csv` </br>`recovery_periods_CLaw_perm.csv` (2022 and beyond, reflecting 5-year amortization of R&D)
+>**File(s) Supplied**: </br>`recovery_periods_CLaw_perm.csv` (all years, reflecting 5-year amortization of R&D)
 >
 >**Dimensions**: Detailed industry (rows) by asset type (columns)
 >
@@ -991,8 +1004,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`other_expens_share_CLaw_2021.csv`
-</br>`other_expens_share_CLaw_2022.csv` (reflecting 5-year amortization of R&D)
+>**File(s) Supplied**: </br>`other_expens_share_CLaw_2022.csv` (reflecting 5-year amortization of R&D)
 </br>`other_expens_share_CLaw_2023.csv` (also reflecting 20% phaseout of bonus depreciation)
 </br>`other_expens_share_CLaw_2024.csv` (also reflecting 40% phaseout of bonus depreciation)
 </br>`other_expens_share_CLaw_2025.csv` (also reflecting 60% phaseout of bonus depreciation)
@@ -1013,8 +1025,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`itc_rates_CLaw_2021.csv` (2021 values for the solar energy ITC and the reduced R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2022.csv` (2022 values for the solar energy ITC and the full R&E and orphan drug credits)
+>**File(s) Supplied**: </br>`itc_rates_CLaw_2022.csv` (2022 values for the solar energy ITC and the full R&E and orphan drug credits)
 </br>`itc_rates_CLaw_2023.csv` (2023 values for the solar energy ITC and the full R&E and orphan drug credits)
 </br>`itc_rates_CLaw_perm.csv` (post-2023 values for the solar energy ITC and the full R&E and orphan drug credits)
 >
@@ -1031,8 +1042,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`itc_nondeprcbl_bases_CLaw_rduc.csv` (values of 1.0 in all cells except research and development and own-account software eligible for the credit, which contain values of 0.0 because cost recovery is permitted under the reduced credit)
-</br>`itc_nondeprcbl_bases_CLaw_full.csv` (values of 1.0 in all cells, because cost recovery is not permitted under the solar energy ITC or under the full R&E and orphan drug credits.
+>**File(s) Supplied**: </br>`itc_nondeprcbl_bases_CLaw_full.csv` (values of 1.0 in all cells, because cost recovery is not permitted under the solar energy ITC or under the full R&E and orphan drug credits.
 >
 >**Dimensions**: Standard industry (rows) by asset type (columns)
 >
@@ -1050,7 +1060,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`sec_199A_adjustments_CLaw_temp.csv` (2020-2025, reflecting Section 199A deduction of 20%)
+>**File(s) Supplied**: </br>`sec_199A_adjustments_CLaw_temp.csv` (2022-2025, reflecting Section 199A deduction of 20%)
 </br>`sec_199A_adjustments_CLaw_perm.csv` (2026 and beyond, reflecting expiration of Section 199A)
 >
 >**Dimensions**: Detailed industry
@@ -1066,8 +1076,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`industry_adjustments_CLaw_2021.csv` (2021 values, representing the renewable energy production credit)
-</br>`industry_adjustments_CLaw_perm.csv` (values of 0.0 in all cells, reflecting the expiration of the renewable energy production credit)
+>**File(s) Supplied**: </br>`industry_adjustments_CLaw_perm.csv` (values of 0.0 in all cells)
 >
 >**Dimensions**: Detailed industry
 >
@@ -1084,7 +1093,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: `asset_adjustments_CLaw_perm.csv`
+>**File(s) Supplied**: `asset_adjustments_CLaw_perm.csv` (values of 0.0 in all cells)
 >
 >**Dimensions**: Asset type
 >

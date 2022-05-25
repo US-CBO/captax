@@ -47,9 +47,9 @@ class OutputBuilder():
         """Build all the model outputs.
 
         This method calls three other methods:
-            * calc_c_corp_tax_wedges()
-            * calc_total_tax_wedges()
-            * calc_effective_marginal_tax_rates()
+            * _calc_c_corp_tax_wedges()
+            * _calc_total_tax_wedges()
+            * _calc_effective_marginal_tax_rates()
 
         The first method is used to calculate C corp tax wedges, which are equal to
         the difference between before-tax rates of return and after-tax rates of return

@@ -235,7 +235,8 @@ class Calculator():
         """
         self.biz_inc_tax_rate_adjustments = (
             self._calc_biz_inc_tax_rate_adjustments(self.pol.tax_rate_adjustments,
-                                                    self.pol.deduction['pass_thru_inc_share_below_thresholds'])
+                                                    self.pol.deduction['pass_thru_inc_share_below_thresholds'],
+                                                    self.pol.deduction['pass_thru_eligibility_below_thresholds'])
         )
 
         self.biz_tax_rates_adjusted = (
@@ -912,7 +913,8 @@ class Calculator():
 
     def _calc_biz_inc_tax_rate_adjustments(self,
                                            tax_rate_adjustments,
-                                           pass_thru_inc_share_below_thresholds):
+                                           pass_thru_inc_share_below_thresholds,
+                                           pass_thru_eligibility_below_thresholds):
         """Calculates income tax rate adjustments for businesses (C corps and pass-throughs).
 
         Calculation of tax rate adjustments combines adjustments by asset type and by industry.
@@ -927,6 +929,9 @@ class Calculator():
         pass_thru_inc_share_below_thresholds : np.array
             Share of pass-through income below income threshold for calculation of Section 199A
             deduction adjustments.
+        pass_thru_eligibility_below_thresholds : np.array
+            Share of pass-through income below income thresholds for calculation of Section 199A
+            deduction adjustments that is eligible for the deduction.
 
         Returns
         -------
@@ -979,10 +984,13 @@ class Calculator():
                                                      NUM_ASSETS).transpose((1, 0, 2))
                     )
 
-        # Share of pass-through income below income threshold for calculation of section 199A deduction
         pass_thru_inc_share_below_thresholds = self._expand_array(pass_thru_inc_share_below_thresholds,
                                                                   NUM_DETAILED_INDS,
                                                                   NUM_ASSETS)
+
+        pass_thru_eligibility_below_thresholds = self._expand_array(pass_thru_eligibility_below_thresholds,
+                                                                    NUM_DETAILED_INDS,
+                                                                    NUM_ASSETS)
 
         # Calculate asset type- and industry-specific adjustments by form of organization (C corps and pass-throughs)
         #---------------------------------------------------------------------------------
@@ -1003,6 +1011,7 @@ class Calculator():
                         (1 - adjustment_types[legal_form][adjustment_type]['eligibility']
                          * adjustment_types[legal_form][adjustment_type]['rate'])
                         * (1 - pass_thru_inc_share_below_thresholds
+                           * pass_thru_eligibility_below_thresholds
                            * adjustment_types[legal_form]['sec_199A']['rate']
                            - (1 - pass_thru_inc_share_below_thresholds)
                            * adjustment_types[legal_form]['sec_199A']['eligibility']
