@@ -1,18 +1,18 @@
-Other industry-specific tax rate adjustments (renewable energy production credit),Other industry-specific adjustment eligibility,Other industry-specific adjustment rate
+Other industry-specific tax rate adjustments (renewable energy production credit and advanced manufacturing production credit),Other industry-specific adjustment eligibility,Other industry-specific adjustment rate
 Default values,0,0
 Farms,0,0
 "Forestry,_Fishing,_and_Related_Activites",0,0
 Oil_and_Gas_Extraction,0,0
 Mining_(Except_Oil_and_Gas),0,0
 Support_Activities_For_Mining,0,0
-Hydroelectric_Power_Generation,1,0.0609
-Nuclear_Electric_Power_Generation,1,0.0609
-"Fossil_Fuel_Electric_Power_Generation,_Steam_and_Combined_Cycle",1,0.0609
-"Fossil_Fuel_Electric_Power_Generation,_Combustion",1,0.0609
-Other_Electric_Power_Generation,1,0.0609
-Electirc_Power_Transmission_and_Distribution,1,0.0609
-Natural_Gas_Distribution_and_Transmission,1,0.0609
-Water_and_Sewer_Systems,1,0.0609
+Hydroelectric_Power_Generation,1,0.0322
+Nuclear_Electric_Power_Generation,1,0.0322
+"Fossil_Fuel_Electric_Power_Generation,_Steam_and_Combined_Cycle",1,0.0322
+"Fossil_Fuel_Electric_Power_Generation,_Combustion",1,0.0322
+Other_Electric_Power_Generation,1,0.0322
+Electirc_Power_Transmission_and_Distribution,1,0.0322
+Natural_Gas_Distribution_and_Transmission,1,0.0322
+Water_and_Sewer_Systems,1,0.0322
 Construction,0,0
 "Grain,_Sugar,_and_Vegetable_Oil_Products_Manufacturing",0,0
 Other_Food_Products_Manufacturing,0,0
@@ -34,9 +34,9 @@ Other_Nonmetalic_Mineral_Products_Manufacturing,0,0
 Primary_Ferrous_Metal_Manufacturing,0,0
 Primary_Nonferrous_Metal_Manufacturing,0,0
 Fabricated_Metal_Product_Manufacturing,0,0
-Machinery_Manufacturing,0,0
-Computer_and_Electronic_Product_Manufacturing,0,0
-"Electrical_Equipment,_Appliances,_and_Components_Manufacturing",0,0
+Machinery_Manufacturing,1,0.032
+Computer_and_Electronic_Product_Manufacturing,1,0.032
+"Electrical_Equipment,_Appliances,_and_Components_Manufacturing",1,0.032
 Motor_Vehicle_and_Parts_Manufacturing,0,0
 Ships_and_Boats_Manufacturing,0,0
 Other_Transportation_Equipment_Manufacturing,0,0

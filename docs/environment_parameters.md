@@ -83,6 +83,19 @@ Details for each parameter within those groups are provided, below.
 >
 > **Note**: The difference between 1.0000 and this parameter represents the share of equity-financed investment in fixed assets funded with new shares.
 
+#### `c_corp_equity_repurchases_share`
+> **Description**: Share of returns from equity-financed investment in fixed assets paid out as stock repurchases (*C corporations only*)
+>
+> **Units**: Share (in decimal format)
+>
+> **Permitted Range**: 0.0000 to 1.0000
+>
+> **Dimensions**: Scalar
+>
+> **Source**: CBO
+>
+> **Note**: The difference between 1.0000 and this parameter represents the share of returns from equity-financed investment in fixed assets paid out as dividends.
+
 ### Rate of return parameters
 
 #### `nominal_rate_of_return_equity`

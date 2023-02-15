@@ -5,7 +5,7 @@ import pandas as pd
 from captax.constants import *
 
 
-class Dispersion():
+class Dispersion:
     """Define the object used to calculate and store dispersion statistics.
 
     Attributes
@@ -75,7 +75,7 @@ class Dispersion():
             This method nests other methods.
 
         """
-        print('Begin calculating dispersion statistics')
+        print("Begin calculating dispersion statistics")
 
         values = self.output.total_tax_wedges
         weights = self.agg.weights
@@ -83,69 +83,61 @@ class Dispersion():
         self.total_tax_wedge = {}
 
         # Weighted average of absolute differences calculations
-        #---------------------------------------------------------------------------------
+        # ------------------------------------------------------------------------------
         # Initialize list where weighted average of absolute differences are stored
         dfs = []
 
         # Perform calculation for specified asset aggregates
-        asset_aggs_names = ['All equipment, structures, IPP, and inventories',
-                            'All equipment, structures, IPP, inventories, and land',
-                            'Nonresidential equipment',
-                            'Nonresidential structures',
-                            'Residential property',
-                            'IPP',
-                            'R&D and own-account software',
-                            'Other intellectual property products']
+        asset_aggs_names = [
+            "All equipment, structures, IPP, and inventories",
+            "All equipment, structures, IPP, inventories, and land",
+            "Nonresidential equipment",
+            "Nonresidential structures",
+            "Residential property",
+            "IPP",
+            "R&D and own-account software",
+            "Other intellectual property products",
+        ]
 
-        asset_aggs = [ALL_EQUIP_STRUCT_IPP_INVENT,
-                      ALL_ASSETS,
-                      ALL_NONRES_EQUIPMENT,
-                      ALL_NONRES_STRUCTURES_PLUS_MINERAL,
-                      ALL_RESIDENTIAL,
-                      ALL_IPP_MINUS_MINERAL,
-                      ALL_RESEARCH,
-                      ALL_NON_RESEARCH_IPP_MINUS_MINERAL]
+        asset_aggs = [
+            ALL_EQUIP_STRUCT_IPP_INVENT,
+            ALL_ASSETS,
+            ALL_NONRES_EQUIPMENT,
+            ALL_NONRES_STRUCTURES_PLUS_MINERAL,
+            ALL_RESIDENTIAL,
+            ALL_IPP_MINUS_MINERAL,
+            ALL_RESEARCH,
+            ALL_NON_RESEARCH_IPP_MINUS_MINERAL,
+        ]
 
         names_aggs = zip(asset_aggs_names, asset_aggs)
 
-        for asset_agg_name , asset_agg in names_aggs:
-            wgtd_avg_abs_diff_asset_agg = self._calc_wgtd_avg_abs_diff(values,
-                                                                       weights,
-                                                                       'assets',
-                                                                       asset_agg_name,
-                                                                       asset_agg)
+        for asset_agg_name, asset_agg in names_aggs:
+            wgtd_avg_abs_diff_asset_agg = self._calc_wgtd_avg_abs_diff(
+                values, weights, "assets", asset_agg_name, asset_agg
+            )
 
             dfs.append(wgtd_avg_abs_diff_asset_agg)
 
         # Perform calculation for industry aggregations
-        dim_names = ['industries (excluding land)',
-                     'industries (including land)']
+        dim_names = ["industries (excluding land)", "industries (including land)"]
 
         for dim_name in dim_names:
-            wgtd_avg_abs_diff_ind_agg = (
-                    self._calc_wgtd_avg_abs_diff(values,
-                                                 weights,
-                                                 dim_name,
-                                                 'All Industries',
-                                                 ALL_BIZ_INDS)
+            wgtd_avg_abs_diff_ind_agg = self._calc_wgtd_avg_abs_diff(
+                values, weights, dim_name, "All Industries", ALL_BIZ_INDS
             )
             dfs.append(wgtd_avg_abs_diff_ind_agg)
 
         # Store values
-        self.total_tax_wedge['wgtd_avg_abs_diffs'] = pd.concat(dfs, ignore_index=True)
+        self.total_tax_wedge["wgtd_avg_abs_diffs"] = pd.concat(dfs, ignore_index=True)
 
-        print('* Weighted average of absolute differences calculated')
+        print("* Weighted average of absolute differences calculated")
 
-        print('Finished calculating dispersion statistics\n')
+        print("Finished calculating dispersion statistics\n")
 
         return None
 
-    def _calc_wgtd_avg_abs_diff(self,
-                                values,
-                                weights,
-                                dim,
-                                agg_label,
-                                agg_components):
+    def _calc_wgtd_avg_abs_diff(self, values, weights, dim, agg_label, agg_components):
         """Calculate the weighted average of absolute differences.
 
         The weighted average of absolute differences are calculated by dimension
@@ -200,57 +192,48 @@ class Dispersion():
         agg_dim_label_components = zip(agg_dim, agg_label, agg_components)
 
         for dim, label, components in agg_dim_label_components:
-            for legal_form in ['c_corp', 'pass_thru', 'biz']:
+            for legal_form in ["c_corp", "pass_thru", "biz"]:
                 for i_year in range(NUM_YEARS):
                     # _vals and _wgts are returned as flattened, 1-D arrays
-                    vals, wgts = self._select_values_weights(values,
-                                                             weights,
-                                                             dim,
-                                                             agg_components,
-                                                             legal_form,
-                                                             i_year)
+                    vals, wgts = self._select_values_weights(
+                        values, weights, dim, agg_components, legal_form, i_year
+                    )
 
                     total_wgts_sq = self._calc_total_wgts_sq(wgts)
-                    wgt_adj_factor = self._calc_weight_adj_factor(wgts,
-                                                                  total_wgts_sq)
+                    wgt_adj_factor = self._calc_weight_adj_factor(wgts, total_wgts_sq)
 
                     val_perms = self._get_permutations(vals)
                     wgt_perms = self._get_permutations(wgts)
 
-                    adjusted_wgts = self._adjust_weights(wgt_perms,
-                                                         wgt_adj_factor,
-                                                         total_wgts_sq)
+                    adjusted_wgts = self._adjust_weights(
+                        wgt_perms, wgt_adj_factor, total_wgts_sq
+                    )
 
                     wgtd_avg_abs_diff = 0
                     for val_pair, wgt in zip(val_perms, adjusted_wgts):
                         abs_diff = abs(val_pair[0] - val_pair[1])
                         wgtd_avg_abs_diff += abs_diff * wgt
 
-                    data.append([dim,
-                                 label,
-                                 legal_form,
-                                 START_YEAR + i_year,
-                                 wgtd_avg_abs_diff])
+                    data.append(
+                        [dim, label, legal_form, START_YEAR + i_year, wgtd_avg_abs_diff]
+                    )
 
         # Put the data list into a DataFrame
-        columns = ['dimension',
-                   'aggregation',
-                   'legal_form',
-                   'year',
-                   'wgtd_avg_abs_diff']
+        columns = [
+            "dimension",
+            "aggregation",
+            "legal_form",
+            "year",
+            "wgtd_avg_abs_diff",
+        ]
 
         df = pd.DataFrame(data, columns=columns)
 
         return df
 
-
-    def _select_values_weights(self,
-                               values,
-                               weights,
-                               dim,
-                               agg_components,
-                               legal_form,
-                               i_year):
+    def _select_values_weights(
+        self, values, weights, dim, agg_components, legal_form, i_year
+    ):
         """Select the values and weights to use.
 
         Parameters
@@ -278,50 +261,67 @@ class Dispersion():
             Two flattened arrays, based on the parameter specifications.
 
         """
-        if dim == 'assets':
-            values = values[NUM_INDS,
-                            agg_components,
-                            LEGAL_FORMS[legal_form],
-                            FINANCING_SOURCES['typical (biz)'],
-                            i_year].flatten()
+        if dim == "assets":
+            values = values[
+                NUM_INDS,
+                agg_components,
+                LEGAL_FORMS[legal_form],
+                FINANCING_SOURCES["typical (biz)"],
+                i_year,
+            ].flatten()
 
-            weights = weights[NUM_INDS,
-                              agg_components,
-                              LEGAL_FORMS[legal_form],
-                              FINANCING_SOURCES['typical (biz)'],
-                              i_year].flatten()
+            weights = weights[
+                NUM_INDS,
+                agg_components,
+                LEGAL_FORMS[legal_form],
+                FINANCING_SOURCES["typical (biz)"],
+                i_year,
+            ].flatten()
 
-        elif dim == 'industries (excluding land)':
-            values = values[agg_components,
-                            INDEX['All equipment, structures, IPP, and inventories'],
-                            LEGAL_FORMS[legal_form],
-                            FINANCING_SOURCES['typical (biz)'],
-                            i_year].flatten()
+        elif dim == "industries (excluding land)":
+            values = values[
+                agg_components,
+                ASSET_TYPE_INDEX["All equipment, structures, IPP, and inventories"],
+                LEGAL_FORMS[legal_form],
+                FINANCING_SOURCES["typical (biz)"],
+                i_year,
+            ].flatten()
 
-            weights = weights[agg_components,
-                              INDEX['All equipment, structures, IPP, and inventories'],
-                              LEGAL_FORMS[legal_form],
-                              FINANCING_SOURCES['typical (biz)'],
-                              i_year].flatten()
+            weights = weights[
+                agg_components,
+                ASSET_TYPE_INDEX["All equipment, structures, IPP, and inventories"],
+                LEGAL_FORMS[legal_form],
+                FINANCING_SOURCES["typical (biz)"],
+                i_year,
+            ].flatten()
 
-        elif dim == 'industries (including land)':
-            values = values[agg_components,
-                            INDEX['All equipment, structures, IPP, inventories, and land'],
-                            LEGAL_FORMS[legal_form],
-                            FINANCING_SOURCES['typical (biz)'],
-                            i_year].flatten()
+        elif dim == "industries (including land)":
+            values = values[
+                agg_components,
+                ASSET_TYPE_INDEX[
+                    "All equipment, structures, IPP, inventories, and land"
+                ],
+                LEGAL_FORMS[legal_form],
+                FINANCING_SOURCES["typical (biz)"],
+                i_year,
+            ].flatten()
 
-            weights = weights[agg_components,
-                              INDEX['All equipment, structures, IPP, inventories, and land'],
-                              LEGAL_FORMS[legal_form],
-                              FINANCING_SOURCES['typical (biz)'],
-                              i_year].flatten()
+            weights = weights[
+                agg_components,
+                ASSET_TYPE_INDEX[
+                    "All equipment, structures, IPP, inventories, and land"
+                ],
+                LEGAL_FORMS[legal_form],
+                FINANCING_SOURCES["typical (biz)"],
+                i_year,
+            ].flatten()
         else:
-            raise ValueError(f'Dimension specified must be "assets", "industries (excluding land)" '
-                             f'or "industries (including land)"')
+            raise ValueError(
+                f'Dimension specified must be "assets", "industries (excluding land)" '
+                f'or "industries (including land)"'
+            )
 
         return values, weights
-
 
     def _calc_total_wgts_sq(self, weights):
         """Calculate the sum of the weights, squared.
@@ -344,7 +344,6 @@ class Dispersion():
         total_wgts_sq = sum(weights) ** 2
 
         return total_wgts_sq
-
 
     def _calc_weight_adj_factor(self, weights, total_wgts_sq):
         """Calculate a weight adjustment factor used in the weighted average of absolute
@@ -377,7 +376,6 @@ class Dispersion():
 
         return wgt_adj_factor
 
-
     def _get_permutations(self, array):
         """Get all the possible permutations of pairs from a one-dimensional array.
 
@@ -401,7 +399,6 @@ class Dispersion():
         perms = permutations(array, 2)
 
         return perms
-
 
     def _adjust_weights(self, weight_perms, weight_adj_factor, total_wgts_sq):
         """Adjust the weights used in the weighted average of absolute differences

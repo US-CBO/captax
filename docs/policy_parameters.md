@@ -66,6 +66,19 @@ Each subdirectory contains `*.csv` files with values set to simulate current law
 >
 >**Note**: Must account for zero rate on S corporations and many partnerships
 
+#### `repurchases_tax_rate`
+>**Description**: Marginal excise tax rate on stock repurchases
+>
+>**Units**: Rate (in decimal format)
+>
+>**Permitted Range**: 0.0000 to 1.0000
+>
+>**Dimensions**: Year
+>
+>**Source**: Internal Revenue Code
+>
+>**Note**: 0.0100 by statute
+
 #### `ooh_tax_rate`
 >**Description**: Marginal tax rate on the imputed rent from owner-occupied housing
 >

@@ -2,6 +2,7 @@ policy_parameter,min_value,max_value
 c_corp_tax_rate,0,1
 pass_thru_tax_rate,0,1
 seca_tax_rate,0,1
+repurchases_tax_rate,0,1
 ooh_tax_rate,0,1
 dividend_inc_tax_rate,0,1
 cap_gains_short_term_tax_rate,0,1

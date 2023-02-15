@@ -4,6 +4,7 @@ nonfinancial_c_corp_debt_share,0,1
 nonfinancial_pass_thru_debt_share,0,1
 ooh_debt_share,0,1
 c_corp_equity_retained_earnings_share,0,1
+c_corp_equity_repurchases_share,0,1
 nominal_rate_of_return_equity,0,1
 nominal_rate_of_return_debt,0,1
 inflation_rate,NA,NA
