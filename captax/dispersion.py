@@ -146,14 +146,22 @@ class Dispersion:
         ('c_corp', 'pass-through', or 'biz'), and by year.
 
         This method calls other five methods:
-            * self._select_values_weights() : Selects the values and weights to use.
-            * self._calc_total_wgts_sq() : Calculates the sum of the weights, squared.
-            * self._calc_weight_adj_factor() : Calculates a weight adjustment factor used
-                in the weighted average of absolute differences calculations.
-            * self._get_permutations() : Gets all the possible permutations of pairs from
-                a one-dimensional array.
-            * self._adjust_weights() : Adjusts the weights used in the weighted average of
-                absolute differences calculation.
+            * self._select_values_weights()
+              Selects the values and weights to use.
+              
+            * self._calc_total_wgts_sq() 
+              Calculates the sum of the weights, squared.
+              
+            * self._calc_weight_adj_factor()
+              Calculates a weight adjustment factor used in the weighted average 
+              of absolute differences calculations.
+              
+            * self._get_permutations() 
+              Gets all the possible permutations of pairs from a one-dimensional 
+              array.
+            * self._adjust_weights()
+              Adjusts the weights used in the weighted average of absolute 
+              differences calculation.
 
         Parameters
         ----------

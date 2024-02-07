@@ -54,17 +54,27 @@ class Environment:
         """Initialize Environment object.
 
         This method calls six other methods:
-            * self._read_economic_environment() : Reads in the economic environment parameters.
-            * self._read_econ_depreciation() : Reads economic depreciation rates by detailed industry
-                and asset type.
-            * self._read_debt_shares() : Reads shares of investment financed with debt, by industry and
-                legal form.
-            * self._calc_debt_share_rescaling_factors() : Calculates rescaling factors applied to
-                debt-financing shares by industry and legal form.
-            * self._rescale_debt_shares() : Rescales debt-financing shares by industry and legal form
-            using aggregate rescaling factors returned by calc_debt_share_rescaling_factors() method.
-            * self._check_environment_parameter_ranges() : Checks that all environment parameters are
-                within permitted ranges.
+            * self._read_economic_environment()
+              Reads in the economic environment parameters.
+              
+            * self._read_econ_depreciation()
+              Reads economic depreciation rates by detailed industry and asset type.
+            
+            * self._read_debt_shares() 
+              Reads shares of investment financed with debt, by industry and
+              legal form.
+            
+            * self._calc_debt_share_rescaling_factors()
+              Calculates rescaling factors applied to debt-financing shares by 
+              industry and legal form.
+            
+            * self._rescale_debt_shares()
+              Rescales debt-financing shares by industry and legal form using 
+              aggregate rescaling factors returned by calc_debt_share_rescaling_factors() 
+              method.
+            
+            * self._check_environment_parameter_ranges()
+              Checks that all environment parameters are within permitted ranges.
 
         Parameters
         ----------

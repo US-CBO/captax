@@ -1,8 +1,8 @@
-# CBO's Capital Tax Model (CapTax) Parameters Documentation
+# CBO's Capital Tax Model (CapTax) Documentation
 
-The CBO Capital Tax (CapTax) Model accepts about 40 files containing a variety of data and parameter values read into the model.
+There are numerous abbreviations used throughout the CBO Capital Tax (CapTax) Model code and the documentation. A listing of those abbreviations are in [abbreviations.md](abbreviations.md).
 
-There are numerous abbreviations used throughout the CapTax model code and the documentation. A listing of those abbreviations are in [abbreviations.md](abbreviations.md).
+The CapTax Model accepts about 50 files containing a variety of data and parameter values read into the model.
 
 The parameter files and weights data are organized into the following directories:
 * `/captax/captax/data/inputs/environment_parameters/` </br>Detailed descriptions of the environment parameters are in [environment_parameters.md](environment_parameters.md)
@@ -36,3 +36,5 @@ Two levels of detail are used:
     * fully taxable,
     * temporarily deferred, and
     * nontaxable
+
+More detailed documentation for the model can be found in a CBO Working Paper: [“CBO’s Model for Estimating the Effect of Federal Taxes on Capital Income from New Investment"](https://cbo.gov/publication/57429). A short description of modeling changes made after the release of the paper can be found [here](updates_to_model.md).

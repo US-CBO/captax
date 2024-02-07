@@ -22,6 +22,7 @@ The policy parameters in `policy_parameters_Current-Law_comprehensive.csv` and `
 **Note**: The [policy suffix parameters](#policy-suffix-parameters) in `policy_parameters_Current-Law_comprehensive.csv` and `policy_parameters_Current-Law_uniformity.csv` are character strings that represent suffixes for files containing larger policy parameter matrices, which are in the following subdirectories:
 * [`/depreciation_adjustments/`](#depreciation_adjustments-parameter-files)
 * [`/investment_tax_credit_adjustments/`](#investment_tax_credit_adjustments-parameter-files)
+* [`/production_tax_credit_adjustments/`](#production_tax_credit_adjustments-parameter-files)
 * [`/tax_rate_adjustments/`](#tax_rate_adjustments-parameter-files)
 
 Each subdirectory contains `*.csv` files with values set to simulate current law.
@@ -51,7 +52,7 @@ Each subdirectory contains `*.csv` files with values set to simulate current law
 >
 >**Source**: CBO's Microsimulation Tax Model
 >
->**Notes**: </br> 1. Should be calculated with the Section 199A deduction in place. That will capture the interaction of the deduction with the marginal rate brackets but will not capture the deduction itself. </br> 2. Under the tax uniformity perspective, this should have the same value as other tax rates estimated using the standard rate schedule.
+>**Notes**: </br> 1. Should be calculated with the Section 199A deduction in place. That will capture the interaction of the deduction with the marginal rate brackets but will not capture the deduction itself. </br> 2. Under the tax uniformity perspective, this should have the same value as other tax rates estimated using the standard rate schedule
 
 #### `seca_tax_rate`
 >**Description**: Average marginal SECA tax rate on the profits of pass-through entities
@@ -517,6 +518,7 @@ Each subdirectory contains `*.csv` files with values set to simulate current law
 The following set of parameters are character strings that represent suffixes for files containing larger policy parameter matrices. Those larger policy parameter matrices are in the following subdirectories:
 * [`/depreciation_adjustments/`](#depreciation_adjustments-parameter-files)
 * [`/investment_tax_credit_adjustments/`](#investment_tax_credit_adjustments-parameter-files)
+* [`/production_tax_credit_adjustments/`](#production_tax_credit_adjustments-parameter-files)
 * [`/tax_rate_adjustments/`](#tax_rate_adjustments-parameter-files)
 
 #### `recovery_periods`
@@ -619,6 +621,17 @@ characters identify the time period to which they apply)
 >
 >**Note**: Go to documentation for [`/investment_tax_credit_adjustments/itc_nondeprcbl_bases_[POLICY_SUFFIX].csv`](#investment_tax_credit_adjustmentsitc_nondeprcbl_bases_policy_suffixcsv)
 
+#### `ptc_rates`
+>**Description**: Policy suffix of file containing production tax credit rates by standard industry and asset type
+>
+>**Permitted Range**: 9 characters (files supplied follow a `xxxx_yyyy` format, in which the four `x` characters identify the law being simulated and the four `y` characters identify the time period to which they apply)
+>
+>**Dimensions**: Years
+>
+>**Source**: CBO
+>
+>**Note**: Go to documentation for [`/production_tax_credit_adjustments/ptc_rates_[POLICY_SUFFIX].csv`](#production_tax_credit_adjustmentsptc_rates_policy_suffixcsv)
+
 #### `sec_199A_adjustments`
 >**Description**: Policy suffix of file containing parameters controlling Section 199A deductions by detailed industry
 >
@@ -667,7 +680,6 @@ characters identify the time period to which they apply)
 >
 >**Note**: Go to documentation for [`/tax_rate_adjustments/asset_adjustments_[POLICY_SUFFIX].csv`](#tax_rate_adjustmentsasset_adjustments_policy_suffixcsv)
 
-
 #### `pass_thru_asset_adjustments`
 >**Description**: Policy suffix of file containing parameters controlling indirect and targeted tax adjustments for pass-through entities by asset type
 >
@@ -678,22 +690,6 @@ characters identify the time period to which they apply)
 >**Source**: CBO
 >
 >**Note**: Go to documentation for [`/tax_rate_adjustments/asset_adjustments_[POLICY_SUFFIX].csv`](#tax_rate_adjustmentsasset_adjustments_policy_suffixcsv)
-
-#### `/tax_rate_adjustments/asset_adjustments_[POLICY_SUFFIX].csv`
->**Description**: Two different parameters: </br>1. Share of net business income eligible for asset-type-specific adjustment
-</br>2. Rate of asset-type-specific adjustment
->
->**Units**:</br> 1. Share (in decimal format)
-</br>2. Rate (in decimal format)
->
->**Permitted Range**: 0.0000 to 1.0000
->
->**File(s) Supplied**: `asset_adjustments_CLaw_perm.csv`
->
->**Dimensions**: Asset type
->**Source**: CBO, based on Internal Revenue Code
->
->**Note**: Available for simulating a patent box or other special tax rate targeted to specific asset types
 
 ### Account category parameters
 The following 18 parameters represent the shares of marginal savings directed to a specific account category (`taxable`, `deferred`, or `nontaxable`) by legal form (`c_corp`, `pass_thru`, or `ooh`) and financing source (`equity` or `debt`).
@@ -1017,9 +1013,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`other_expens_share_CLaw_2022.csv` (reflecting 5-year amortization of R&D)
-</br>`other_expens_share_CLaw_2023.csv` (also reflecting 20% phaseout of bonus depreciation)
-</br>`other_expens_share_CLaw_2024.csv` (also reflecting 40% phaseout of bonus depreciation)
+>**File(s) Supplied**: </br>`other_expens_share_CLaw_2024.csv` (reflecting 5-year amortization of R&D and 40% phaseout of bonus depreciation)
 </br>`other_expens_share_CLaw_2025.csv` (also reflecting 60% phaseout of bonus depreciation)
 </br>`other_expens_share_CLaw_2026.csv` (also reflecting 80% phaseout of bonus depreciation)
 </br>`other_expens_share_CLaw_perm.csv` (2027 and beyond, reflecting full phaseout of bonus depreciation)
@@ -1038,15 +1032,23 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`itc_rates_CLaw_2022.csv` (2022 values for the solar energy ITC and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2023.csv` (2023 values for the solar energy ITC and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_perm.csv` (post-2023 values for the solar energy ITC and the full R&E and orphan drug credits)
+>**File(s) Supplied**: </br>`itc_rates_CLaw_2024.csv` (2024 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2025.csv` (2025 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2026.csv` (2026 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2027.csv` (2027 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2028.csv` (2028 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2029.csv` (2029 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2030.csv` (2030 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2031.csv` (2031 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2032.csv` (2032 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2033.csv` (2033 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2034.csv` (2034 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
 >
 >**Dimensions**: Standard industry (rows) by asset type (columns)
 >
 >**Source**: CBO, based on SOI Tables for Form 6765
 >
->**Note**: Currently used for R&E credit, orphan drug credit, and solar ITC; but also available for true ITC
+>**Note**: Currently used for R&E credit, orphan drug credit, advanced manufacturing ITC, and solar and wind ITC
 
 #### `/investment_tax_credit_adjustments/itc_nondeprcbl_bases_[POLICY_SUFFIX].csv`
 >**Description**: Shares of investment for which an investment tax credit was claimed that cannot also be depreciated
@@ -1055,12 +1057,39 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`itc_nondeprcbl_bases_CLaw_full.csv` (values of 1.0 in all cells, because cost recovery is not permitted under the solar energy ITC or under the full R&E and orphan drug credits.
+>**File(s) Supplied**: </br>`itc_nondeprcbl_bases_CLaw_full.csv` (values of 1.0 in all cells other than for the solar and wind energy ITC, which reduces cost recovery deductions by a factor of 0.5)
 >
 >**Dimensions**: Standard industry (rows) by asset type (columns)
 >
 >**Source**: CBO
 
+### `/production_tax_credit_adjustments/` parameter files
+The files in this directory contain parameter matrices with policy suffixes in their filenames. Which parameter matrix file gets used for any given year in the model is specified by the `POLICY_SUFFIX` set in the [Policy suffix parameters](#policy-suffix-parameters) in `policy_parameters_Current-Law_comprehensive.csv` and `policy_parameters_Current-Law_uniformity.csv`.
+
+#### `/production_tax_credit_adjustments/ptc_rates_[POLICY_SUFFIX].csv`
+>**Description**: Production tax credit rates
+>
+>**Units**: Rate (in decimal format)
+>
+>**Permitted Range**: 0.0000 to 1.0000
+>
+>**File(s) Supplied**: </br>`ptc_rates_CLaw_2024.csv` (2024 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2025.csv` (2025 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2026.csv` (2026 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2027.csv` (2027 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2028.csv` (2028 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2029.csv` (2029 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2030.csv` (2030 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2031.csv` (2031 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2032.csv` (2032 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2033.csv` (2033 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2034.csv` (2034 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+>
+>**Dimensions**: Standard industry (rows) by asset type (columns)
+>
+>**Source**: CBO
+>
+>**Note**: Currently used for solar and wind energy PTC, and advanced manufacturing PTC
 
 ### `/tax_rate_adjustments/` parameter files
 The files in this directory contain parameter matrices with policy suffixes in their filenames. Which parameter matrix file gets used for any given year in the model is specified by the `POLICY_SUFFIX` set in the [Policy suffix parameters](#policy-suffix-parameters) in `policy_parameters_Current-Law_comprehensive.csv` and `policy_parameters_Current-Law_uniformity.csv`.
@@ -1073,7 +1102,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`sec_199A_adjustments_CLaw_temp.csv` (2022-2025, reflecting Section 199A deduction of 20%)
+>**File(s) Supplied**: </br>`sec_199A_adjustments_CLaw_temp.csv` (2024-2025, reflecting Section 199A deduction of 20%)
 </br>`sec_199A_adjustments_CLaw_perm.csv` (2026 and beyond, reflecting expiration of Section 199A)
 >
 >**Dimensions**: Detailed industry

@@ -262,6 +262,7 @@ class Calculator:
             self.pol.tax_rates["c_corp"],
             self.pol.tax_rates["pass_thru"],
             self.pol.itc["rates"],
+            self.pol.ptc["rates"],
             self.pol.biz_timing_adjustments,
             self.biz_inc_tax_rate_adjustments,
             self.wgt.detailed_industry_weights,
@@ -439,7 +440,7 @@ class Calculator:
         """Calculate rates of return on equity and debt (by year) and apply adjustments
         to the rates of return on debt if tax uniformity method is used.
 
-        This menthod is called in self.calc_all().
+        This method is called in self.calc_all().
 
         Parameters
         ----------
@@ -650,10 +651,13 @@ class Calculator:
 
         CCR_shields = self._calc_capital_cost_recovery_shields(
             self.pol.itc,
+            self.pol.ptc["rates"],
             self.biz_tax_rates_adjusted["c_corp"]["deductions"],
             self.biz_tax_rates_adjusted["pass_thru"]["deductions"],
-            self.biz_tax_rates_adjusted["c_corp"]["credits"],
-            self.biz_tax_rates_adjusted["pass_thru"]["credits"],
+            self.biz_tax_rates_adjusted["c_corp"]["investment_tax_credits"],
+            self.biz_tax_rates_adjusted["pass_thru"]["investment_tax_credits"],
+            self.biz_tax_rates_adjusted["c_corp"]["production_tax_credits"],
+            self.biz_tax_rates_adjusted["pass_thru"]["production_tax_credits"],
             self.seca_tax_rates_adjusted["deductions"],
             self.pol.tax_rates["ooh"],
             depreciation_deduction_PVs,
@@ -664,7 +668,7 @@ class Calculator:
     def _calc_req_before_tax_returns(self):
         """Calculate required before-tax rates of return.
 
-        This menthod is called in self.calc_all() and calls:
+        This method is called in self.calc_all() and calls:
             * self._calc_proportional_PV_gross_profits_after_tax_rates()
               Calculate the proportional present value (PV) of after-tax gross
               profits, which is a component of the the required before-tax
@@ -1127,6 +1131,7 @@ class Calculator:
         c_corp_tax_rates,
         pass_thru_tax_rates,
         itc_rates,
+        ptc_rates,
         biz_timing_adjustments,
         biz_inc_tax_rate_adjustments,
         detailed_industry_weights,
@@ -1144,6 +1149,8 @@ class Calculator:
             Marginal tax rates on pass-through income.
         itc_rates : np.ndarray
             Investment tax credit rates.
+        ptc_rates : np.ndarray
+            Production tax credit rates.
         biz_timing_adjustments : dict
             Timing adjustment parameters applied to tax rates on net income,
             deductions, and credits.
@@ -1155,7 +1162,7 @@ class Calculator:
         Returns
         -------
         biz_tax_rates_adjusted : dict
-            Dictionary with six arrays of adjusted tax rates, each with dimensions:
+            Dictionary with eight arrays of adjusted tax rates, each with dimensions:
                 [NUM_INDS,
                  NUM_ASSETS,
                  NUM_FINANCING_SOURCES,
@@ -1179,6 +1186,10 @@ class Calculator:
         )
 
         itc_rates = self._expand_array(itc_rates, NUM_FINANCING_SOURCES).transpose(
+            (1, 2, 0, 3)
+        )
+         
+        ptc_rates = self._expand_array(ptc_rates, NUM_FINANCING_SOURCES).transpose(
             (1, 2, 0, 3)
         )
 
@@ -1225,14 +1236,20 @@ class Calculator:
                 * tax_rate_adjustments["c_corp"]["net_inc"],
                 "deductions": tax_rates["c_corp"]
                 * tax_rate_adjustments["c_corp"]["deductions"],
-                "credits": itc_rates * tax_rate_adjustments["c_corp"]["credits"],
+                "investment_tax_credits": itc_rates 
+                * tax_rate_adjustments["c_corp"]["credits"],
+                "production_tax_credits": ptc_rates 
+                * tax_rate_adjustments["c_corp"]["credits"],
             },
             "pass_thru": {
                 "net_inc": tax_rates["pass_thru"]
                 * tax_rate_adjustments["pass_thru"]["net_inc"],
                 "deductions": tax_rates["pass_thru"]
                 * tax_rate_adjustments["pass_thru"]["deductions"],
-                "credits": itc_rates * tax_rate_adjustments["pass_thru"]["credits"],
+                "investment_tax_credits": itc_rates 
+                * tax_rate_adjustments["pass_thru"]["credits"],
+                "production_tax_credits": ptc_rates 
+                * tax_rate_adjustments["pass_thru"]["credits"],
             },
         }
 
@@ -2581,10 +2598,13 @@ class Calculator:
     def _calc_capital_cost_recovery_shields(
         self,
         itc,
+        ptc_rates,
         c_corp_deduction_tax_rates_adjusted,
         pass_thru_deduction_tax_rates_adjusted,
-        c_corp_credit_tax_rates_adjusted,
-        pass_thru_credit_tax_rates_adjusted,
+        c_corp_itc_rates_adjusted,
+        pass_thru_itc_rates_adjusted,
+        c_corp_ptc_rates_adjusted,
+        pass_thru_ptc_rates_adjusted,
         seca_deduction_tax_rates_adjusted,
         ooh_tax_rates,
         depreciation_deduction_PVs,
@@ -2597,14 +2617,20 @@ class Calculator:
         ----------
         itc : dict
             Investment tax credit parameters (tax rates and non-depreciable bases).
+        ptc_rates : dict
+            Production tax credit rates.
         c_corp_deduction_tax_rates_adjusted : np.ndarray
             Adjusted marginal tax rates on C corp deductions.
         pass_thru_deduction_tax_rates_adjusted : np.ndarray
             Adjusted marginal tax rates on pass-through deductions.
-        c_corp_credit_tax_rates_adjusted : np.ndarray
-            Adjusted marginal tax rates on C corp tax credits.
-        pass_thru_credit_tax_rates_adjusted : np.ndarray
-            Adjusted marginal tax rates on pass-through tax credits.
+        c_corp_itc_tax_rates_adjusted : np.ndarray
+            Adjusted marginal tax rates on C corp investment tax credits.
+        pass_thru_itc_tax_rates_adjusted : np.ndarray
+            Adjusted marginal tax rates on pass-through investment tax credits.
+        c_corp_ptc_tax_rates_adjusted : np.ndarray
+            Adjusted marginal tax rates on C corp production tax credits.
+        pass_thru_ptc_tax_rates_adjusted : np.ndarray
+            Adjusted marginal tax rates on pass-through production tax credits.
         seca_deduction_tax_rates_adjusted : dict
             Adjusted SECA tax rates on deductions.
         ooh_tax_rates : np.ndarray
@@ -2642,6 +2668,10 @@ class Calculator:
         itc_nondeprcbl_bases = self._expand_array(
             itc["nondeprcbl_bases"], NUM_FINANCING_SOURCES
         ).transpose((1, 2, 0, 3))
+                   
+        ptc_rates = self._expand_array(ptc_rates, NUM_FINANCING_SOURCES).transpose(
+            (1, 2, 0, 3)
+        )
 
         ooh_tax_rates = self._expand_array(ooh_tax_rates, NUM_FINANCING_SOURCES)
 
@@ -2657,7 +2687,8 @@ class Calculator:
         ]
 
         capital_cost_recovery_shields[c_corp_slice] = (
-            c_corp_credit_tax_rates_adjusted
+            c_corp_itc_rates_adjusted
+            + c_corp_ptc_rates_adjusted
             + (
                 (1.0 - itc_rates * itc_nondeprcbl_bases)
                 * depreciation_deduction_PVs[c_corp_slice]
@@ -2675,7 +2706,8 @@ class Calculator:
         ]
 
         capital_cost_recovery_shields[pt_slice] = (
-            pass_thru_credit_tax_rates_adjusted
+            pass_thru_itc_rates_adjusted
+            + pass_thru_ptc_rates_adjusted
             + (
                 (1.0 - itc_rates * itc_nondeprcbl_bases)
                 * depreciation_deduction_PVs[pt_slice]
@@ -2699,10 +2731,14 @@ class Calculator:
             OOH_IND, ALL_OOH_ASSETS, :NUM_FINANCING_SOURCES, :NUM_YEARS
         ]
 
-        capital_cost_recovery_shields[ooh_slice] = itc_rates[ooh_slice_4d] + (
-            (1.0 - itc_rates[ooh_slice_4d] * itc_nondeprcbl_bases[ooh_slice_4d])
-            * depreciation_deduction_PVs[ooh_slice]
-            * ooh_tax_rates
+        capital_cost_recovery_shields[ooh_slice] = (
+            itc_rates[ooh_slice_4d] 
+            + ptc_rates[ooh_slice_4d]
+            + (
+                (1.0 - itc_rates[ooh_slice_4d] * itc_nondeprcbl_bases[ooh_slice_4d])
+                * depreciation_deduction_PVs[ooh_slice]
+                * ooh_tax_rates
+            )
         )
 
         return capital_cost_recovery_shields

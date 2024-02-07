@@ -31,6 +31,7 @@ The table below lists the abbreviations and a more detailed description for each
 | pass_thru          | pass-through businesses
 | pol                | a policy object used in the model
 | prop               | property
+| ptc                | production tax credit
 | PV                 | present value
 | ret_plan           | retirement plan
 | sec_179            | Section 179 of the United States Internal Revenue Code

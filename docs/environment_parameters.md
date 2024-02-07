@@ -29,7 +29,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (industry-specific values are in `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`)
 >
-> **Source**: CBO, based on the Financial Accounts of the United States (2002-2017)
+> **Source**: CBO, based on the Financial Accounts of the United States (2001-2022)
 >
 > **Note**: Changing this value will adjust the corresponding industry-specific values read in from `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`
 
@@ -42,9 +42,9 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (industry-specific values are in `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`)
 >
-> **Source**: CBO, based on the Financial Accounts of the United States (2002-2017)
+> **Source**: CBO, based on the Financial Accounts of the United States (2001-2022)
 >
-> **Note**: Changing this value will automatically adjust the corresponding industry-specific values read in from `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`.
+> **Note**: Changing this value will automatically adjust the corresponding industry-specific values read in from `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`
 
 #### `nonfinancial_pass_thru_debt_share`
 > **Description**: Share of investment in fixed assets funded by debt (*Pass-through entities only, all sectors except "Finance" and "Management of Companies"*)
@@ -55,9 +55,9 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (industry-specific values are in `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`)
 >
-> **Source**: CBO, based on the Financial Accounts of the United States (2002-2017)
+> **Source**: CBO, based on the Financial Accounts of the United States (2001-2022)
 >
-> **Note**: Changing this value will automatically adjust the corresponding industry-specific values read in from `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`.
+> **Note**: Changing this value will automatically adjust the corresponding industry-specific values read in from `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`
 
 #### `ooh_debt_share`
 > **Description**: Share of investment in fixed assets funded by debt (*Owner-occupied housing only*)
@@ -68,7 +68,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (industry-specific values do not apply)
 >
-> **Source**: CBO, based on the Financial Accounts of the United States
+> **Source**: CBO, based on the Financial Accounts of the United States (2001-2022)
 
 #### `c_corp_equity_retained_earnings_share`
 > **Description**: Share of equity-financed investment in fixed assets funded with retained earnings (*C corporations only*)
@@ -81,7 +81,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Source**: CBO
 >
-> **Note**: The difference between 1.0000 and this parameter represents the share of equity-financed investment in fixed assets funded with new shares.
+> **Note**: The difference between 1.0000 and this parameter represents the share of equity-financed investment in fixed assets funded with new shares
 
 #### `c_corp_equity_repurchases_share`
 > **Description**: Share of returns from equity-financed investment in fixed assets paid out as stock repurchases (*C corporations only*)
@@ -94,7 +94,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Source**: CBO
 >
-> **Note**: The difference between 1.0000 and this parameter represents the share of returns from equity-financed investment in fixed assets paid out as dividends.
+> **Note**: The difference between 1.0000 and this parameter represents the share of returns from equity-financed investment in fixed assets paid out as dividends
 
 ### Rate of return parameters
 
@@ -142,7 +142,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar
 >
-> **Source**: CBO, based on the 2017 American Housing Survey
+> **Source**: CBO, based on the 2021 American Housing Survey
 
 ### Holding period parameters
 
@@ -155,7 +155,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (year-by-year changes can be made in `/captax/captax/data/inputs/policy_parameters/policy_parameters_Current-Law_[PERSPECTIVE].csv`)
 >
-> **Source**: CBO, based on SOI Sale of Capital Assets (2007-2012)
+> **Source**: CBO, based on SOI Sale of Capital Assets (2007-2015)
 >
 > **Note**: The "long_term" share (realized during the purchaser’s lifetime but more than one year after purchase) is the difference between 1.0000 and the sum of the "short_term" and "at_death" shares
 
@@ -168,7 +168,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (year-by-year changes can be made in `/captax/captax/data/inputs/policy_parameters/policy_parameters_Current-Law_[PERSPECTIVE].csv`)
 >
-> **Source**: CBO, based on SOI Sale of Capital Assets (2007-2012) and SOI Estate Tax Returns (2007, 2009, 2011)
+> **Source**: CBO, based on SOI Sale of Capital Assets (2007-2015) and SOI Estate Tax Returns (2007-2016)
 >
 > **Note**: The "long_term" share (realized during the purchaser’s lifetime but more than one year after purchase) is the difference between 1.0000 and the sum of the "short_term" and "at_death" shares
 
@@ -181,7 +181,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (year-by-year changes can be made in `/captax/captax/data/inputs/policy_parameters/policy_parameters_Current-Law_[PERSPECTIVE].csv`)
 >
-> **Source**: CBO, based on SOI Sale of Capital Assets (2007-2012)
+> **Source**: CBO, based on SOI Sale of Capital Assets (2007-2015)
 
 #### `cap_gains_long_term_holding_period`
 > **Description**: Average holding period of capital gains realized more than one year after purchase
@@ -192,7 +192,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (year-by-year changes can be made in `/captax/captax/data/inputs/policy_parameters/policy_parameters_Current-Law_[PERSPECTIVE].csv`)
 >
-> **Source**: CBO, based on SOI Sale of Capital Assets (2007-2012)
+> **Source**: CBO, based on SOI Sale of Capital Assets (2007-2015)
 
 #### `cap_gains_at_death_holding_period`
 > **Description**: Average holding period of capital gains not realized during purchaser’s lifetime
@@ -203,7 +203,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (year-by-year changes can be made in `/captax/captax/data/inputs/policy_parameters/policy_parameters_Current-Law_[PERSPECTIVE].csv`)
 >
-> **Source**: CBO, based on SOI Sale of Capital Assets (2007-2012) and SOI Estate Tax Returns (2007, 2009, 2011)
+> **Source**: CBO, based on SOI Sale of Capital Assets (2007-2015) and SOI Estate Tax Returns (2007-2016)
 
 #### `ret_plan_deferred_holding_period`
 > **Description**: Average holding period of assets in whole life insurance policies and nonqualified annuities
@@ -268,4 +268,4 @@ There is just a single parameter matrix in this file.
 >
 >**Dimensions**: Detailed industry (rows) by asset type (columns)
 >
->**Source**: CBO, based on BEA Detailed Fixed Asset tables (Depreciation, current cost/Net stocks, current cost)
+>**Source**: CBO, based on 2021 BEA Detailed Fixed Asset tables (Depreciation, current cost/Net stocks, current cost)

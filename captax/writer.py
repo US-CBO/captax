@@ -152,8 +152,8 @@ class Writer:
 
             * self._write_values_biz()
               Writes out values for a given variable by either industry or asset type
-                (but always also include by legal form, and financing source as well)
-                for businesses.
+              (but always also include by legal form, and financing source as well)
+              for businesses.
 
             * self._write_values_by_industry_asset_agg()
               Writes out values for a given variable by industry and asset aggregates.
@@ -397,10 +397,10 @@ class Writer:
 
         Method calls two other methods:
             * self._set_index_year()
+              Sets i_year based on year - START_YEAR.
+            
             * self._write_out_csv()
-
-        The first method sets i_year based on year - START_YEAR. The second method
-        writes out the csv output file.
+              Writes out the csv output file.
 
         Parameters
         ----------
@@ -498,10 +498,10 @@ class Writer:
 
         Method calls two other methods:
             * self._set_index_year()
+              Sets i_year based on year - START_YEAR
+            
             * self._write_out_csv()
-
-        The first method sets i_year based on year - START_YEAR. The second method
-        writes out the csv output file.
+              Writes out the csv output file.
 
         Parameters
         ----------

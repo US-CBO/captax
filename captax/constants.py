@@ -10,7 +10,7 @@ CURRENT_PATH = os.path.abspath(os.path.dirname(__file__))
 # --------------------------------------------------------------------------------------
 NUM_YEARS = 11
 ALL_YEARS = np.arange(NUM_YEARS)
-START_YEAR = 2023
+START_YEAR = 2024
 END_YEAR = START_YEAR + NUM_YEARS - 1
 YEARS = np.arange(START_YEAR, START_YEAR + NUM_YEARS)
 
@@ -279,12 +279,13 @@ TAX_RATE_ADJUSTMENTS_COMPONENTS = {"eligibility": 0, "rate": 1}
 
 NUM_TAX_RATE_ADJUSTMENTS_COMPONENTS = len(TAX_RATE_ADJUSTMENTS_COMPONENTS)
 
-# Aggregate debt shares, derived from Federal Reserve Flow of Funds
+# Aggregate debt shares, derived from Federal Reserve Financial Accounts of the United 
+# States (FAOTUS)
 # DO NOT EDIT THESE.
 # --------------------------------------------------------------------------------------
 AGG_DEBT_SHARE = {
-    "financial_sector": 0.5573,
-    "nonfin_c_corp": 0.2815,
-    "nonfin_pass_thru": 0.3141,
-    "ooh": 0.4105,
+    "financial_sector": 0.4932,
+    "nonfin_c_corp": 0.2750,
+    "nonfin_pass_thru": 0.3054,
+    "ooh": 0.4136,
 }

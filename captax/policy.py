@@ -16,13 +16,15 @@ def create_policies(env):
 
     This method calls three other methods:
         * _read_policies()
+          Reads in the list of policies to run, included in the policies.yml 
+          file.
+          
         * _validate_policy_parameters_files()
+          Validates the policy parameters files names included in that file
+        
         * _produce_policy_perspective_run()
-
-    The first method reads in the list of policies to run, included in the
-    policies.yml file. The second method validates the policy parameters
-    files names included in that file. The third method determines whether
-    to produce model run for specified policy and perspective.
+          Determines whether to produce model run for specified policy and 
+          perspective.
 
     Parameters
     ----------
@@ -263,16 +265,22 @@ class Policy:
         """Initialize Policy object.
 
         This method calls five other methods:
-            * self._read_policy_parameters_file() : Reads the policy parameters file,
-              which includes policy parameters that vary by year.
-            * self._read_depreciation_parameters() : Reads in various policy parameters
-              related to calculations of tax depreciation.
-            * self._read_investment_tax_credit_parameters() : Reads in parameters
-              related to the investment tax credit.
-            * self._read_tax_rate_adjustment_parameters() : Reads in parameters related
-              to tax rate adjustments.
-            * self._check_policy_parameter_ranges() : Checks that all policy parameters
-              are within permitted ranges.
+            * self._read_policy_parameters_file()
+              Reads the policy parameters file, which includes policy parameters 
+              that vary by year.
+            
+            * self._read_depreciation_parameters() 
+              Reads in various policy parameters related to calculations of tax 
+              depreciation.
+            
+            * self._read_investment_tax_credit_parameters() 
+              Reads in parameters related to the investment tax credit.
+              
+            * self._read_tax_rate_adjustment_parameters() 
+              Reads in parameters related to tax rate adjustments.
+              
+            * self._check_policy_parameter_ranges()
+              Checks that all policy parameters are within permitted ranges.
 
         Parameters
         ----------
@@ -441,6 +449,9 @@ class Policy:
                 "rates": pol["itc_rates"].to_numpy(),
                 "nondeprcbl_bases": pol["itc_nondeprcbl_bases"].to_numpy(),
             },
+            "ptc": {
+                "rates": pol["ptc_rates"].to_numpy(),
+            },
             "tax_rate_adjustments": {
                 "sec_199A_adjustments": pol["sec_199A_adjustments"].to_numpy(),
                 "c_corp": {
@@ -574,13 +585,20 @@ class Policy:
             ),
         }
 
-        # Investment Tax Credit (itc) parameters
+        # Investment Tax Credit (ITC) parameters
         self.itc = {
-            "rates": self._read_investment_tax_credit_parameters(
-                "itc_rates_", file_policy_suffixes["itc"]["rates"]
+            "rates": self._read_tax_credit_parameters(
+                "investment_tax_credit", "itc_rates_", file_policy_suffixes["itc"]["rates"]
             ),
-            "nondeprcbl_bases": self._read_investment_tax_credit_parameters(
-                "itc_nondeprcbl_bases_", file_policy_suffixes["itc"]["nondeprcbl_bases"]
+            "nondeprcbl_bases": self._read_tax_credit_parameters(
+                "investment_tax_credit", "itc_nondeprcbl_bases_", file_policy_suffixes["itc"]["nondeprcbl_bases"]
+            ),
+        }
+        
+        # Production Tax Credit (PTC) parameters
+        self.ptc = {
+            "rates": self._read_tax_credit_parameters(
+                "production_tax_credit", "ptc_rates_", file_policy_suffixes["ptc"]["rates"]
             ),
         }
 
@@ -718,36 +736,39 @@ class Policy:
 
         return depreciation_parameters
 
-    def _read_investment_tax_credit_parameters(self, filename, filename_suffix):
-        """Read in parameters related to the investment tax credit.
+    def _read_tax_credit_parameters(self, credit_type, filename, filename_suffix):
+        """Read in parameters related to the investment and production tax credits.
 
-        There are 2 files that are read in, each of which are matrices of
+        There are three files that are read in, each of which are matrices of
         industry by asset type values:
             * itc_rates
             * itc_nondeprcbl_bases
+            * ptc_rates
 
         Parameters
         ----------
+        credit_type : str
+            Either 'investment_tax_credit' or 'production_tax_credit'.
         filename : str
-            File name.
+            The base of the filename containing the matrices to read.
         filename_suffix : str
-            Suffix to file name that indicates the specific policy matrix to read.
+            Suffix to filename that indicates the specific policy matrix to read.
 
         Returns
         -------
-        itc_parameters : np.ndarray
-            Array of investment tax credit parameters by industry, assets, and year.
+        credit_parameters : np.ndarray
+            Array of tax credit parameters by industry, assets, and year.
 
         """
         # Initialize array
-        itc_parameters = np.zeros((NUM_INDS, NUM_ASSETS, NUM_YEARS))
+        credit_parameters = np.zeros((NUM_INDS, NUM_ASSETS, NUM_YEARS))
 
         # Fill arrays with relevant investment tax credit parameters
         for i_year in range(NUM_YEARS):
 
             data = pd.read_csv(
                 self.policy_path
-                + "/investment_tax_credit_adjustments/"
+                + f"/{credit_type}_adjustments/"
                 + filename
                 + filename_suffix[i_year]
                 + ".csv"
@@ -755,29 +776,29 @@ class Policy:
             data.drop([0], axis=0, inplace=True)
             data.drop(data.iloc[:NUM_INDS, 0:2], axis=1, inplace=True)
             data.reset_index(inplace=True, drop=True)
-            itc_parameters[:NUM_INDS, :NUM_ASSETS, i_year] = data.to_numpy()
+            credit_parameters[:NUM_INDS, :NUM_ASSETS, i_year] = data.to_numpy()
 
-        return itc_parameters
+        return credit_parameters
 
     def _read_tax_rate_adjustment_parameters(self, filename, filename_suffix):
         """Read in parameters related to tax rate adjustments.
 
-        There are 3 files that are read in, one of which is a matrix of asset type
-        values:
+        There are three files that are read in, one of which is a matrix of
+        asset type values:
             * asset_adjustments
         The other two are matrices of detailed industry values:
             * sec_199A_adjustments
             * industry_adjustments
 
-        All matrices include two columns, one for the eligibility parameters and one for
-        the rate parameter.
+        All matrices include two columns, one for the eligibility parameters
+        and one for the rate parameter.
 
         Parameters
         ----------
         filename : str
-            File name.
+            The base of the filename containing the matrices to read.
         filename_suffix : str
-            Suffix to file name that indicates the specific policy matrix to read.
+            Suffix to filename that indicates the specific policy matrix to read.
 
         Returns
         -------
