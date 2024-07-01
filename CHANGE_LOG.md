@@ -1,5 +1,10 @@
 # Change Log
 
+## Version 0.5.0 -- 2024-07-01
+* Updated [economic environment parameter values](docs/environment_parameters.md) consistent with [CBO’s June 2024 economic projections](https://www.cbo.gov/data/budget-economic-data#4).
+
+* Updated [policy parameter values](docs/policy_parameters.md) consistent with data that supplement [CBO’s June 2024 report, An Update to The Budget and Economic Outlook: 2024 to 2034](https://www.cbo.gov/data/budget-economic-data#10).
+
 ## Version 0.4.0 -- 2024-02-07
 * Updated [economic environment parameter values](docs/environment_parameters.md) consistent with [CBO’s February 2024 economic projections](https://www.cbo.gov/data/budget-economic-data#4).
 

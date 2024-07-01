@@ -1,95 +1,95 @@
 "Total EMTRs by Asset Type, Legal Form, and Financing Source, 2024 (Percent)"
 ,C Corporations,C Corporations,C Corporations,Pass-through Entities,Pass-through Entities,Pass-through Entities,Businesses,Businesses,Businesses
 ,Equity,Debt,Typical (Biz),Equity,Debt,Typical (Biz),Equity,Debt,Typical (Biz)
-Computers and peripheral equipment,19.74,3.45,16.87,10.15,-2.2,7.9,18.25,2.54,15.47
-Communication equipment,15.64,-1.14,12.57,6.07,-9.89,3.03,14.93,-1.82,11.85
-Nonelectronic medical instruments,14.31,-2.0,8.06,4.3,-12.71,-0.06,10.86,-4.43,5.59
-Electronic medical instruments,15.91,-0.42,10.72,5.21,-11.06,1.42,12.42,-2.97,7.92
-Nonmedical instruments,12.07,-9.99,8.37,5.26,-11.63,2.84,9.65,-10.51,6.44
-Photocopy and related equipment,13.87,-6.64,10.18,6.2,-9.5,3.44,12.48,-7.14,8.97
-Office and accounting equipment,19.91,4.51,15.97,12.57,1.36,10.12,18.31,3.93,14.74
-Nuclear fuel,34.74,25.42,32.72,31.6,25.89,30.35,34.72,25.43,32.7
-Other fabricated metal products,12.83,-6.63,9.49,4.03,-13.36,1.24,11.29,-7.72,8.06
-Steam engines,24.85,10.61,21.84,13.01,-1.56,10.14,24.69,10.46,21.69
-Internal combustion engines,37.4,32.72,36.4,6.98,-7.38,4.73,34.8,30.3,33.86
-Metalworking machinery,7.96,-17.78,3.83,1.51,-18.38,-1.25,6.92,-17.86,3.03
-"Special industrial machinery, n.e.c.",9.9,-13.6,6.05,2.67,-15.23,-0.56,9.01,-13.82,5.23
-General industrial equipment,12.62,-7.06,9.51,3.69,-13.78,0.96,11.35,-8.01,8.3
-"Electric transmission, distribution and industrial apparatus",23.65,10.01,20.88,5.17,-10.03,2.79,23.13,9.59,20.39
-Light trucks (including utility vehicles),16.83,0.95,12.19,6.48,-7.97,3.92,13.53,-0.79,9.82
-"Other trucks, buses, and truck trailers",16.53,0.41,13.5,7.43,-7.44,5.18,13.31,-1.92,10.64
-Autos,17.1,1.31,11.75,7.92,-5.77,5.06,15.0,0.37,10.42
-Aircraft,14.36,-2.63,10.02,4.84,-12.43,1.1,13.01,-3.79,8.8
-Ships and boats,15.67,-0.42,13.12,6.5,-10.06,4.29,13.2,-2.66,10.79
-Railroad equipment,14.51,-2.38,9.66,5.87,-11.31,1.74,13.55,-3.18,8.83
-Household furniture,15.66,-0.86,10.89,6.73,-9.08,2.13,12.65,-3.66,7.93
-Other furniture and fixtures,15.92,-0.36,12.06,7.16,-8.26,3.91,13.4,-2.4,9.77
-Other agricultural machinery,14.21,-2.64,11.51,5.7,-10.74,3.5,7.56,-8.66,5.29
-Farm tractors,15.25,-1.23,12.41,6.19,-9.79,3.93,9.15,-6.52,6.78
-Other construction machinery,15.59,-0.55,12.76,4.26,-11.89,1.92,10.73,-4.8,8.21
-Construction tractors,15.9,-0.18,12.87,4.73,-10.87,2.38,11.32,-3.88,8.68
-Mining and oilfield machinery,20.28,9.49,18.81,8.88,-5.44,7.31,18.93,8.07,17.48
-Service industry machinery,18.2,2.29,14.26,6.41,-8.96,2.14,15.17,-0.96,11.04
-Household appliances,16.38,0.14,12.62,7.59,-7.72,4.58,12.58,-2.85,9.23
-"Other electrical equipment, n.e.c",18.58,3.54,14.98,5.41,-9.33,2.57,17.08,2.4,13.63
-Other nonresidential equipment,15.49,-1.13,11.45,6.13,-9.58,3.19,13.19,-2.73,9.52
-Office and medical buildings,28.38,15.34,25.06,29.44,18.82,27.39,28.7,16.15,25.73
-Hospitals and special care facilities,28.15,14.1,19.54,28.1,15.86,24.65,28.12,14.42,21.23
-Warehouses,28.11,14.18,25.75,28.45,16.66,26.53,28.23,15.02,26.02
-Mobile structures,13.81,-3.24,10.64,4.55,-12.99,1.57,9.51,-7.49,6.48
-Other commercial buildings,28.34,15.09,25.22,29.08,18.46,26.81,28.59,16.11,25.73
-Manufacturing buildings,28.22,14.72,26.05,30.61,21.57,29.18,28.65,15.93,26.61
-Electric power structures,23.38,7.39,20.07,10.4,-5.12,7.98,23.24,7.3,19.95
-Wind and solar power structures,-85.58,-250.96,-106.54,-136.5,-639.64,-164.83,-92.55,-274.76,-114.0
-Gas power structures,21.23,5.92,18.41,9.45,-7.27,7.34,20.73,5.56,17.96
-Petroleum pipelines,16.32,-0.03,13.77,6.8,-11.17,4.49,15.45,-0.87,12.95
-Communication structures,14.75,-2.48,11.97,6.5,-11.59,3.86,14.61,-2.63,11.83
-Depreciable petroleum and natural gas structures,14.85,-1.95,12.78,6.32,-10.47,4.51,14.1,-2.6,12.07
-Depreciable mining structures,11.87,-6.69,9.87,2.08,-18.41,0.18,10.66,-7.94,8.69
-Religious buildings,28.26,14.3,25.52,28.26,16.22,26.14,28.26,15.4,25.89
-Educational and vocational buildings,28.18,14.16,25.55,28.15,15.98,26.08,28.17,14.95,25.79
-Lodging buildings,29.81,17.27,25.39,30.65,21.22,27.99,30.21,18.85,26.57
-Amusement and recreation buildings,29.55,16.8,26.42,30.63,21.24,28.56,29.97,18.36,27.23
-Track replacement,13.32,-4.1,10.65,3.96,-14.68,1.46,13.2,-4.21,10.54
-Other railroad structures,16.06,-0.95,13.33,8.41,-9.44,5.42,15.77,-1.28,13.04
-Other transportation structures,28.26,14.81,25.31,26.44,14.96,24.66,27.94,14.83,25.21
-Farm buildings,16.73,0.03,14.01,10.16,-6.82,7.79,11.5,-5.21,9.09
-Water supply and sewer and waste disposal facilities,21.38,4.94,17.54,8.73,-8.85,5.34,19.06,2.88,15.39
-"Public safety, highways, conservation, and development",15.74,-1.42,12.36,8.06,-9.96,5.01,13.18,-3.92,9.97
-Oil and gas exploration (geological and geophysical)--integrated,21.72,6.56,19.85,NA,NA,NA,21.72,6.56,19.85
-Oil and gas exploration (geological and geophysical)--independent,14.84,-2.16,12.74,6.66,-10.36,4.81,14.13,-2.78,12.07
-Oil and gas development (intangible drilling costs)--integrated,13.71,-3.41,11.59,NA,NA,NA,13.71,-3.41,11.59
-Oil and gas development (intangible drilling costs)--independent,11.06,-6.65,8.87,-0.0,-19.1,-2.07,10.39,-7.3,8.22
-Other mineral exploration--C corps,20.57,3.9,18.77,NA,NA,NA,20.57,3.9,18.77
-Other mineral exploration--pass-throughs,NA,NA,NA,17.05,1.54,15.57,17.05,1.54,15.57
-Other mineral development--C corps,10.91,-7.83,8.89,NA,NA,NA,10.91,-7.83,8.89
-Other mineral development--pass-throughs,NA,NA,NA,-3.1,-24.84,-5.14,-3.1,-24.84,-5.14
-Prepackaged software,23.93,9.37,20.82,14.81,5.32,12.94,23.35,9.14,20.33
-Custom software,19.11,3.37,16.03,12.72,1.05,10.59,18.79,3.26,15.76
-Credit-eligible own account software,-24.47,-344.21,-46.86,-16.23,-310.26,-32.79,-22.38,-337.01,-43.33
-Other own-account software,34.13,25.03,32.03,37.0,35.09,36.66,34.78,26.8,33.04
-Credit-eligible research and development,-10.37,-101.38,-20.1,-11.53,-98.98,-20.94,-10.41,-101.29,-20.14
-Other research and development,22.43,7.87,20.17,21.2,12.03,19.71,22.39,8.01,20.16
-Theatrical movies,18.59,3.55,16.45,13.09,0.54,11.49,18.42,3.47,16.31
-Long-lived television programs,19.67,3.68,17.12,10.86,-6.29,8.1,19.46,3.45,16.91
-Books,28.98,16.62,26.91,7.39,-9.2,3.89,24.96,10.58,22.43
-Music,30.5,16.26,28.51,7.1,-10.46,3.4,21.1,2.24,17.9
-Other entertainment originals,28.19,15.71,26.12,8.41,-8.32,4.94,19.84,3.93,16.91
+Computers and peripheral equipment,19.33,2.67,16.46,9.97,-2.1,7.82,17.87,1.9,15.11
+Communication equipment,15.23,-1.98,12.14,5.98,-9.69,3.04,14.53,-2.59,11.46
+Nonelectronic medical instruments,13.89,-2.85,7.58,4.23,-12.45,0.02,10.55,-5.04,5.26
+Electronic medical instruments,15.5,-1.25,10.26,5.12,-10.83,1.47,12.1,-3.56,7.61
+Nonmedical instruments,11.68,-11.06,7.95,5.17,-11.4,2.84,9.36,-11.17,6.17
+Photocopy and related equipment,13.48,-7.54,9.79,6.1,-9.3,3.43,12.15,-7.85,8.64
+Office and accounting equipment,19.51,3.77,15.56,12.36,1.42,10.01,17.94,3.33,14.39
+Nuclear fuel,34.36,24.92,32.35,31.18,25.72,30.0,34.35,24.93,32.34
+Other fabricated metal products,12.45,-7.51,9.1,3.98,-13.1,1.29,10.97,-8.42,7.74
+Steam engines,24.48,9.89,21.46,12.83,-1.48,10.06,24.32,9.75,21.31
+Internal combustion engines,37.05,32.33,36.06,6.88,-7.21,4.71,34.46,29.94,33.53
+Metalworking machinery,7.67,-18.76,3.52,1.52,-18.05,-1.14,6.67,-18.66,2.78
+"Special industrial machinery, n.e.c.",9.49,-14.71,5.62,2.63,-14.97,-0.49,8.65,-14.74,4.86
+General industrial equipment,12.23,-7.98,9.11,3.65,-13.53,1.01,11.01,-8.76,7.96
+"Electric transmission, distribution and industrial apparatus",23.29,9.28,20.5,5.13,-9.84,2.83,22.77,8.88,20.02
+Light trucks (including utility vehicles),16.41,0.15,11.75,6.37,-7.79,3.91,13.2,-1.41,9.49
+"Other trucks, buses, and truck trailers",16.11,-0.4,13.07,7.31,-7.27,5.14,12.99,-2.45,10.34
+Autos,16.69,0.52,11.3,7.79,-5.62,5.04,14.64,-0.3,10.05
+Aircraft,13.95,-3.49,9.57,4.77,-12.18,1.16,12.64,-4.52,8.42
+Ships and boats,15.26,-1.26,12.7,6.41,-9.85,4.28,12.87,-3.27,10.47
+Railroad equipment,14.09,-3.24,9.21,5.78,-11.09,1.8,13.17,-3.94,8.43
+Household furniture,15.24,-1.68,10.44,6.62,-8.88,2.18,12.32,-4.14,7.64
+Other furniture and fixtures,15.5,-1.18,11.63,7.05,-8.07,3.91,13.07,-2.97,9.46
+Other agricultural machinery,13.79,-3.49,11.08,5.61,-10.51,3.49,7.39,-8.72,5.18
+Farm tractors,14.83,-2.06,11.98,6.09,-9.58,3.92,8.94,-6.72,6.61
+Other construction machinery,15.18,-1.37,12.34,4.19,-11.65,1.94,10.45,-5.24,7.95
+Construction tractors,15.49,-0.99,12.44,4.65,-10.64,2.39,11.03,-4.35,8.42
+Mining and oilfield machinery,19.88,8.8,18.4,8.74,-5.31,7.23,18.55,7.46,17.11
+Service industry machinery,17.79,1.51,13.83,6.3,-8.76,2.18,14.82,-1.47,10.73
+Household appliances,15.97,-0.67,12.18,7.47,-7.54,4.57,12.29,-3.3,8.97
+"Other electrical equipment, n.e.c",18.22,2.79,14.59,5.34,-9.14,2.6,16.74,1.72,13.29
+Other nonresidential equipment,15.09,-1.96,11.02,6.03,-9.37,3.2,12.85,-3.37,9.19
+Office and medical buildings,28.02,14.65,24.69,29.11,18.68,27.13,28.36,15.6,25.39
+Hospitals and special care facilities,27.8,13.38,19.06,27.79,15.73,24.45,27.79,13.82,20.85
+Warehouses,27.76,13.48,25.39,28.13,16.53,26.28,27.89,14.51,25.7
+Mobile structures,13.4,-4.11,10.21,4.48,-12.74,1.62,9.25,-7.89,6.25
+Other commercial buildings,27.99,14.4,24.85,28.76,18.32,26.56,28.24,15.59,25.4
+Manufacturing buildings,27.88,14.04,25.7,30.26,21.42,28.89,28.31,15.35,26.27
+Electric power structures,23.02,6.6,19.69,10.27,-5.0,7.94,22.88,6.51,19.57
+Wind and solar power structures,-85.93,-261.2,-107.21,-134.37,-647.24,-162.07,-92.63,-285.19,-114.32
+Gas power structures,20.85,5.12,18.01,9.33,-7.11,7.3,20.36,4.78,17.58
+Petroleum pipelines,15.92,-0.89,13.36,6.72,-10.96,4.49,15.07,-1.64,12.57
+Communication structures,14.34,-3.35,11.55,6.42,-11.36,3.88,14.2,-3.48,11.42
+Depreciable petroleum and natural gas structures,14.44,-2.79,12.36,6.23,-10.25,4.48,13.71,-3.37,11.68
+Depreciable mining structures,11.47,-7.6,9.46,2.06,-18.13,0.23,10.3,-8.73,8.33
+Religious buildings,27.91,13.59,25.15,27.95,16.09,25.9,27.93,15.02,25.6
+Educational and vocational buildings,27.83,13.45,25.19,27.84,15.85,25.84,27.84,14.49,25.49
+Lodging buildings,29.46,16.62,25.0,30.3,21.07,27.74,29.86,18.4,26.25
+Amusement and recreation buildings,29.2,16.15,26.05,30.28,21.09,28.29,29.62,17.89,26.9
+Track replacement,12.9,-4.98,10.22,3.91,-14.4,1.5,12.79,-5.08,10.12
+Other railroad structures,15.66,-1.81,12.92,8.31,-9.25,5.42,15.38,-2.1,12.63
+Other transportation structures,27.9,14.12,24.95,26.14,14.86,24.42,27.59,14.21,24.86
+Farm buildings,16.33,-0.81,13.6,10.03,-6.68,7.74,11.31,-5.31,8.96
+Water supply and sewer and waste disposal facilities,21.0,4.14,17.14,8.61,-8.66,5.34,18.72,2.21,15.05
+"Public safety, highways, conservation, and development",15.34,-2.28,11.94,7.97,-9.76,5.02,12.88,-4.48,9.68
+Oil and gas exploration (geological and geophysical)--integrated,21.34,5.8,19.46,NA,NA,NA,21.34,5.8,19.46
+Oil and gas exploration (geological and geophysical)--independent,14.42,-3.01,12.32,6.57,-10.15,4.78,13.75,-3.55,11.68
+Oil and gas development (intangible drilling costs)--integrated,13.29,-4.27,11.17,NA,NA,NA,13.29,-4.27,11.17
+Oil and gas development (intangible drilling costs)--independent,10.62,-7.54,8.43,-0.0,-18.73,-1.99,9.98,-8.14,7.81
+Other mineral exploration--C corps,20.21,3.09,18.4,NA,NA,NA,20.21,3.09,18.4
+Other mineral exploration--pass-throughs,NA,NA,NA,16.85,1.53,15.41,16.85,1.53,15.41
+Other mineral development--C corps,10.51,-8.75,8.48,NA,NA,NA,10.51,-8.75,8.48
+Other mineral development--pass-throughs,NA,NA,NA,-3.05,-24.42,-5.01,-3.05,-24.42,-5.01
+Prepackaged software,23.54,8.69,20.43,14.57,5.34,12.78,22.97,8.5,19.95
+Custom software,18.7,2.61,15.61,12.51,1.11,10.47,18.39,2.54,15.35
+Credit-eligible own account software,-24.49,-381.81,-47.2,-16.61,-345.04,-33.39,-22.49,-374.02,-43.74
+Other own-account software,33.77,24.53,31.68,36.55,34.87,36.25,34.4,26.35,32.67
+Credit-eligible research and development,-10.58,-106.49,-20.43,-11.63,-102.13,-21.03,-10.62,-106.31,-20.46
+Other research and development,22.09,7.16,19.82,20.93,11.95,19.5,22.05,7.33,19.81
+Theatrical movies,18.18,2.78,16.04,12.89,0.61,11.35,18.02,2.72,15.9
+Long-lived television programs,19.27,2.89,16.71,10.7,-6.15,8.04,19.07,2.67,16.51
+Books,28.61,15.98,26.55,7.28,-9.0,3.9,24.63,10.11,22.13
+Music,30.16,15.57,28.16,7.0,-10.25,3.43,20.83,1.97,17.69
+Other entertainment originals,27.82,15.06,25.75,8.28,-8.13,4.94,19.55,3.65,16.68
 Reserved for non-BEA intangibles,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Reserved for non-BEA intangibles,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Residential equipment,15.99,-0.39,12.85,7.93,-7.17,5.33,10.16,-5.11,7.45
-Residential buildings,27.17,12.78,24.42,26.58,14.13,24.45,26.74,13.74,24.44
-Inventories,31.83,21.72,30.23,30.1,22.16,28.93,31.28,21.85,29.82
-Land,29.5,15.74,26.61,30.19,16.86,28.06,29.89,16.28,27.4
+Residential equipment,15.57,-1.21,12.42,7.8,-6.99,5.3,9.95,-5.25,7.3
+Residential buildings,26.81,12.06,24.05,26.29,14.01,24.22,26.43,13.45,24.18
+Inventories,31.46,21.14,29.87,29.81,22.15,28.7,30.94,21.45,29.5
+Land,29.16,15.04,26.25,29.87,16.74,27.81,29.56,15.86,27.11
 Reserved for non-BEA natural resources,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Reserved for non-BEA natural resources,NA,NA,NA,NA,NA,NA,NA,NA,NA
 Reserved for non-BEA natural resources,NA,NA,NA,NA,NA,NA,NA,NA,NA
-Nonresidential equipment,15.93,-0.88,12.47,5.66,-10.27,2.89,13.8,-2.52,10.54
-Nonresidential structures,21.71,8.47,19.11,24.45,14.7,22.6,22.3,9.78,19.87
-Residential property,27.02,12.61,24.26,26.35,13.86,24.21,26.53,13.5,24.22
-R&D and own-account software,-0.3,-58.8,-7.49,-2.28,-70.55,-10.06,-0.4,-59.35,-7.62
-Other intellectual property products,20.98,5.96,18.27,10.84,-3.47,8.09,20.3,5.28,17.58
-"All equipment, structures, IPP, and inventories",20.0,4.14,17.03,23.06,11.22,20.99,20.89,6.07,18.16
-"All equipment, structures, IPP, inventories, and land",21.39,6.06,18.47,25.57,13.07,23.45,22.85,8.28,20.18
-"All equipment, structures, and inventories",21.95,7.67,19.18,23.45,11.92,21.43,22.42,8.9,19.88
-"All equipment, structures, inventories, and land",23.19,9.11,20.43,25.86,13.56,23.76,24.19,10.59,21.65
+Nonresidential equipment,15.54,-1.72,12.05,5.57,-10.06,2.91,13.47,-3.18,10.21
+Nonresidential structures,21.33,7.71,18.72,24.16,14.59,22.37,21.94,9.16,19.51
+Residential property,26.66,11.88,23.89,26.06,13.75,23.99,26.22,13.21,23.96
+R&D and own-account software,-0.57,-61.77,-7.84,-2.53,-73.38,-10.33,-0.67,-62.32,-7.97
+Other intellectual property products,20.58,5.22,17.87,10.67,-3.35,8.02,19.91,4.6,17.19
+"All equipment, structures, IPP, and inventories",19.63,3.3,16.63,22.79,11.14,20.78,20.54,5.45,17.82
+"All equipment, structures, IPP, inventories, and land",21.02,5.24,18.08,25.28,12.97,23.23,22.51,7.7,19.85
+"All equipment, structures, and inventories",21.57,6.9,18.79,23.18,11.85,21.23,22.07,8.34,19.54
+"All equipment, structures, inventories, and land",22.82,8.36,20.04,25.56,13.47,23.55,23.84,10.07,21.32
