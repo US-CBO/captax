@@ -21,7 +21,7 @@ with open(CURRENT_PATH + "/data/inputs/labels/industry_labels.txt") as f:
     INDUSTRY_LABELS = np.array([line.rstrip() for line in f])
 
 NUM_INDS = len(INDUSTRY_LABELS) - 1
-NUM_DETAILED_INDS = 88
+NUM_DETAILED_INDS = 95
 
 NUM_IND_AGGS = 1
 LEN_INDS = NUM_INDS + NUM_IND_AGGS
@@ -31,15 +31,22 @@ ALL_INDS = np.r_[:NUM_INDS]
 ALL_INDS_PLUS_AGG = np.r_[: NUM_INDS + 1]
 
 # Financial industries:
-#    Credit intermediation
-#    Securities, commodity contracts, and other financial investments
-#    Insurance
-#    Other financial vehicles
-#    Professional, scientific, and technical services
-ALL_FINANCIAL_INDS = np.r_[40:44, 46]
-ALL_NONFINANCIAL_INDS = np.r_[0:40, 44:46, 47 : NUM_INDS - 1]
+#   Depository Credit Intermediation
+#   Other Intermediation
+#   Nondepository Credit Intermediation
+#   Securities, Commodity Contracts, and Other Financial Investments and Related Activities
+#   Insurance Carriers
+#   Insurance Agencies and Brokers and Related Services
+#   Funds, Trusts, and Other Financial Vehicles
+#   Management of Companies and Enterprises
 
-REAL_ESTATE_IND = 44
+ALL_FINANCIAL_INDS = np.r_[48:55, 60]
+ALL_NONFINANCIAL_INDS = np.r_[0:48, 55:60, 61 : NUM_INDS - 1]
+
+REAL_ESTATE_IND = 55
+ELECTRIC_POWER_IND = 5
+NATURAL_GAS_IND = 6
+WATER_SEWER_IND = 7
 
 # Businesses vs. owner-occupied housing industries
 ALL_BIZ_INDS = np.r_[: NUM_INDS - 1]
@@ -142,7 +149,7 @@ with open(CURRENT_PATH + "/data/inputs/labels/asset_type_labels.txt") as f:
     ASSET_TYPE_LABELS = np.array([line.rstrip() for line in f])
 
 NUM_EQUIPMENT = 32
-NUM_STRUCTURES = 23
+NUM_STRUCTURES = 25
 NUM_IPP = 19
 NUM_NON_BEA_INTANGIBLES = 2  # Place holder for Non-BEA intangibles
 NUM_RESIDENTIAL = 2
@@ -194,6 +201,11 @@ ALL_IPP = np.r_[START_IPP:END_IPP]
 ALL_RESIDENTIAL = np.r_[START_RESIDENTIAL:END_RESIDENTIAL]
 ALL_INVENTORIES = np.r_[START_INVENTORIES:END_INVENTORIES]
 ALL_LAND = np.r_[START_LAND:END_LAND]
+
+# Asset types for regulated utilities
+REGULATED_ELECTRIC_ASSETS = np.r_[14,38,40]
+REGULATED_NATURAL_GAS_ASSETS = 42
+REGULATED_WATER_SEWER_ASSETS = 55
 
 # Numbers of IPP assets
 NUM_MINERAL = 8  # Mineral exploration and development
@@ -279,13 +291,12 @@ TAX_RATE_ADJUSTMENTS_COMPONENTS = {"eligibility": 0, "rate": 1}
 
 NUM_TAX_RATE_ADJUSTMENTS_COMPONENTS = len(TAX_RATE_ADJUSTMENTS_COMPONENTS)
 
-# Aggregate debt shares, derived from Federal Reserve Financial Accounts of the United 
-# States (FAOTUS)
+# Aggregate debt shares, derived from Federal Reserve Flow of Funds
 # DO NOT EDIT THESE.
 # --------------------------------------------------------------------------------------
 AGG_DEBT_SHARE = {
-    "financial_sector": 0.4932,
-    "nonfin_c_corp": 0.2750,
-    "nonfin_pass_thru": 0.3054,
-    "ooh": 0.4136,
+    "financial_sector": 0.5094,
+    "nonfin_c_corp": 0.2743,
+    "nonfin_pass_thru": 0.3048,
+    "ooh": 0.4085,
 }

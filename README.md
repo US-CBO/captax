@@ -8,7 +8,7 @@ CBO uses its Capital Tax model (CBO-CapTax) to estimate the effects of federal t
 
 ## Documentation
 
-More detailed documentation for the model can be found in a CBO Working Paper: [“CBO’s Model for Estimating the Effect of Federal Taxes on Capital Income from New Investment"](https://cbo.gov/publication/57429). A short description of modeling changes made after the release of the paper can be found [here](docs/updates_to_model.md).
+More detailed documentation for the model can be found in a CBO Working Paper: [“CBO’s Model for Estimating the Effect of Federal Taxes on Capital Income from New Investment"](https://cbo.gov/publication/57429).
 
 The [`/captax/docs/`](docs/) directory contains files with useful information pertaining to parameters and data used in the CapTax model.
 
@@ -92,11 +92,10 @@ A successful first run of the model will overwrite the output using `Current-Law
 Most policy parameters are annual values that can be directly edited when performing a simple policy change, as discussed below. There are, however, policy parameters that are stored in separate files and are used to model the effect of the tax system on investment through:
 
 * depreciation adjustments,
-* investment tax credit adjustments,
-* production tax credit adjustments, and
+* investment tax credit adjustments, and
 * marginal tax rate adjustments
 
-Files used to estimate depreciation adjustments include parameter values that vary by detailed industry and asset type. Files used to estimate investment tax credit adjustments and production tax credit adjustments include parameters that vary by industry and asset type. Files used to estimate marginal tax rate adjustments include parameter values that vary by detailed industry or by asset type.
+Files used to estimate depreciation adjustments include parameter values that vary by detailed industry and asset type. Files used to estimate investment tax credit adjustments include parameters that vary by industry and asset type. Files used to estimate marginal tax rate adjustments include parameter values that vary by detailed industry or by asset type.
 
 Making policy changes related to one or more of those three sets of adjustment parameters is slightly more complex and requires changes in at least two places, as discussed below.
 
@@ -158,7 +157,7 @@ Save and close the `policies.yml` file.
 
 ### A More Complex Policy Change
 
-A more complex policy change, that is a change to parameters defining depreciation rules, investment tax credit rules, production tax credit rules, and marginal tax rate adjustments, involves changing one or more policy parameters stored in more complex data structures and requires making changes in at least two places.
+A more complex policy change, that is a change to parameters defining depreciation rules, investment tax credit rules, and marginal tax rate adjustments, involves changing one or more policy parameters stored in more complex data structures and requires making changes in at least two places.
 
 To make a more complex policy change, follow these steps:
 
@@ -166,7 +165,6 @@ To make a more complex policy change, follow these steps:
 
     * `/captax/captax/data/inputs/policy_parameters/depreciation_adjustments/`
     * `/captax/captax/data/inputs/policy_parameters/investment_tax_credit_adjustments/`
-    * `/captax/captax/data/inputs/policy_parameters/production_tax_credit_adjustments/`
     * `/captax/captax/data/inputs/policy_parameters/tax_rate_adjustments/`
 
 2) Make a copy of the relevant file; for example:   
@@ -188,7 +186,7 @@ Make changes in the appropriate parameters files that include parameters defin
 2) Rename the `Current-Law` portion of the filename with a new policy suffix; for example:  
 `policy_parameters_My-Policy-Name_comprehensive.csv`
 
-3) Modify the policy name suffix(es) referencing the policy parameter file(s) with depreciation rules, investment tax credit rules, production tax credit rules, or marginal tax rate adjustments modified by the user; for example: change the policy name suffix for the `acceleration_rates` parameter for the appropriate years from `CLaw_perm` to `My-Policy-Name`.
+3) Modify the policy name suffix(es) referencing the policy parameter file(s) with depreciation rules, investment tax credit rules, or marginal tax rate adjustments modified by the user; for example: change the policy name suffix for the `acceleration_rates` parameter for the appropriate years from `CLaw_perm` to `My-Policy-Name`.
 
 Repeat the same steps for `policy_parameters_Current-Law_uniformity.csv` if also interested in running the CapTax model with a policy simulation using the uniformity perspective.
 
@@ -210,9 +208,9 @@ Subsequent model runs with the same `My-Policy-Name` and `perspective`, however,
 
 ## Acknowledgements
 
-The [original version of the model](https://www.cbo.gov/system/files/2022-02/corrected_etrs.xls) was developed in Excel by **Paul Burnham** and **Larry Ozanne (formerly of CBO)**  and was released along with the CBO Background paper [Computing Effective Tax Rates on Capital Income](https://www.cbo.gov/publication/18259) (2006). That model was subsequently extended and converted to Fortran. **Cody Kallen (formerly of CBO)** made significant contributions towards converting the model from Fortran to its current state in Python.
+The [original version of the model](https://www.cbo.gov/system/files/2022-02/corrected_etrs.xls) was developed in Excel by **Paul Burnham** and **Larry Ozanne (both formerly of CBO)**  and was released along with the CBO Background paper [Computing Effective Tax Rates on Capital Income](https://www.cbo.gov/publication/18259) (2006). That model was subsequently extended and converted to Fortran. **Cody Kallen (formerly of CBO)** made significant contributions towards converting the model from Fortran to its current state in Python.
 
-**Dorian Carloni** and **Kevin Perese** made further structural changes to the model in Python. **Madeleine Fox** and **Jennifer Shand** did research and constructed parameters for the model. **Omar Morales**, **Charles Pineles-Mark**, and **F. Matthew Woodward** provided useful feedback on the source code and ran model tests. **John McClelland** and **Joseph Rosenberg** supervised the most recent model development.
+**Dorian Carloni** and **Kevin Perese** made further structural changes to the model in Python. **Jennifer Shand** and **Madeleine Fox** did research and constructed parameters for the model. **Charles Pineles-Mark**, **Omar Morales**, and **F. Matthew Woodward** provided useful feedback on the source code and ran model tests. **John McClelland** and **Joseph Rosenberg** supervised the most recent model development.
 
 
 ## Contact

@@ -36,8 +36,10 @@ Warehouses
 Mobile structures
 Other commercial buildings
 Manufacturing buildings
-Electric power structures
-Wind and solar power structures
+Regulated electric power structures
+Unregulated electric power structures
+Regulated wind and solar power structures
+Unregulated wind and solar power structures
 Gas power structures
 Petroleum pipelines
 Communication structures

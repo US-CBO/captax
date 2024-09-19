@@ -1,8 +1,8 @@
 parameter,value
-financial_sector_debt_share,0.4932
-nonfinancial_c_corp_debt_share,0.275
-nonfinancial_pass_thru_debt_share,0.3054
-ooh_debt_share,0.4136
+financial_sector_debt_share,0.5094
+nonfinancial_c_corp_debt_share,0.2743
+nonfinancial_pass_thru_debt_share,0.3048
+ooh_debt_share,0.4085
 c_corp_equity_retained_earnings_share,0.5
 c_corp_equity_repurchases_share,0.6
 nominal_rate_of_return_equity,0.0844

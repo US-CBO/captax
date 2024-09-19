@@ -29,7 +29,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (industry-specific values are in `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`)
 >
-> **Source**: CBO, based on the Financial Accounts of the United States (2001-2022)
+> **Source**: CBO, based on the Financial Accounts of the United States (2001-2023)
 >
 > **Note**: Changing this value will adjust the corresponding industry-specific values read in from `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`
 
@@ -42,7 +42,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (industry-specific values are in `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`)
 >
-> **Source**: CBO, based on the Financial Accounts of the United States (2001-2022)
+> **Source**: CBO, based on the Financial Accounts of the United States (2001-2023)
 >
 > **Note**: Changing this value will automatically adjust the corresponding industry-specific values read in from `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`
 
@@ -55,7 +55,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (industry-specific values are in `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`)
 >
-> **Source**: CBO, based on the Financial Accounts of the United States (2001-2022)
+> **Source**: CBO, based on the Financial Accounts of the United States (2001-2023)
 >
 > **Note**: Changing this value will automatically adjust the corresponding industry-specific values read in from `/captax/captax/data/inputs/environment_parameters/debt_shares.csv`
 
@@ -68,7 +68,7 @@ Details for each parameter within those groups are provided, below.
 >
 > **Dimensions**: Scalar (industry-specific values do not apply)
 >
-> **Source**: CBO, based on the Financial Accounts of the United States (2001-2022)
+> **Source**: CBO, based on the Financial Accounts of the United States (2001-2023)
 
 #### `c_corp_equity_retained_earnings_share`
 > **Description**: Share of equity-financed investment in fixed assets funded with retained earnings (*C corporations only*)
@@ -252,7 +252,7 @@ There is just a single parameter matrix in this file.
 >
 > **Dimensions**: Standard industry (rows) by legal form (columns)
 >
-> **Source**: CBO, based on SOI Nonfarm Sole Proprietorship, Partnership, and Corporate Returns
+> **Source**: CBO, based on SOI Nonfarm Sole Proprietorship, Partnership, and Corporate Returns (2018-2020)
 >
 >**Note**: The values for C corporations and pass-through entities read in from this file will be adjusted if any of the first three “Financing share parameters” in `/captax/captax/data/inputs/environment_parameters/environment_parameters.csv` (`financial_sector_debt_share`, `nonfinancial_c_corp_debt_share`, or `nonfinancial_pass_thru_debt_share`) are modified. Directly modifying values in this array, however, will have no impact on the values read in from `/captax/captax/data/inputs/environment_parameters/environment_parameters.csv`
 
@@ -268,4 +268,4 @@ There is just a single parameter matrix in this file.
 >
 >**Dimensions**: Detailed industry (rows) by asset type (columns)
 >
->**Source**: CBO, based on 2021 BEA Detailed Fixed Asset tables (Depreciation, current cost/Net stocks, current cost)
+>**Source**: CBO, based on 2022 BEA Detailed Fixed Asset tables (Depreciation, current cost/Net stocks, current cost)

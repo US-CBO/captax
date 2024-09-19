@@ -38,8 +38,10 @@ Warehouses,0.0000,0.0000
 Mobile_structures,0.0000,0.0000
 Other_commercial_buildings,0.0000,0.0000
 Manufacturing_buildings,0.0000,0.0000
-Electric_power_structures,0.0000,0.0000
-Wind_and_solar_power_structures,0.0000,0.0000
+Regulated_electric_power_structures,0.0000,0.0000
+Unregulated_electric_power_structures,0.0000,0.0000
+Regulated_wind_and_solar_power_structures,0.0000,0.0000
+Unregulated_wind_and_solar_power_structures,0.0000,0.0000
 Gas_power_structures,0.0000,0.0000
 Petroleum_pipelines,0.0000,0.0000
 Communication_structures,0.0000,0.0000

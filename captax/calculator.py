@@ -1953,6 +1953,14 @@ class Calculator:
             interest_deductible_shares["pass_thru"], NUM_INDS, NUM_ASSETS
         )
 
+        # Full deductibility of interest in utilities industry
+        c_corp_interest_deductible_shares[ELECTRIC_POWER_IND, REGULATED_ELECTRIC_ASSETS] = 1.0
+        c_corp_interest_deductible_shares[NATURAL_GAS_IND, REGULATED_NATURAL_GAS_ASSETS] = 1.0
+        c_corp_interest_deductible_shares[WATER_SEWER_IND, REGULATED_WATER_SEWER_ASSETS] = 1.0
+        pass_thru_interest_deductible_shares[ELECTRIC_POWER_IND, REGULATED_ELECTRIC_ASSETS] = 1.0
+        pass_thru_interest_deductible_shares[NATURAL_GAS_IND, REGULATED_NATURAL_GAS_ASSETS] = 1.0
+        pass_thru_interest_deductible_shares[WATER_SEWER_IND, REGULATED_WATER_SEWER_ASSETS] = 1.0
+
         # Mortgage interest deductions parameters
         mortg_interest_deduction_tax_rates = self._expand_array(
             mortg_interest_deduction["tax_rates"], NUM_INDS, NUM_ASSETS
@@ -2246,6 +2254,14 @@ class Calculator:
         mortg_interest_deduction_deductible_shares = self._expand_array(
             mortg_interest_deduction["deductible_shares"], NUM_ASSETS
         )
+
+        # Full deductibility of interest in utilities industry
+        c_corp_interest_deductible_shares[ELECTRIC_POWER_IND, REGULATED_ELECTRIC_ASSETS] = 1.0
+        c_corp_interest_deductible_shares[NATURAL_GAS_IND, REGULATED_NATURAL_GAS_ASSETS] = 1.0
+        c_corp_interest_deductible_shares[WATER_SEWER_IND, REGULATED_WATER_SEWER_ASSETS] = 1.0
+        pass_thru_interest_deductible_shares[ELECTRIC_POWER_IND, REGULATED_ELECTRIC_ASSETS] = 1.0
+        pass_thru_interest_deductible_shares[NATURAL_GAS_IND, REGULATED_NATURAL_GAS_ASSETS] = 1.0
+        pass_thru_interest_deductible_shares[WATER_SEWER_IND, REGULATED_WATER_SEWER_ASSETS] = 1.0
 
         # Calculate nominal discount rates
         # -----------------------------------------------------------------------

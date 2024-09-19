@@ -21,8 +21,9 @@ The primary weight values used in the CapTax model consist of asset values by in
 >**Dimensions**: Standard industry (rows) by asset type (columns)
 >
 >**Source**:
-</br>2021 BEA Detailed Fixed Asset tables (Equipment, Structures, Intellectual Property) </br>2021 BLS Detailed Capital Measures tables (Inventories and Land)
+</br>2022 BEA Detailed Fixed Asset tables (Equipment, Structures, Intellectual Property) </br>2022 BLS Detailed Capital Measures tables (Inventories and Land)
 </br>CBO estimates based on data from the U.S. Census Bureau, the Independent Petroleum Association of America, the U.S. Geological Survey, and the Energy Information Administration (tangible mining structures, mineral exploration, mine and well development) </br> CBO estimates based on 2019 data from the Internal Revenue Service and BEA Detailed Fixed Asset tables (R&D and own-account software eligible and not eligible for R&E credit)
+</br> CBO estimates based on 2022 data from the Edison Electric Institute (Regulated and unregulated shares of electric power and wind/solar power structures)
 
 ## Legal form shares
 There are three files used to allocate total asset values by industry and asset type among the legal forms used in the CapTax model (C corporations, pass-through entities, and owner-occupied housing). Those shares do not sum to 1.0000; the residual share is attributable to nonprofit organizations.
@@ -35,7 +36,7 @@ There are three files used to allocate total asset values by industry and asset 
 >
 >**Dimensions**: Standard industry (rows) by asset type (columns)
 >
->**Source**: CBO estimates based on data from the Internal Revenue Service (2017-2019)
+>**Source**: CBO estimates based on data from the Internal Revenue Service (2018-2020)
 
 ### `asset_shares_pass_throughs.csv`
 >**Description**: Share of assets held by pass-through entities
@@ -46,7 +47,7 @@ There are three files used to allocate total asset values by industry and asset 
 >
 >**Dimensions**: Standard industry (rows) by asset type (columns)
 >
->**Source**: CBO estimates based on data from the Internal Revenue Service (2017-2019)
+>**Source**: CBO estimates based on data from the Internal Revenue Service (2018-2020)
 
 ### `asset_shares_ooh.csv`
 >**Description**: Share of assets held by owner-occupied housing
@@ -71,6 +72,6 @@ There is just a single file weights that are used to apportion values between de
 >
 >**Dimensions**: Detailed industry
 >
->**Source**: CBO, based on data from the U.S. Census Bureau, the Energy Information Administration, and the Federal Reserve (2017-2020)
+>**Source**: CBO, based on data from the U.S. Census Bureau, the Energy Information Administration, and the Federal Reserve (2017-2021)
 >
 >**Note**: Weights sum to 1 for each standard industry category

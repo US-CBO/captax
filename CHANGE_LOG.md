@@ -1,5 +1,18 @@
 # Change Log
 
+## Version 0.6.0 -- 2024-09-19
+
+* Incorporated intermediate changes in parameter values and model structure. (This model update is not associated with data supplementing CBO's Budget and Economic Outlook publication)
+
+* Updated [economic depreciation and debt financing shares files](docs/environment_parameters.md) to reflect more recently available information.
+
+* Updated [weights data files](docs/weights_data.md) to reflect more recently available information.
+
+* Expanded industry detail consistently with Bureau of Economic Analysis' (BEA) November 2023 detailed fixed asset tables.
+
+* Added two asset types by distinguishing between regulated and unregulated electric power and wind/solar structures.
+
+
 ## Version 0.5.0 -- 2024-07-01
 * Updated [economic environment parameter values](docs/environment_parameters.md) consistent with [CBO’s June 2024 economic projections](https://www.cbo.gov/data/budget-economic-data#4).
 

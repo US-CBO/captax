@@ -3,9 +3,12 @@ Forestry, Fishing, and Related Activities
 Oil and Gas Extraction
 Mining (Except Oil and Gas)
 Support Activities for Mining
-Utilities
+Electric Power
+Natural Gas Distribution
+Water, Sewage and Other Systems
 Construction
-Food, Beverage, and Tobacco Product Manufacturing
+Food Manufacturing
+Beverage and Tobacco Products Manufacturing
 Textile and Textile Product Mills
 Apparel, Leather, and Allied Products Manufacturing
 Wood Product Manufacturing
@@ -23,9 +26,14 @@ Electrical Equipment, Appliances, and Components Manufacturing
 Motor Vehicle and Parts Manufacturing
 Other Transportation Equipment Manufacturing
 Furniture and Related Products Manufacturing
-Miscellaneous Manufacturing
-Wholesale Trade
-Retail Trade
+Medical Equipment and Supplies
+Other Manufacturing
+Wholesale Durable Goods
+Wholesale Nondurable Goods
+Motor Vehicle and Parts Dealers
+Food and Beverage Stores
+General Merchandise Stores
+Other Retail
 Air Transportation
 Rail Transportation
 Water Transportation
@@ -38,13 +46,18 @@ Publishing Industries (Except Internet)
 Motion Picture and Sound Recording Industries
 Broadcasting (Except Internet) and Telecommunications
 Data Processing, Hosting, and Other Information Services
-Credit Intermediation and Related Activities
+Depository Credit Intermediation
+Other Intermediation
+Nondepository Credit Intermediation
 Securities, Commodity Contracts, and Other Financial Investments and Related Activities
-Insurance Carriers and Related Activities
+Insurance Carriers
+Insurance Agencies and Brokers and Related Services
 Funds, Trusts, and Other Financial Vehicles
 Real Estate
 Rental and Leasing (Including Nonfinancial Intangibles)
-Professional, Scientific, and Technical Services
+Legal Services
+Computer Systems Design and Related Services
+Other Professional, Scientific, and Technical Services
 Management of Companies and Enterprises
 Administrative and Support Services
 Waste Management and Remediation Services

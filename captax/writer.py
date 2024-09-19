@@ -176,14 +176,6 @@ class Writer:
         """
         print("Begin writing results")
 
-        if (
-            self.pol.policy_name == "Current-Law"
-            and self.pol.perspective == "comprehensive"
-        ):
-            self._write_supplemental_table_EMTRs(
-                self.metrics[id(self.output.total_EMTRs)]
-            )
-
         self._write_summary_metrics(self.metrics)
 
         if self.pol.perspective == "comprehensive":
@@ -228,10 +220,6 @@ class Writer:
             disp_metrics["wgtd_avg_abs_diffs"]["wgtd_avg_abs_diff"] = (
                 disp_metrics["wgtd_avg_abs_diffs"]["wgtd_avg_abs_diff"] * 100
             ).round(decimals=2)
-            self._write_supplemental_table_tax_wedges(
-                self.metrics[id(self.output.total_tax_wedges)],
-                disp_metrics["wgtd_avg_abs_diffs"],
-            )
 
         return None
 

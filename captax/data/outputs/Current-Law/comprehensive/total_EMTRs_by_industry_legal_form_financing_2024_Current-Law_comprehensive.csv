@@ -1,65 +1,78 @@
 "Total EMTRs by Industry, Legal Form, and Financing Source, 2024 (Percent)"
 ,C Corporations,C Corporations,C Corporations,Pass-through Entities,Pass-through Entities,Pass-through Entities,Businesses,Businesses,Businesses
 ,Equity,Debt,Typical (Biz),Equity,Debt,Typical (Biz),Equity,Debt,Typical (Biz)
-Farms,17.27,0.9,14.83,10.76,-4.66,8.72,11.96,-3.52,9.86
-"Forestry, Fishing, and Related Activities",19.03,3.23,16.92,14.44,0.86,12.82,15.74,1.6,14.0
-Oil and Gas Extraction,14.24,-3.1,12.15,7.01,-9.35,5.26,13.76,-3.47,11.69
-Mining (Except Oil and Gas),16.26,-1.87,14.42,10.26,-7.12,8.7,15.47,-2.49,13.68
-Support Activities for Mining,19.5,3.69,18.26,14.77,1.2,13.82,18.63,3.28,17.45
-Utilities,21.43,4.46,17.99,19.37,4.5,16.67,21.42,4.46,17.99
-Construction,20.09,4.36,17.86,12.19,-2.47,10.34,15.65,0.74,13.66
-"Food, Beverage, and Tobacco Product Manufacturing",23.51,8.72,20.79,21.81,10.83,19.96,23.24,9.03,20.66
-Textile and Textile Product Mills,25.35,11.07,23.99,25.13,15.0,24.26,25.31,11.74,24.04
-"Apparel, Leather, and Allied Products Manufacturing",25.45,10.29,22.8,27.09,17.45,25.53,26.04,12.73,23.78
-Wood Product Manufacturing,26.01,12.76,24.26,24.24,14.29,23.05,25.45,13.2,23.88
-Paper Manufacturing,22.39,7.14,19.78,20.2,8.63,18.41,22.18,7.27,19.65
-Printing and Related Support Activities,23.3,7.91,18.95,21.55,10.32,18.62,22.76,8.6,18.85
-Petroleum and Coal Products Manufacturing,22.2,6.02,20.26,20.92,8.03,19.53,22.18,6.05,20.25
-Chemical Manufacturing,14.77,-8.24,12.06,18.41,3.95,16.83,14.84,-8.02,12.16
-Plastics and Rubber Products Manufacturing,22.26,6.61,19.44,20.75,9.38,18.87,22.0,7.05,19.34
-Nonmetallic Mineral Product Manufacturing,21.83,4.85,19.6,21.52,9.79,20.1,21.8,5.38,19.66
-Primary Metal Manufacturing,22.81,7.68,20.31,20.85,9.3,19.12,22.61,7.83,20.19
-Fabricated Metal Product Manufacturing,22.86,7.54,20.44,20.94,9.7,19.32,22.25,8.18,20.09
-Machinery Manufacturing,14.83,-10.26,11.54,16.53,-0.57,14.46,15.03,-9.2,11.89
-Computer and Electronic Product Manufacturing,6.74,-35.79,-0.33,15.09,-7.03,11.46,6.97,-35.02,-0.01
-"Electrical Equipment, Appliances, and Components Manufacturing",-123.7,967.37,-160.72,-38.97,-307.03,-48.56,-111.79,1256.05,-143.99
-Motor Vehicle and Parts Manufacturing,2.1,-52.9,-7.07,7.56,-34.34,1.06,2.23,-52.49,-6.87
-Other Transportation Equipment Manufacturing,23.19,6.15,19.83,23.27,11.89,21.2,23.19,6.29,19.87
-Furniture and Related Products Manufacturing,25.11,10.74,22.42,24.3,14.19,22.57,24.87,11.66,22.46
-Miscellaneous Manufacturing,21.44,3.29,19.07,23.41,12.36,22.07,21.71,4.44,19.48
-Wholesale Trade,27.11,13.97,25.89,27.79,19.02,27.06,27.27,15.07,26.17
-Retail Trade,26.22,12.35,23.28,26.62,16.92,24.73,26.33,13.44,23.65
-Air Transportation,19.15,3.16,15.25,14.64,0.78,11.58,18.98,3.09,15.12
-Rail Transportation,14.21,-3.41,11.57,6.38,-11.23,4.05,14.12,-3.49,11.48
-Water Transportation,17.92,1.71,15.54,11.76,-2.92,9.84,15.9,0.32,13.69
-Truck Transportation,19.09,3.25,16.74,13.52,0.28,11.75,16.78,2.1,14.69
-Transit and Ground Passenger Transportation,21.94,6.71,19.78,18.16,5.28,16.52,20.52,6.21,18.57
-Pipeline Transportation,5.59,-18.17,2.33,-3.3,-29.45,-6.42,4.57,-19.3,1.34
-Other Transportation and Support Activities,15.4,-2.87,11.8,9.84,-7.13,6.84,14.47,-3.51,10.98
-Warehousing and Storage,24.43,9.59,21.93,23.05,11.02,21.22,23.96,10.04,21.69
-Publishing Industries (Except Internet),13.67,-18.27,9.05,17.11,-4.59,14.17,13.79,-17.85,9.22
-Motion Picture and Sound Recording Industries,20.56,5.25,18.44,21.51,10.37,20.12,20.61,5.53,18.54
-Broadcasting (Except Internet) and Telecommunications,16.19,-1.62,13.29,11.06,-4.87,8.74,16.12,-1.66,13.23
-"Data Processing, Hosting, and Other Information Services",17.38,-5.25,15.56,15.82,-2.18,14.51,17.35,-5.2,15.54
-Credit Intermediation and Related Activities,22.31,6.72,15.09,19.48,7.15,14.13,22.18,6.74,15.05
-"Securities, Commodity Contracts, and Other Financial Investments and Related Activities",24.69,9.14,19.02,24.2,12.18,20.14,24.62,9.57,19.19
-Insurance Carriers and Related Activities,24.26,8.34,22.64,24.83,14.13,23.83,24.29,8.58,22.69
-"Funds, Trusts, and Other Financial Vehicles",28.33,14.57,20.45,27.26,15.32,20.81,28.06,14.75,20.53
-Real Estate,26.85,12.32,24.12,26.39,14.51,24.38,26.51,13.88,24.31
-Rental and Leasing (Including Nonfinancial Intangibles),16.65,0.12,12.51,10.36,-3.91,7.12,14.78,-0.98,10.94
-"Professional, Scientific, and Technical Services",16.67,-6.92,13.12,15.78,-5.19,12.97,16.39,-6.42,13.08
-Management of Companies and Enterprises,25.33,9.82,18.4,25.95,14.53,21.16,25.37,10.09,18.57
-Administrative and Support Services,19.58,0.45,15.35,16.69,3.58,13.99,18.4,1.66,14.8
-Waste Management and Remediation Services,18.39,2.03,13.82,10.68,-5.15,6.68,17.06,0.93,12.62
-Educational Services,26.18,10.83,23.78,26.37,14.24,24.66,26.27,12.36,24.2
-Ambulatory Health Care Services,22.64,6.44,18.06,20.73,8.15,17.46,21.75,7.18,17.79
-Hospitals,25.14,10.17,13.35,23.22,10.44,13.45,25.0,10.18,13.36
-Nursing and Residential Care Facilities,25.34,10.05,19.76,24.74,12.45,20.59,25.06,11.1,20.14
-Social Assistance,26.2,11.67,21.72,25.79,14.51,22.6,25.96,13.28,22.24
-"Performing Arts, Spectator Sports, Museums, and Related Activities",26.78,12.94,23.5,17.62,4.73,14.86,21.96,8.88,19.02
-"Amusement, Gambling, and Recreation Services",26.6,12.96,22.31,26.15,16.01,23.21,26.48,13.72,22.55
-Accommodation,28.44,15.22,23.47,29.03,19.51,25.7,28.67,16.79,24.32
-Food Services and Drinking Places,25.31,10.98,18.89,23.72,12.17,18.9,24.51,11.54,18.9
-Other Services (Except Public Administration),25.83,10.94,22.98,25.56,13.92,23.54,25.67,12.61,23.31
+Farms,15.91,-2.68,13.73,9.11,-8.62,6.53,10.43,-7.68,7.89
+"Forestry, Fishing, and Related Activities",18.79,1.6,16.32,14.28,-0.36,12.28,15.41,0.15,13.3
+Oil and Gas Extraction,14.87,-3.77,12.45,8.66,-8.13,7.81,14.43,-3.89,12.15
+Mining (Except Oil and Gas),15.83,-3.93,13.93,9.76,-8.93,8.83,15.02,-4.29,13.28
+Support Activities for Mining,19.86,2.85,18.51,15.59,1.37,14.67,19.14,2.64,17.86
+Electric Power,18.43,-5.54,13.25,15.74,-3.57,14.95,18.42,-5.54,13.25
+Natural Gas Distribution,22.23,1.73,19.75,19.69,3.8,18.78,22.18,1.75,19.73
+"Water, Sewage and Other Systems",24.3,4.91,20.69,23.29,9.32,21.8,24.27,4.97,20.71
+Construction,21.45,5.1,19.2,14.7,0.14,13.22,17.65,2.73,15.89
+Food Manufacturing,24.03,8.28,21.7,22.7,11.03,21.79,23.78,8.56,21.72
+Beverage and Tobacco Products Manufacturing,24.32,8.75,19.0,22.98,11.51,22.08,23.96,8.9,19.63
+Textile and Textile Product Mills,25.84,10.66,24.3,25.68,14.86,25.08,25.81,11.17,24.45
+"Apparel, Leather, and Allied Products Manufacturing",26.07,10.33,23.01,27.06,16.51,26.11,26.48,11.73,24.21
+Wood Product Manufacturing,25.78,11.19,23.86,24.51,13.8,23.8,25.37,11.67,23.84
+Paper Manufacturing,22.92,6.66,20.23,21.26,9.03,20.26,22.7,6.81,20.24
+Printing and Related Support Activities,24.05,7.84,19.27,22.9,11.13,21.85,23.51,8.41,20.33
+Petroleum and Coal Products Manufacturing,23.5,7.01,21.49,22.8,10.01,21.86,23.48,7.05,21.5
+Chemical Manufacturing,15.67,-7.93,12.94,17.02,0.01,15.98,15.71,-7.81,13.02
+Plastics and Rubber Products Manufacturing,23.0,6.56,20.01,21.62,9.47,20.94,22.69,6.77,20.2
+Nonmetallic Mineral Product Manufacturing,22.05,4.14,19.58,21.33,8.37,20.04,21.95,4.56,19.64
+Primary Metal Manufacturing,23.32,7.23,20.76,21.64,9.33,20.63,23.1,7.37,20.75
+Fabricated Metal Product Manufacturing,23.02,6.64,20.21,21.24,9.03,20.49,22.33,7.04,20.31
+Machinery Manufacturing,15.95,-9.33,12.48,16.67,-2.3,15.73,16.07,-8.91,12.96
+Computer and Electronic Product Manufacturing,6.04,-39.24,-0.84,14.63,-10.28,13.78,6.38,-39.01,-0.33
+"Electrical Equipment, Appliances, and Components Manufacturing",-117.06,1158.45,-162.01,-57.47,-1007.24,-65.5,-107.73,1264.07,-146.33
+Motor Vehicle and Parts Manufacturing,3.52,-49.6,-5.76,5.62,-45.15,2.69,3.6,-49.56,-5.49
+Other Transportation Equipment Manufacturing,24.11,6.42,20.26,23.53,10.59,22.74,24.09,6.46,20.34
+Furniture and Related Products Manufacturing,25.65,10.48,22.8,25.01,14.18,24.13,25.45,11.03,23.19
+Medical Equipment and Supplies,21.91,3.65,19.92,22.25,9.84,21.77,21.95,3.9,20.12
+Other Manufacturing,21.31,1.74,15.65,22.22,9.02,21.27,21.65,2.49,17.43
+Wholesale Durable Goods,27.01,12.63,25.06,27.31,17.48,26.59,27.11,13.53,25.51
+Wholesale Nondurable Goods,27.7,13.69,26.66,28.38,19.03,27.62,27.82,14.73,26.83
+Motor Vehicle and Parts Dealers,28.6,14.77,25.84,28.59,18.86,27.51,28.59,16.56,26.82
+Food and Beverage Stores,26.6,11.56,23.66,26.6,15.73,25.46,26.6,12.17,24.1
+General Merchandise Stores,27.25,12.61,24.71,27.69,17.69,26.41,27.26,12.66,24.74
+Other Retail,25.26,9.86,20.94,25.0,13.85,23.94,25.18,10.29,21.73
+Air Transportation,19.6,2.43,13.9,15.01,0.28,13.21,19.33,2.39,13.87
+Rail Transportation,14.21,-4.88,10.88,6.38,-12.2,4.97,14.08,-4.93,10.79
+Water Transportation,18.25,0.74,15.66,11.49,-4.24,9.3,15.87,-0.92,13.44
+Truck Transportation,19.65,2.64,17.03,14.12,0.11,11.76,17.13,1.42,14.61
+Transit and Ground Passenger Transportation,21.22,4.55,18.67,16.53,2.5,14.19,19.14,3.59,16.67
+Pipeline Transportation,14.01,-6.05,11.19,6.62,-12.97,3.9,12.95,-7.03,10.14
+Other Transportation and Support Activities,20.11,2.73,16.47,16.01,1.11,13.97,19.22,2.5,15.96
+Warehousing and Storage,25.68,10.23,22.99,24.67,12.65,23.05,25.24,11.11,23.01
+Publishing Industries (Except Internet),13.57,-20.1,8.96,15.31,-10.48,14.2,13.64,-19.98,9.17
+Motion Picture and Sound Recording Industries,20.39,3.62,17.97,20.9,8.62,20.17,20.44,3.78,18.14
+Broadcasting (Except Internet) and Telecommunications,16.24,-3.02,13.34,11.23,-5.73,9.98,16.16,-3.04,13.29
+"Data Processing, Hosting, and Other Information Services",16.76,-7.27,14.73,14.52,-5.3,12.73,16.72,-7.24,14.7
+Depository Credit Intermediation,25.33,9.34,15.21,24.83,12.71,17.39,25.3,9.51,15.33
+Other Intermediation,22.3,4.68,19.73,21.81,9.08,19.92,22.29,4.76,19.73
+Nondepository Credit Intermediation,18.47,0.58,11.46,12.59,-3.12,9.89,18.04,0.49,11.38
+"Securities, Commodity Contracts, and Other Financial Investments and Related Activities",24.31,7.25,18.15,24.33,11.75,22.74,24.31,7.53,18.86
+Insurance Carriers,23.65,6.28,21.71,21.92,8.56,19.82,23.64,6.3,21.7
+Insurance Agencies and Brokers and Related Services,23.29,5.77,20.92,23.16,10.52,17.24,23.27,8.32,19.99
+"Funds, Trusts, and Other Financial Vehicles",27.38,11.56,18.19,27.29,14.99,25.48,27.34,11.9,20.39
+Real Estate,26.83,11.1,23.85,26.49,13.88,24.05,26.58,13.16,24.0
+Rental and Leasing (Including Nonfinancial Intangibles),16.83,-1.05,11.88,11.15,-3.87,8.33,14.95,-1.7,10.8
+Legal Services,25.28,9.36,23.34,23.75,11.28,22.93,24.05,10.66,23.01
+Computer Systems Design and Related Services,17.84,-5.67,15.28,17.96,0.82,17.14,17.85,-5.24,15.54
+"Other Professional, Scientific, and Technical Services",16.92,-7.7,13.22,17.63,0.1,16.38,17.16,-6.25,14.25
+Management of Companies and Enterprises,25.76,9.26,18.17,26.31,14.23,21.4,25.8,9.56,18.39
+Administrative and Support Services,20.55,1.19,16.1,17.73,2.88,15.55,19.28,1.73,15.87
+Waste Management and Remediation Services,19.19,1.77,14.36,12.75,-2.81,9.85,17.92,1.18,13.55
+Educational Services,26.66,10.51,24.11,26.6,13.56,24.89,26.63,11.87,24.49
+Ambulatory Health Care Services,23.03,5.78,18.38,21.32,7.76,18.83,22.22,6.48,18.58
+Hospitals,25.26,9.1,13.79,23.67,10.15,21.13,24.87,9.13,14.55
+Nursing and Residential Care Facilities,25.41,8.86,20.51,24.53,10.95,21.43,24.93,9.81,20.99
+Social Assistance,26.16,10.48,21.92,26.05,14.1,23.99,26.09,12.43,23.26
+"Performing Arts, Spectator Sports, Museums, and Related Activities",27.14,12.21,23.04,18.47,4.89,16.3,21.63,8.78,18.98
+"Amusement, Gambling, and Recreation Services",26.38,11.45,21.91,26.0,15.06,22.28,26.29,12.45,22.0
+Accommodation,28.29,13.87,22.83,28.9,18.59,24.77,28.52,15.76,23.58
+Food Services and Drinking Places,25.74,10.52,18.84,24.68,13.09,20.93,25.17,11.57,19.86
+Other Services (Except Public Administration),25.98,9.98,23.05,25.8,13.35,23.05,25.88,12.06,23.05
 Owner-occupied Housing,NA,NA,NA,NA,NA,NA,NA,NA,NA
-All Industries,19.63,3.3,16.63,22.79,11.14,20.78,20.54,5.45,17.82
+All Industries,19.98,1.99,16.6,23.07,11.27,21.13,20.93,4.52,17.96

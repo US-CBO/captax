@@ -15,11 +15,11 @@ The possible dimensions of those matrices are as follows:
 
 1.	**Industry**  
 Two levels of detail are used:
-	* Standard industry (61 categories fully reflected in the model’s output)
-	* Detailed industry (88 categories needed to accommodate the variation in depreciation rules, but not reflected in the model’s output)
+	* Standard industry (74 categories fully reflected in the model’s output)
+	* Detailed industry (95 categories needed to accommodate the variation in depreciation rules, but not reflected in the model’s output)
 
 2. **Asset type**
-    * 83 categories, including five placeholders for additional asset types not recognized in BEA Fixed Asset tables
+    * 85 categories, including five placeholders for additional asset types not recognized in BEA Fixed Asset tables
 
 3. **Legal form**
     * C corporations,
