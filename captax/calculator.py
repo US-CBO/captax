@@ -91,7 +91,7 @@ class Calculator:
               income and adjusted tax rates applied to businesses' net income,
               deductions, and credits.
 
-            * self._cal_req_after_tax_returns_investors()
+            * self._calc_req_after_tax_returns_investors()
               Calculates the required (real) after-tax rate of return to
               investors, which enters the calculation of the C corps effective
               marginal tax rate on investment.
@@ -294,7 +294,7 @@ class Calculator:
                 [NUM_INDS,
                  NUM_ASSETS,
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
@@ -304,7 +304,7 @@ class Calculator:
                 NUM_INDS,
                 NUM_ASSETS,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
                 NUM_YEARS,
             )
         )
@@ -373,13 +373,13 @@ class Calculator:
 
         Returns
         -------
-        req_after_tax_returns_savers : np.ndarray
+req_after_tax_returns_savers : np.ndarray
             Array of after-tax rates of return required by savers, with
             dimensions:
                 [NUM_INDS,
                  NUM_ASSETS
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  LEN_ACCOUNT_CATEGORIES,
                  NUM_YEARS]
 
@@ -557,7 +557,7 @@ class Calculator:
                 [NUM_INDS,
                  NUM_ASSETS,
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
@@ -615,7 +615,7 @@ class Calculator:
                 [NUM_INDS,
                  NUM_ASSETS,
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
@@ -699,7 +699,7 @@ class Calculator:
                 [NUM_INDS,
                  NUM_ASSETS,
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
@@ -1165,7 +1165,7 @@ class Calculator:
             Dictionary with eight arrays of adjusted tax rates, each with dimensions:
                 [NUM_INDS,
                  NUM_ASSETS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
@@ -1178,18 +1178,18 @@ class Calculator:
 
         # Expand dimensions of arrays used in calculations
         tax_rates["c_corp"] = self._expand_array(
-            c_corp_tax_rates, NUM_INDS, NUM_ASSETS, NUM_FINANCING_SOURCES
+            c_corp_tax_rates, NUM_INDS, NUM_ASSETS, NUM_EQUITY_DEBT
         )
 
         tax_rates["pass_thru"] = self._expand_array(
-            pass_thru_tax_rates, NUM_INDS, NUM_ASSETS, NUM_FINANCING_SOURCES
+            pass_thru_tax_rates, NUM_INDS, NUM_ASSETS, NUM_EQUITY_DEBT
         )
 
-        itc_rates = self._expand_array(itc_rates, NUM_FINANCING_SOURCES).transpose(
+        itc_rates = self._expand_array(itc_rates, NUM_EQUITY_DEBT).transpose(
             (1, 2, 0, 3)
         )
          
-        ptc_rates = self._expand_array(ptc_rates, NUM_FINANCING_SOURCES).transpose(
+        ptc_rates = self._expand_array(ptc_rates, NUM_EQUITY_DEBT).transpose(
             (1, 2, 0, 3)
         )
 
@@ -1199,7 +1199,7 @@ class Calculator:
             )
 
             inc_tax_rate_adjustments[legal_form] = self._expand_array(
-                inc_tax_rate_adjustments_comb[legal_form], NUM_FINANCING_SOURCES
+                inc_tax_rate_adjustments_comb[legal_form], NUM_EQUITY_DEBT
             ).transpose((1, 2, 0, 3))
 
             timing_adjustments[legal_form] = {}
@@ -1208,7 +1208,7 @@ class Calculator:
                     biz_timing_adjustments[legal_form][timing_adjustment],
                     NUM_INDS,
                     NUM_ASSETS,
-                    NUM_FINANCING_SOURCES,
+                    NUM_EQUITY_DEBT,
                 )
 
         # Calculate adjustments to net income, deductions and credits
@@ -1273,13 +1273,13 @@ class Calculator:
             dimensions:
                 [NUM_INDS,
                  NUM_ASSETS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
         # Expand SECA parameters
         seca_tax_rates = self._expand_array(
-            seca_tax_rates, NUM_INDS, NUM_ASSETS, NUM_FINANCING_SOURCES
+            seca_tax_rates, NUM_INDS, NUM_ASSETS, NUM_EQUITY_DEBT
         )
 
         for timing_adjustment in ["net_inc", "deductions"]:
@@ -1287,7 +1287,7 @@ class Calculator:
                 seca_timing_adjustments[timing_adjustment],
                 NUM_INDS,
                 NUM_ASSETS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
             )
 
         # Store adjusted SECA tax rates in dictionary
@@ -1814,7 +1814,7 @@ class Calculator:
                 [NUM_INDS,
                  NUM_ASSETS,
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  LEN_ACCOUNT_CATEGORIES,
                  NUM_YEARS]
 
@@ -1831,7 +1831,7 @@ class Calculator:
                 NUM_INDS,
                 NUM_ASSETS,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
                 LEN_ACCOUNT_CATEGORIES,
                 NUM_YEARS,
             )
@@ -1923,7 +1923,7 @@ class Calculator:
                 [NUM_INDS,
                  NUM_ASSETS,
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
@@ -1933,7 +1933,7 @@ class Calculator:
                 NUM_INDS,
                 NUM_ASSETS,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
                 NUM_YEARS,
             )
         )
@@ -2044,7 +2044,7 @@ class Calculator:
                 [NUM_INDS,
                  NUM_ASSETS,
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
@@ -2055,7 +2055,7 @@ class Calculator:
                 NUM_INDS,
                 NUM_ASSETS,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
                 NUM_YEARS,
             )
         )
@@ -2191,7 +2191,7 @@ class Calculator:
                 [NUM_DETAILED_INDS,
                  NUM_ASSETS,
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
@@ -2202,7 +2202,7 @@ class Calculator:
                 NUM_DETAILED_INDS,
                 NUM_ASSETS,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
                 NUM_YEARS,
             )
         )
@@ -2212,7 +2212,7 @@ class Calculator:
                 NUM_DETAILED_INDS,
                 NUM_ASSETS,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
                 NUM_YEARS,
             )
         )
@@ -2480,7 +2480,7 @@ class Calculator:
                 [NUM_INDS,
                  NUM_ASSETS,
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
@@ -2523,38 +2523,38 @@ class Calculator:
             geometric_rate_of_decay = self._expand_array(
                 geometric_rate_of_decay0,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
             ).transpose((2, 3, 0, 1, 4))
 
             years_before_switching_to_straight_line = self._expand_array(
                 years_before_switching_to_straight_line0,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
             ).transpose((2, 3, 0, 1, 4))
 
             adjusted_inflation_rates = self._expand_array(
                 adjusted_inflation_rates0,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
             ).transpose((2, 3, 0, 1, 4))
 
             expens_shares = self._expand_array(
-                expens_shares, NUM_FINANCING_SOURCES
+                expens_shares, NUM_EQUITY_DEBT
             ).transpose((1, 2, 3, 0, 4))
 
             straight_line_flags = self._expand_array(
-                straight_line_flags, NUM_FOR_PROFIT_LEGAL_FORMS, NUM_FINANCING_SOURCES
+                straight_line_flags, NUM_FOR_PROFIT_LEGAL_FORMS, NUM_EQUITY_DEBT
             ).transpose((2, 3, 0, 1, 4))
 
             econ_depreciation_detailed_industry = self._expand_array(
                 econ_depreciation_detailed_industry,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
                 NUM_YEARS,
             ).transpose((3, 4, 0, 1, 2))
 
             recovery_periods = self._expand_array(
-                recovery_periods, NUM_FOR_PROFIT_LEGAL_FORMS, NUM_FINANCING_SOURCES
+                recovery_periods, NUM_FOR_PROFIT_LEGAL_FORMS, NUM_EQUITY_DEBT
             ).transpose((2, 3, 0, 1, 4))
 
             # PV of economic depreciation
@@ -2603,6 +2603,24 @@ class Calculator:
                 PV_econ_depreciation_detailed_industry,
                 PV_tax_depreciation_detailed_industry,
             )
+
+                        
+            # Income forecast method for entertainment, literary, and artistic (ELA) originals
+            slice = np.ix_(
+                ALL_DETAILED_INDS,
+                ALL_ENTERTAINMENT,
+                ALL_FOR_PROFIT_LEGAL_FORMS,
+                ALL_EQUITY_DEBT,
+                ALL_YEARS
+            )
+            
+            depreciation_deduction_PVs_detailed_industry[slice] = (
+                ((econ_depreciation_detailed_industry[slice]-inflation_rate)
+                  /(nominal_discount_rates[slice]-inflation_rate+econ_depreciation_detailed_industry[slice]))
+                *((1-np.exp(-recovery_periods[slice]*(nominal_discount_rates[slice]-inflation_rate+econ_depreciation_detailed_industry[slice])))
+                  /(1-np.exp(-recovery_periods[slice]*(econ_depreciation_detailed_industry[slice]-inflation_rate))))
+            )               
+                                  
 
             # PV of depreciation deductions by industry
             depreciation_deduction_PVs = self._combine_detailed_industry(
@@ -2661,7 +2679,7 @@ class Calculator:
                 [NUM_INDS,
                  NUM_ASSETS,
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
@@ -2671,25 +2689,25 @@ class Calculator:
                 NUM_INDS,
                 NUM_ASSETS,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
                 NUM_YEARS,
             )
         )
 
         # Expand dimensions of arrays used in calculations
-        itc_rates = self._expand_array(itc["rates"], NUM_FINANCING_SOURCES).transpose(
+        itc_rates = self._expand_array(itc["rates"], NUM_EQUITY_DEBT).transpose(
             (1, 2, 0, 3)
         )
 
         itc_nondeprcbl_bases = self._expand_array(
-            itc["nondeprcbl_bases"], NUM_FINANCING_SOURCES
+            itc["nondeprcbl_bases"], NUM_EQUITY_DEBT
         ).transpose((1, 2, 0, 3))
                    
-        ptc_rates = self._expand_array(ptc_rates, NUM_FINANCING_SOURCES).transpose(
+        ptc_rates = self._expand_array(ptc_rates, NUM_EQUITY_DEBT).transpose(
             (1, 2, 0, 3)
         )
 
-        ooh_tax_rates = self._expand_array(ooh_tax_rates, NUM_FINANCING_SOURCES)
+        ooh_tax_rates = self._expand_array(ooh_tax_rates, NUM_EQUITY_DEBT)
 
         # Compute present value of tax shield from capital cost recovery
         # -----------------------------------------------------------------------
@@ -2698,7 +2716,7 @@ class Calculator:
             :NUM_INDS,
             :NUM_ASSETS,
             LEGAL_FORMS["c_corp"],
-            :NUM_FINANCING_SOURCES,
+            :NUM_EQUITY_DEBT,
             :NUM_YEARS,
         ]
 
@@ -2717,7 +2735,7 @@ class Calculator:
             :NUM_INDS,
             :NUM_ASSETS,
             LEGAL_FORMS["pass_thru"],
-            :NUM_FINANCING_SOURCES,
+            :NUM_EQUITY_DEBT,
             :NUM_YEARS,
         ]
 
@@ -2739,12 +2757,12 @@ class Calculator:
             OOH_IND,
             ALL_OOH_ASSETS,
             LEGAL_FORMS["ooh"],
-            :NUM_FINANCING_SOURCES,
+            :NUM_EQUITY_DEBT,
             :NUM_YEARS,
         ]
 
         ooh_slice_4d = np.s_[
-            OOH_IND, ALL_OOH_ASSETS, :NUM_FINANCING_SOURCES, :NUM_YEARS
+            OOH_IND, ALL_OOH_ASSETS, :NUM_EQUITY_DEBT, :NUM_YEARS
         ]
 
         capital_cost_recovery_shields[ooh_slice] = (
@@ -2793,7 +2811,7 @@ class Calculator:
                 [NUM_INDS,
                  NUM_ASSETS,
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
@@ -2803,18 +2821,18 @@ class Calculator:
                 NUM_INDS,
                 NUM_ASSETS,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
                 NUM_YEARS,
             )
         )
 
         # Expand dimensions of arrays used in calculations
         exp_econ_depreciation = self._expand_array(
-            econ_depreciation, NUM_FINANCING_SOURCES, NUM_YEARS
+            econ_depreciation, NUM_EQUITY_DEBT, NUM_YEARS
         ).transpose((2, 3, 0, 1))
 
         ooh_tax_rates = self._expand_array(
-            ooh_tax_rates, NUM_FINANCING_SOURCES - FINANCING_SOURCES["typical_equity"]
+            ooh_tax_rates, NUM_EQUITY_DEBT - FINANCING_SOURCES["typical_equity"]
         )
 
         # Compute array of proportional present value of the gross profits
@@ -2870,7 +2888,7 @@ class Calculator:
         exp_econ_depreciation = self._expand_array(
             econ_depreciation,
             NUM_FOR_PROFIT_LEGAL_FORMS,
-            NUM_FINANCING_SOURCES,
+            NUM_EQUITY_DEBT,
             NUM_YEARS,
         ).transpose((3, 4, 0, 1, 2))
 
@@ -2921,17 +2939,17 @@ class Calculator:
             inventories, with dimensions:
                 [NUM_BIZ_INDS,
                  NUM_BIZ,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
         # Initialize arrays
         cumulative_nominal_before_tax_rates_of_return = np.zeros(
-            (NUM_BIZ_INDS, NUM_BIZ, NUM_FINANCING_SOURCES, NUM_YEARS)
+            (NUM_BIZ_INDS, NUM_BIZ, NUM_EQUITY_DEBT, NUM_YEARS)
         )
 
         req_before_tax_returns_biz_inventories = np.zeros(
-            (NUM_BIZ_INDS, NUM_BIZ, NUM_FINANCING_SOURCES, NUM_YEARS)
+            (NUM_BIZ_INDS, NUM_BIZ, NUM_EQUITY_DEBT, NUM_YEARS)
         )
 
         # Expand dimensions of arrays used in calculations
@@ -2941,7 +2959,7 @@ class Calculator:
         )
 
         adjusted_inflation_rates = self._expand_array(
-            adjusted_inflation_rates, NUM_BIZ, NUM_FINANCING_SOURCES
+            adjusted_inflation_rates, NUM_BIZ, NUM_EQUITY_DEBT
         ).transpose((2, 3, 0, 1, 4))
 
         adjusted_biz_income_tax_rates = np.stack(
@@ -2955,7 +2973,7 @@ class Calculator:
             inventories_holding_period + inventories_holding_period_changes,
             NUM_INDS,
             NUM_BIZ,
-            NUM_FINANCING_SOURCES,
+            NUM_EQUITY_DEBT,
         )
 
         # Calculate required before-tax rates of return for business inventories
@@ -2965,12 +2983,12 @@ class Calculator:
             ALL_BIZ_INDS,
             ASSET_TYPE_INDEX["Inventories"],
             :NUM_BIZ,
-            :NUM_FINANCING_SOURCES,
+            :NUM_EQUITY_DEBT,
             :NUM_YEARS,
         ]
 
         holding_periods_slice = np.s_[
-            ALL_BIZ_INDS, :NUM_BIZ, :NUM_FINANCING_SOURCES, :NUM_YEARS
+            ALL_BIZ_INDS, :NUM_BIZ, :NUM_EQUITY_DEBT, :NUM_YEARS
         ]
 
         cumulative_nominal_before_tax_rates_of_return = np.log(
@@ -3023,12 +3041,12 @@ class Calculator:
         # Expand dimensions of arrays used in calculations
         prop_tax_deduction_tax_rates = self._expand_array(
             prop_tax_deduction["tax_rates"],
-            NUM_FINANCING_SOURCES - FINANCING_SOURCES["typical_equity"],
+            NUM_EQUITY_DEBT - FINANCING_SOURCES["typical_equity"],
         )
 
         prop_tax_deduction_deductible_shares = self._expand_array(
             prop_tax_deduction["deductible_shares"],
-            NUM_FINANCING_SOURCES - FINANCING_SOURCES["typical_equity"],
+            NUM_EQUITY_DEBT - FINANCING_SOURCES["typical_equity"],
         )
 
         # Property tax deduction
@@ -3079,7 +3097,7 @@ class Calculator:
                 [NUM_INDS,
                  NUM_ASSETS,
                  NUM_FOR_PROFIT_LEGAL_FORMS,
-                 NUM_FINANCING_SOURCES,
+                 NUM_EQUITY_DEBT,
                  NUM_YEARS]
 
         """
@@ -3090,7 +3108,7 @@ class Calculator:
                 NUM_INDS,
                 NUM_ASSETS,
                 NUM_FOR_PROFIT_LEGAL_FORMS,
-                NUM_FINANCING_SOURCES,
+                NUM_EQUITY_DEBT,
                 NUM_YEARS,
             )
         )
@@ -3099,12 +3117,12 @@ class Calculator:
         econ_depreciation = self._expand_array(
             econ_depreciation,
             NUM_FOR_PROFIT_LEGAL_FORMS,
-            NUM_FINANCING_SOURCES,
+            NUM_EQUITY_DEBT,
             NUM_YEARS,
         ).transpose((3, 4, 0, 1, 2))
 
         property_tax_deduction = self._expand_array(
-            property_tax_deduction, NUM_FINANCING_SOURCES
+            property_tax_deduction, NUM_EQUITY_DEBT
         ).transpose((1, 0, 2))
 
         # Calculate required before-tax rates of return
@@ -3173,7 +3191,7 @@ class Calculator:
             OOH_IND,
             ALL_OOH_ASSETS,
             LEGAL_FORMS["ooh"],
-            :NUM_FINANCING_SOURCES,
+            :NUM_EQUITY_DEBT,
             :NUM_YEARS,
         ]
 
@@ -3191,7 +3209,7 @@ class Calculator:
             ALL_BIZ_INDS,
             ASSET_TYPE_INDEX["Inventories"],
             :NUM_BIZ,
-            :NUM_FINANCING_SOURCES,
+            :NUM_EQUITY_DEBT,
             :NUM_YEARS,
         ] = req_before_tax_returns_biz_inventories
 

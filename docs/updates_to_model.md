@@ -1,9 +1,10 @@
 # Updates to CapTax model's formulas
 
 We have applied changes to the formulas defined in CBO's Working Paper: [“CBO’s Model for Estimating the Effect of Federal Taxes on Capital Income from New Investment"](https://cbo.gov/publication/57429). Those changes relate to both the required before-tax rate of return to investors and the after-tax rate of return to savers, and have been introduced to:
-* allow modelling of excise taxes on shares repurchases,
-* update our modelling of production tax credits, and 
-* distinguish between sources of equity financing and uses of profits for equity-financed investment
+* allow modeling of excise taxes on shares repurchases,
+* update our modeling of production tax credits, 
+* distinguish between sources of equity financing and uses of profits for equity-financed investment, and
+* refine our modeling for calculating depreciation deductions when using the income forecast method 
 
 ## Changes to the required before-tax rate of return
 
@@ -30,3 +31,27 @@ $$s_{cc,equity,ft}=(1-m)(1-\phi)[i_{equity}(1-t_{div})-\pi]+[m+(1-m)\phi]\sum_{n
 
 where $m$ is the share of equity-financed investment from retained earnings and $\phi$ is the share of profits paid out as share repurchases.
 
+## Refine modeling for calculating depreciation deductions when using the income forecast method (effective with Version 0.7.0)
+
+The 10-year income forecast method used for determining the present value of depreciation deductions ($z$) for entertainment, literary, and artistic (ELA) originals accounts for the income profile of an investment in the ten years following that investment. It accounts for the fact that the income generated with that investment is at the same time declining over time at rate $\delta$ (as the value of the asset depreciates) and rising over time at the inflation rate $\pi$.
+
+
+
+The expression for $z$ is derived by first calculating the undiscounted sum of tax depreciation deductions claimed in the ten years after the investment is made and $(\delta-\pi)$ is recovered in each period:
+
+$$
+\begin{aligned}
+sum &= (\delta-\pi)\int_{0}^{10}e^{-(\delta-\pi)t}dt \\
+&= \frac{(\delta-\pi)}{(\delta-\pi)}(1-e^{-10(\delta-\pi)}) \\
+&= (1-e^{-10(\delta-\pi)})
+\end{aligned}
+$$
+
+Because the undiscounted sum of depreciation deductions must cover the entire initial investment, each period's depreciation deduction $(\delta-\pi)$ needs to be multiplied by $\frac{1}{(1-e^{-10(\delta-\pi)})}$. In addition, future depreciation deductions are discounted at the nominal discount rate $i$. As a result:
+
+$$
+\begin{aligned}
+z &= \frac{(\delta-\pi)}{(1-e^{-10(\delta-\pi)})}\int_{0}^{10}e^{-(\delta-\pi)t}e^{-it}dt \\
+&= \frac{(\delta-\pi)}{(i-\pi+\delta)}\frac{(1-e^{-10(i-\pi+\delta)})}{(1-e^{-10(\delta-\pi)})}
+\end{aligned}
+$$

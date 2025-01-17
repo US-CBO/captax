@@ -1,5 +1,14 @@
 # Change Log
 
+## Version 0.7.0 -- 2025-01-17
+* Updated [economic environment parameter values](docs/environment_parameters.md) consistent with [CBO’s January 2025 economic projections](https://www.cbo.gov/data/budget-economic-data#4).
+
+* Updated [policy parameter values](docs/policy_parameters.md) consistent with [data that supplement CBO’s January 2025 report](https://www.cbo.gov/data/budget-economic-data#10), [The Budget and Economic Outlook: 2025 to 2035](https://www.cbo.gov/publication/60870).
+
+* Changed [policy parameter values](docs/policy_parameters.md) used for modeling the reduction in the investment basis eligible for cost-recovery deductions when the R&E credit is claimed to more accurately reflect current law.
+
+* Refined [modeling of income forecast method](docs/updates_to_model.md) used to calculate depreciation deductions for entertainment, literary, and artistic (ELA) originals.
+
 ## Version 0.6.0 -- 2024-09-19
 
 * Incorporated intermediate changes in parameter values and model structure. (This model update is not associated with data supplementing CBO's Budget and Economic Outlook publication)

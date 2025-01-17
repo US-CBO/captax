@@ -10,7 +10,7 @@ CURRENT_PATH = os.path.abspath(os.path.dirname(__file__))
 # --------------------------------------------------------------------------------------
 NUM_YEARS = 11
 ALL_YEARS = np.arange(NUM_YEARS)
-START_YEAR = 2024
+START_YEAR = 2025
 END_YEAR = START_YEAR + NUM_YEARS - 1
 YEARS = np.arange(START_YEAR, START_YEAR + NUM_YEARS)
 
@@ -29,6 +29,7 @@ LEN_INDS = NUM_INDS + NUM_IND_AGGS
 # Arrays including industry indexes
 ALL_INDS = np.r_[:NUM_INDS]
 ALL_INDS_PLUS_AGG = np.r_[: NUM_INDS + 1]
+ALL_DETAILED_INDS = np.r_[:NUM_DETAILED_INDS]
 
 # Financial industries:
 #   Depository Credit Intermediation
@@ -92,6 +93,7 @@ LEN_LEGAL_FORMS = len(LEGAL_FORMS)
 
 # Array including legal form indexes
 ALL_LEGAL_FORMS = np.arange(LEN_LEGAL_FORMS)
+ALL_FOR_PROFIT_LEGAL_FORMS = np.r_[:NUM_FOR_PROFIT_LEGAL_FORMS]
 
 # Financing sources
 # --------------------------------------------------------------------------------------
@@ -119,12 +121,13 @@ FINANCING_SOURCES["typical (biz)"] = 4
 FINANCING_SOURCES["typical (biz+ooh)"] = 5
 
 NUM_EQUITY = 3
-NUM_FINANCING_SOURCES = 4
+NUM_EQUITY_DEBT = 4
 
 LEN_FINANCING_SOURCES = len(FINANCING_SOURCES)
 
 # Array including financing indexes
 ALL_FINANCING_SOURCES = np.arange(LEN_FINANCING_SOURCES)
+ALL_EQUITY_DEBT = np.r_[:NUM_EQUITY_DEBT]
 
 # Account categories
 # --------------------------------------------------------------------------------------

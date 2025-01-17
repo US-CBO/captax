@@ -1013,8 +1013,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`other_expens_share_CLaw_2024.csv` (reflecting 5-year amortization of R&D and 40% phaseout of bonus depreciation)
-</br>`other_expens_share_CLaw_2025.csv` (also reflecting 60% phaseout of bonus depreciation)
+>**File(s) Supplied**:</br>`other_expens_share_CLaw_2025.csv` (also reflecting 60% phaseout of bonus depreciation)
 </br>`other_expens_share_CLaw_2026.csv` (also reflecting 80% phaseout of bonus depreciation)
 </br>`other_expens_share_CLaw_perm.csv` (2027 and beyond, reflecting full phaseout of bonus depreciation)
 >
@@ -1032,8 +1031,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`itc_rates_CLaw_2024.csv` (2024 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2025.csv` (2025 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
+>**File(s) Supplied**: </br>`itc_rates_CLaw_2025.csv` (2025 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
 </br>`itc_rates_CLaw_2026.csv` (2026 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
 </br>`itc_rates_CLaw_2027.csv` (2027 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
 </br>`itc_rates_CLaw_2028.csv` (2028 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
@@ -1043,6 +1041,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 </br>`itc_rates_CLaw_2032.csv` (2032 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
 </br>`itc_rates_CLaw_2033.csv` (2033 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
 </br>`itc_rates_CLaw_2034.csv` (2034 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2035.csv` (2035 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
 >
 >**Dimensions**: Standard industry (rows) by asset type (columns)
 >
@@ -1057,7 +1056,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`itc_nondeprcbl_bases_CLaw_full.csv` (values of 1.0 in all cells other than for the solar and wind energy ITC, which reduces cost recovery deductions by a factor of 0.5)
+>**File(s) Supplied**: </br>`itc_nondeprcbl_bases_CLaw_rduc.csv` (values of 1.0 in all cells other than for the solar and wind energy ITC, which reduces cost recovery deductions by a factor of 0.5, and for the R&E credit, which does not reduce cost recovery deductions)
 >
 >**Dimensions**: Standard industry (rows) by asset type (columns)
 >
@@ -1073,8 +1072,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`ptc_rates_CLaw_2024.csv` (2024 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
-</br>`ptc_rates_CLaw_2025.csv` (2025 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+>**File(s) Supplied**: </br>`ptc_rates_CLaw_2025.csv` (2025 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
 </br>`ptc_rates_CLaw_2026.csv` (2026 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
 </br>`ptc_rates_CLaw_2027.csv` (2027 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
 </br>`ptc_rates_CLaw_2028.csv` (2028 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
@@ -1084,6 +1082,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 </br>`ptc_rates_CLaw_2032.csv` (2032 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
 </br>`ptc_rates_CLaw_2033.csv` (2033 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
 </br>`ptc_rates_CLaw_2034.csv` (2034 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2035.csv` (2035 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
 >
 >**Dimensions**: Standard industry (rows) by asset type (columns)
 >
@@ -1102,7 +1101,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`sec_199A_adjustments_CLaw_temp.csv` (2024-2025, reflecting Section 199A deduction of 20%)
+>**File(s) Supplied**: </br>`sec_199A_adjustments_CLaw_temp.csv` (2025, reflecting Section 199A deduction of 20%)
 </br>`sec_199A_adjustments_CLaw_perm.csv` (2026 and beyond, reflecting expiration of Section 199A)
 >
 >**Dimensions**: Detailed industry

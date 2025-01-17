@@ -93,7 +93,7 @@ class Aggregator:
                 :NUM_INDS,
                 :NUM_ASSETS,
                 :NUM_FOR_PROFIT_LEGAL_FORMS,
-                :NUM_FINANCING_SOURCES,
+                :NUM_EQUITY_DEBT,
                 ACCOUNT_CATEGORIES["typical"],
                 :NUM_YEARS,
             ],
@@ -292,13 +292,13 @@ class Aggregator:
             :NUM_INDS,
             :NUM_ASSETS,
             :NUM_FOR_PROFIT_LEGAL_FORMS,
-            :NUM_FINANCING_SOURCES,
+            :NUM_EQUITY_DEBT,
             :NUM_YEARS,
         ] = in_var[
             :NUM_INDS,
             :NUM_ASSETS,
             :NUM_FOR_PROFIT_LEGAL_FORMS,
-            :NUM_FINANCING_SOURCES,
+            :NUM_EQUITY_DEBT,
             :NUM_YEARS,
         ]
 
@@ -312,7 +312,7 @@ class Aggregator:
             NUM_INDS,
             :NUM_ASSETS,
             :NUM_FOR_PROFIT_LEGAL_FORMS,
-            :NUM_FINANCING_SOURCES,
+            :NUM_EQUITY_DEBT,
             :NUM_YEARS,
         ] = (
             (
@@ -320,14 +320,14 @@ class Aggregator:
                     :NUM_INDS,
                     :NUM_ASSETS,
                     :NUM_FOR_PROFIT_LEGAL_FORMS,
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ]
                 * weights[
                     :NUM_INDS,
                     :NUM_ASSETS,
                     :NUM_FOR_PROFIT_LEGAL_FORMS,
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ]
             ).sum(axis=(0))
@@ -335,7 +335,7 @@ class Aggregator:
                 NUM_INDS,
                 :NUM_ASSETS,
                 :NUM_FOR_PROFIT_LEGAL_FORMS,
-                :NUM_FINANCING_SOURCES,
+                :NUM_EQUITY_DEBT,
                 :NUM_YEARS,
             ]
         )
@@ -357,51 +357,51 @@ class Aggregator:
             # Legal form aggregates...
             # ...by industry, asset type, financing source and year
             out_array[
-                :NUM_INDS, :NUM_ASSETS, form_agg, :NUM_FINANCING_SOURCES, :NUM_YEARS
+                :NUM_INDS, :NUM_ASSETS, form_agg, :NUM_EQUITY_DEBT, :NUM_YEARS
             ] = (
                 (
                     in_var[
                         :NUM_INDS,
                         :NUM_ASSETS,
                         form_comps,
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                     * weights[
                         :NUM_INDS,
                         :NUM_ASSETS,
                         form_comps,
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                 ).sum(axis=(2))
                 / weights[
-                    :NUM_INDS, :NUM_ASSETS, form_agg, :NUM_FINANCING_SOURCES, :NUM_YEARS
+                    :NUM_INDS, :NUM_ASSETS, form_agg, :NUM_EQUITY_DEBT, :NUM_YEARS
                 ]
             )
 
             # ...by asset type, financing source, and year
             out_array[
-                NUM_INDS, :NUM_ASSETS, form_agg, :NUM_FINANCING_SOURCES, :NUM_YEARS
+                NUM_INDS, :NUM_ASSETS, form_agg, :NUM_EQUITY_DEBT, :NUM_YEARS
             ] = (
                 (
                     in_var[
                         :NUM_INDS,
                         :NUM_ASSETS,
                         form_comps,
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                     * weights[
                         :NUM_INDS,
                         :NUM_ASSETS,
                         form_comps,
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                 ).sum(axis=(0, 2))
                 / weights[
-                    NUM_INDS, :NUM_ASSETS, form_agg, :NUM_FINANCING_SOURCES, :NUM_YEARS
+                    NUM_INDS, :NUM_ASSETS, form_agg, :NUM_EQUITY_DEBT, :NUM_YEARS
                 ]
             )
 
@@ -503,7 +503,7 @@ class Aggregator:
                 :NUM_INDS,
                 NUM_ASSETS + output_position,
                 :NUM_FOR_PROFIT_LEGAL_FORMS,
-                :NUM_FINANCING_SOURCES,
+                :NUM_EQUITY_DEBT,
                 :NUM_YEARS,
             ] = (
                 (
@@ -511,14 +511,14 @@ class Aggregator:
                         :NUM_INDS,
                         asset_agg_range,
                         :NUM_FOR_PROFIT_LEGAL_FORMS,
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                     * weights[
                         :NUM_INDS,
                         asset_agg_range,
                         :NUM_FOR_PROFIT_LEGAL_FORMS,
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                 ).sum(axis=(1))
@@ -526,7 +526,7 @@ class Aggregator:
                     :NUM_INDS,
                     NUM_ASSETS + output_position,
                     :NUM_FOR_PROFIT_LEGAL_FORMS,
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ]
             )
@@ -536,7 +536,7 @@ class Aggregator:
                 NUM_INDS,
                 NUM_ASSETS + output_position,
                 :NUM_FOR_PROFIT_LEGAL_FORMS,
-                :NUM_FINANCING_SOURCES,
+                :NUM_EQUITY_DEBT,
                 :NUM_YEARS,
             ] = (
                 (
@@ -544,14 +544,14 @@ class Aggregator:
                         :NUM_INDS,
                         asset_agg_range,
                         :NUM_FOR_PROFIT_LEGAL_FORMS,
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                     * weights[
                         :NUM_INDS,
                         asset_agg_range,
                         :NUM_FOR_PROFIT_LEGAL_FORMS,
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                 ).sum(axis=(0, 1))
@@ -559,7 +559,7 @@ class Aggregator:
                     NUM_INDS,
                     NUM_ASSETS + output_position,
                     :NUM_FOR_PROFIT_LEGAL_FORMS,
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ]
             )
@@ -583,7 +583,7 @@ class Aggregator:
                     :NUM_INDS,
                     NUM_ASSETS + output_position,
                     form_agg,
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ] = (
                     (
@@ -591,14 +591,14 @@ class Aggregator:
                             :NUM_INDS,
                             asset_agg_range,
                             form_comps,
-                            :NUM_FINANCING_SOURCES,
+                            :NUM_EQUITY_DEBT,
                             :NUM_YEARS,
                         ]
                         * weights[
                             :NUM_INDS,
                             asset_agg_range,
                             form_comps,
-                            :NUM_FINANCING_SOURCES,
+                            :NUM_EQUITY_DEBT,
                             :NUM_YEARS,
                         ]
                     ).sum(axis=(1, 2))
@@ -606,7 +606,7 @@ class Aggregator:
                         :NUM_INDS,
                         NUM_ASSETS + output_position,
                         form_agg,
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                 )
@@ -616,7 +616,7 @@ class Aggregator:
                     NUM_INDS,
                     NUM_ASSETS + output_position,
                     form_agg,
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ] = (
                     (
@@ -624,14 +624,14 @@ class Aggregator:
                             :NUM_INDS,
                             asset_agg_range,
                             form_comps,
-                            :NUM_FINANCING_SOURCES,
+                            :NUM_EQUITY_DEBT,
                             :NUM_YEARS,
                         ]
                         * weights[
                             :NUM_INDS,
                             asset_agg_range,
                             form_comps,
-                            :NUM_FINANCING_SOURCES,
+                            :NUM_EQUITY_DEBT,
                             :NUM_YEARS,
                         ]
                     ).sum(axis=(0, 1, 2))
@@ -639,7 +639,7 @@ class Aggregator:
                         NUM_INDS,
                         NUM_ASSETS + output_position,
                         form_agg,
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                 )
@@ -814,13 +814,13 @@ class Aggregator:
             :NUM_INDS,
             :NUM_ASSETS,
             :NUM_FOR_PROFIT_LEGAL_FORMS,
-            :NUM_FINANCING_SOURCES,
+            :NUM_EQUITY_DEBT,
             :NUM_YEARS,
         ] = in_var[
             :NUM_INDS,
             :NUM_ASSETS,
             :NUM_FOR_PROFIT_LEGAL_FORMS,
-            :NUM_FINANCING_SOURCES,
+            :NUM_EQUITY_DEBT,
             :NUM_YEARS,
         ]
 
@@ -838,10 +838,10 @@ class Aggregator:
         # ------------------------------------------------------------------------------
         # Businesses
         out_array[
-            NUM_INDS, :NUM_ASSETS, :NUM_BIZ, :NUM_FINANCING_SOURCES, :NUM_YEARS
+            NUM_INDS, :NUM_ASSETS, :NUM_BIZ, :NUM_EQUITY_DEBT, :NUM_YEARS
         ] = (
             in_var[
-                :NUM_BIZ_INDS, :NUM_ASSETS, :NUM_BIZ, :NUM_FINANCING_SOURCES, :NUM_YEARS
+                :NUM_BIZ_INDS, :NUM_ASSETS, :NUM_BIZ, :NUM_EQUITY_DEBT, :NUM_YEARS
             ]
             * (
                 np.tile(
@@ -852,7 +852,7 @@ class Aggregator:
                         FINANCING_SOURCES["typical (biz)"],
                         :NUM_YEARS,
                     ],
-                    (NUM_ASSETS, NUM_BIZ, NUM_FINANCING_SOURCES, 1, 1),
+                    (NUM_ASSETS, NUM_BIZ, NUM_EQUITY_DEBT, 1, 1),
                 )
             ).transpose((3, 0, 1, 2, 4))
         ).sum(
@@ -865,7 +865,7 @@ class Aggregator:
                 FINANCING_SOURCES["typical (biz)"],
                 :NUM_YEARS,
             ],
-            (NUM_ASSETS, NUM_BIZ, NUM_FINANCING_SOURCES, 1),
+            (NUM_ASSETS, NUM_BIZ, NUM_EQUITY_DEBT, 1),
         )
 
         # Owner-occupied housing
@@ -898,13 +898,13 @@ class Aggregator:
             # Legal form aggregates, by industry, asset type, financing source and year
             # --------------------------------------------------------------------------
             out_array[
-                ind_comps, :NUM_ASSETS, form_agg, :NUM_FINANCING_SOURCES, :NUM_YEARS
+                ind_comps, :NUM_ASSETS, form_agg, :NUM_EQUITY_DEBT, :NUM_YEARS
             ] = (
                 in_var[
                     ind_comps,
                     :NUM_ASSETS,
                     form_comps,
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ]
                 * (
@@ -916,7 +916,7 @@ class Aggregator:
                             financing_agg,
                             :NUM_YEARS,
                         ],
-                        (len_ind_comps, NUM_ASSETS, NUM_FINANCING_SOURCES, 1, 1),
+                        (len_ind_comps, NUM_ASSETS, NUM_EQUITY_DEBT, 1, 1),
                     )
                 ).transpose((0, 1, 3, 2, 4))
             ).sum(
@@ -929,7 +929,7 @@ class Aggregator:
                     financing_agg,
                     :NUM_YEARS,
                 ],
-                (len_ind_comps, NUM_ASSETS, NUM_FINANCING_SOURCES, 1),
+                (len_ind_comps, NUM_ASSETS, NUM_EQUITY_DEBT, 1),
             )
 
             # Financing source aggregates, by industry, asset type, legal form and year
@@ -1052,13 +1052,13 @@ class Aggregator:
             # Industry and legal form aggregates, by asset type, financing source and year
             # --------------------------------------------------------------------------
             out_array[
-                NUM_INDS, :NUM_ASSETS, form_agg, :NUM_FINANCING_SOURCES, :NUM_YEARS
+                NUM_INDS, :NUM_ASSETS, form_agg, :NUM_EQUITY_DEBT, :NUM_YEARS
             ] = (
                 in_var[
                     ind_comps,
                     :NUM_ASSETS,
                     form_comps,
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ]
                 * (
@@ -1070,7 +1070,7 @@ class Aggregator:
                             financing_agg,
                             :NUM_YEARS,
                         ],
-                        (NUM_ASSETS, len_form_comps, NUM_FINANCING_SOURCES, 1, 1),
+                        (NUM_ASSETS, len_form_comps, NUM_EQUITY_DEBT, 1, 1),
                     )
                 ).transpose((3, 0, 1, 2, 4))
                 * (
@@ -1082,7 +1082,7 @@ class Aggregator:
                             financing_agg,
                             :NUM_YEARS,
                         ],
-                        (len_ind_comps, NUM_ASSETS, NUM_FINANCING_SOURCES, 1, 1),
+                        (len_ind_comps, NUM_ASSETS, NUM_EQUITY_DEBT, 1, 1),
                     )
                 ).transpose((0, 1, 3, 2, 4))
             ).sum(
@@ -1098,7 +1098,7 @@ class Aggregator:
                             :NUM_YEARS,
                         ]
                     ),
-                    (NUM_FINANCING_SOURCES, NUM_ASSETS, 1),
+                    (NUM_EQUITY_DEBT, NUM_ASSETS, 1),
                 )
             ).transpose(
                 (1, 0, 2)
@@ -1213,7 +1213,7 @@ class Aggregator:
                 :NUM_BIZ_INDS,
                 NUM_ASSETS + output_position,
                 :NUM_BIZ,
-                :NUM_FINANCING_SOURCES,
+                :NUM_EQUITY_DEBT,
                 :NUM_YEARS,
             ] = (
                 (
@@ -1221,7 +1221,7 @@ class Aggregator:
                         :NUM_BIZ_INDS,
                         asset_agg_range,
                         :NUM_BIZ,
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                     * (
@@ -1233,7 +1233,7 @@ class Aggregator:
                                 FINANCING_SOURCES["typical (biz)"],
                                 :NUM_YEARS,
                             ],
-                            (NUM_BIZ_INDS, NUM_BIZ, NUM_FINANCING_SOURCES, 1, 1),
+                            (NUM_BIZ_INDS, NUM_BIZ, NUM_EQUITY_DEBT, 1, 1),
                         )
                     ).transpose((0, 3, 1, 2, 4))
                 ).sum(axis=(1))
@@ -1255,14 +1255,14 @@ class Aggregator:
                     OOH_IND,
                     NUM_ASSETS + output_position,
                     LEGAL_FORMS["ooh"],
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ] = (
                     in_var[
                         OOH_IND,
                         ALL_OOH_ASSETS,
                         LEGAL_FORMS["ooh"],
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                     * (
@@ -1274,7 +1274,7 @@ class Aggregator:
                                 FINANCING_SOURCES["typical (biz+ooh)"],
                                 :NUM_YEARS,
                             ],
-                            (NUM_FINANCING_SOURCES, 1, 1),
+                            (NUM_EQUITY_DEBT, 1, 1),
                         )
                     ).transpose((1, 0, 2))
                 ).sum(
@@ -1289,7 +1289,7 @@ class Aggregator:
                             :NUM_YEARS,
                         ]
                     ).sum(axis=(0)),
-                    (NUM_FINANCING_SOURCES, 1),
+                    (NUM_EQUITY_DEBT, 1),
                 )
 
             elif ASSET_TYPE_INDEX["Residential buildings"] in asset_agg_range:
@@ -1297,13 +1297,13 @@ class Aggregator:
                     OOH_IND,
                     NUM_ASSETS + output_position,
                     LEGAL_FORMS["ooh"],
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ] = in_var[
                     OOH_IND,
                     ASSET_TYPE_INDEX["Residential buildings"],
                     LEGAL_FORMS["ooh"],
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ]
 
@@ -1312,7 +1312,7 @@ class Aggregator:
                     OOH_IND,
                     NUM_ASSETS + output_position,
                     LEGAL_FORMS["ooh"],
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ] = np.nan
 
@@ -1487,14 +1487,14 @@ class Aggregator:
                     :NUM_BIZ_INDS,
                     NUM_ASSETS + output_position,
                     LEGAL_FORMS[legal_form],
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ] = (
                     in_var[
                         :NUM_BIZ_INDS,
                         asset_agg_range,
                         :NUM_BIZ,
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                     * (
@@ -1506,7 +1506,7 @@ class Aggregator:
                                 FINANCING_SOURCES["typical (biz)"],
                                 :NUM_YEARS,
                             ],
-                            (NUM_BIZ_INDS, NUM_BIZ, NUM_FINANCING_SOURCES, 1, 1),
+                            (NUM_BIZ_INDS, NUM_BIZ, NUM_EQUITY_DEBT, 1, 1),
                         )
                     ).transpose((0, 3, 1, 2, 4))
                     * (
@@ -1521,7 +1521,7 @@ class Aggregator:
                             (
                                 NUM_BIZ_INDS,
                                 len(asset_agg_range),
-                                NUM_FINANCING_SOURCES,
+                                NUM_EQUITY_DEBT,
                                 1,
                                 1,
                             ),
@@ -1539,7 +1539,7 @@ class Aggregator:
                             :NUM_YEARS,
                         ]
                     ),
-                    (NUM_BIZ_INDS, NUM_FINANCING_SOURCES, 1),
+                    (NUM_BIZ_INDS, NUM_EQUITY_DEBT, 1),
                 )
 
             # Asset, legal form and financing source aggregates, by industry and year
@@ -1627,14 +1627,14 @@ class Aggregator:
                 NUM_INDS,
                 NUM_ASSETS + output_position,
                 :NUM_BIZ,
-                :NUM_FINANCING_SOURCES,
+                :NUM_EQUITY_DEBT,
                 :NUM_YEARS,
             ] = (
                 in_var[
                     :NUM_BIZ_INDS,
                     asset_agg_range,
                     :NUM_BIZ,
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ]
                 * (
@@ -1646,7 +1646,7 @@ class Aggregator:
                             FINANCING_SOURCES["typical (biz)"],
                             :NUM_YEARS,
                         ],
-                        (NUM_BIZ_INDS, NUM_BIZ, NUM_FINANCING_SOURCES, 1, 1),
+                        (NUM_BIZ_INDS, NUM_BIZ, NUM_EQUITY_DEBT, 1, 1),
                     )
                 ).transpose((0, 3, 1, 2, 4))
                 * (
@@ -1658,7 +1658,7 @@ class Aggregator:
                             FINANCING_SOURCES["typical (biz)"],
                             :NUM_YEARS,
                         ],
-                        (len(asset_agg_range), NUM_BIZ, NUM_FINANCING_SOURCES, 1, 1),
+                        (len(asset_agg_range), NUM_BIZ, NUM_EQUITY_DEBT, 1, 1),
                     )
                 ).transpose((3, 0, 1, 2, 4))
             ).sum(
@@ -1673,7 +1673,7 @@ class Aggregator:
                         :NUM_YEARS,
                     ]
                 ),
-                (NUM_BIZ, NUM_FINANCING_SOURCES, 1),
+                (NUM_BIZ, NUM_EQUITY_DEBT, 1),
             )
 
             # Owner-occupied housing
@@ -1762,14 +1762,14 @@ class Aggregator:
                 NUM_INDS,
                 NUM_ASSETS + output_position,
                 LEGAL_FORMS["biz"],
-                :NUM_FINANCING_SOURCES,
+                :NUM_EQUITY_DEBT,
                 :NUM_YEARS,
             ] = (
                 in_var[
                     :NUM_BIZ_INDS,
                     asset_agg_range,
                     :NUM_BIZ,
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ]
                 * (
@@ -1781,7 +1781,7 @@ class Aggregator:
                             FINANCING_SOURCES["typical (biz)"],
                             :NUM_YEARS,
                         ],
-                        (NUM_BIZ_INDS, NUM_BIZ, NUM_FINANCING_SOURCES, 1, 1),
+                        (NUM_BIZ_INDS, NUM_BIZ, NUM_EQUITY_DEBT, 1, 1),
                     )
                 ).transpose((0, 3, 1, 2, 4))
                 * (
@@ -1793,7 +1793,7 @@ class Aggregator:
                             FINANCING_SOURCES["typical (biz)"],
                             :NUM_YEARS,
                         ],
-                        (len(asset_agg_range), NUM_BIZ, NUM_FINANCING_SOURCES, 1, 1),
+                        (len(asset_agg_range), NUM_BIZ, NUM_EQUITY_DEBT, 1, 1),
                     )
                 ).transpose((3, 0, 1, 2, 4))
                 * (
@@ -1808,7 +1808,7 @@ class Aggregator:
                         (
                             NUM_BIZ_INDS,
                             len(asset_agg_range),
-                            NUM_FINANCING_SOURCES,
+                            NUM_EQUITY_DEBT,
                             1,
                             1,
                         ),
@@ -1827,7 +1827,7 @@ class Aggregator:
                     ],
                     3,
                 ),
-                (NUM_FINANCING_SOURCES, 1),
+                (NUM_EQUITY_DEBT, 1),
             )
 
             # All businesses + owner-occupied housing
@@ -1839,7 +1839,7 @@ class Aggregator:
                     NUM_INDS,
                     NUM_ASSETS + output_position,
                     LEGAL_FORMS["biz+ooh"],
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ] = (
                     (
@@ -1847,28 +1847,28 @@ class Aggregator:
                             NUM_INDS,
                             NUM_ASSETS + output_position,
                             LEGAL_FORMS["biz"],
-                            :NUM_FINANCING_SOURCES,
+                            :NUM_EQUITY_DEBT,
                             :NUM_YEARS,
                         ]
                         * weights[
                             NUM_INDS,
                             NUM_ASSETS + output_position,
                             LEGAL_FORMS["biz"],
-                            :NUM_FINANCING_SOURCES,
+                            :NUM_EQUITY_DEBT,
                             :NUM_YEARS,
                         ]
                         + out_array[
                             OOH_IND,
                             NUM_ASSETS + output_position,
                             LEGAL_FORMS["ooh"],
-                            :NUM_FINANCING_SOURCES,
+                            :NUM_EQUITY_DEBT,
                             :NUM_YEARS,
                         ]
                         * weights[
                             OOH_IND,
                             NUM_ASSETS + output_position,
                             LEGAL_FORMS["ooh"],
-                            :NUM_FINANCING_SOURCES,
+                            :NUM_EQUITY_DEBT,
                             :NUM_YEARS,
                         ]
                     )
@@ -1876,7 +1876,7 @@ class Aggregator:
                         NUM_INDS,
                         NUM_ASSETS + output_position,
                         LEGAL_FORMS["biz+ooh"],
-                        :NUM_FINANCING_SOURCES,
+                        :NUM_EQUITY_DEBT,
                         :NUM_YEARS,
                     ]
                 )
@@ -1885,13 +1885,13 @@ class Aggregator:
                     NUM_INDS,
                     NUM_ASSETS + output_position,
                     LEGAL_FORMS["biz+ooh"],
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ] = out_array[
                     NUM_INDS,
                     NUM_ASSETS + output_position,
                     LEGAL_FORMS["biz"],
-                    :NUM_FINANCING_SOURCES,
+                    :NUM_EQUITY_DEBT,
                     :NUM_YEARS,
                 ]
 

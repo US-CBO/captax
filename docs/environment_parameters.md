@@ -4,9 +4,9 @@ Parameters pertaining to the underlying economic environment for the CapTax mode
 `/captax/captax/data/inputs/environment_parameters/` directory.
 
 Within that directory, there are three files:
+* [environment_parameters.csv](#environment_parameterscsv)
 * [debt_shares.csv](#debt_sharescsv)
 * [economic_depreciation.csv](#economic_depreciationcsv)
-* [environment_parameters.csv](#environment_parameterscsv)
 
 Details of the parameters in each of those files are provided, below.
 

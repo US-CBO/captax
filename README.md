@@ -210,7 +210,7 @@ Subsequent model runs with the same `My-Policy-Name` and `perspective`, however,
 
 The [original version of the model](https://www.cbo.gov/system/files/2022-02/corrected_etrs.xls) was developed in Excel by **Paul Burnham** and **Larry Ozanne (both formerly of CBO)**  and was released along with the CBO Background paper [Computing Effective Tax Rates on Capital Income](https://www.cbo.gov/publication/18259) (2006). That model was subsequently extended and converted to Fortran. **Cody Kallen (formerly of CBO)** made significant contributions towards converting the model from Fortran to its current state in Python.
 
-**Dorian Carloni** and **Kevin Perese** made further structural changes to the model in Python. **Jennifer Shand** and **Madeleine Fox** did research and constructed parameters for the model. **Charles Pineles-Mark**, **Omar Morales**, and **F. Matthew Woodward** provided useful feedback on the source code and ran model tests. **John McClelland** and **Joseph Rosenberg** supervised the most recent model development.
+**Dorian Carloni** and **Kevin Perese** made further structural changes to the model in Python. **Jennifer Shand** and **Madeleine Fox** did research and constructed parameters for the model. **Charles Pineles-Mark**, **Omar Morales (formerly of CBO)**, and **F. Matthew Woodward** provided useful feedback on the source code and ran model tests. **John McClelland** and **Joseph Rosenberg (formerly of CBO)** supervised the most recent model development.
 
 
 ## Contact

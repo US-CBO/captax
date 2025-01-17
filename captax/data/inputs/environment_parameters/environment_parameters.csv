@@ -5,8 +5,8 @@ nonfinancial_pass_thru_debt_share,0.3048
 ooh_debt_share,0.4085
 c_corp_equity_retained_earnings_share,0.5
 c_corp_equity_repurchases_share,0.6
-nominal_rate_of_return_equity,0.0844
-nominal_rate_of_return_debt,0.0645
+nominal_rate_of_return_equity,0.0821
+nominal_rate_of_return_debt,0.0624
 inflation_rate,0.0224
 avg_local_prop_tax_rate,0.0092
 cap_gains_short_term_share,0.0286
