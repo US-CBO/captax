@@ -1,8 +1,8 @@
-# CBO's Capital Tax Model (CapTax) Documentation
+# CBO's CapTax Documentation
 
-There are numerous abbreviations used throughout the CBO Capital Tax (CapTax) Model code and the documentation. A listing of those abbreviations are in [abbreviations.md](abbreviations.md).
+There are numerous abbreviations used throughout the CBO CapTax Model code and the documentation. A listing of those abbreviations are in [abbreviations.md](abbreviations.md).
 
-The CapTax Model accepts about 50 files containing a variety of data and parameter values read into the model.
+The CapTax Model accepts about 50 files containing a variety of data and parameter values read into the model. In this branch of the model, which includes policy parameter files for 2016-2024, additional 29 files are included.
 
 The parameter files and weights data are organized into the following directories:
 * `/captax/captax/data/inputs/environment_parameters/` </br>Detailed descriptions of the environment parameters are in [environment_parameters.md](environment_parameters.md)

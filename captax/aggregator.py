@@ -58,6 +58,7 @@ class Aggregator:
         self.req_before_tax_returns = None
         self.req_after_tax_returns_savers = None
         self.req_after_tax_returns_investors = None
+        self.econ_depreciation = None
 
         return None
 
@@ -83,6 +84,13 @@ class Aggregator:
         print("Begin aggregating results")
 
         self.weights = self._aggregate_variable(self.wgt.weights, ASSET_AGGS)
+
+        econ_depr = np.tile(self.calc.econ_depreciation, (NUM_FOR_PROFIT_LEGAL_FORMS, 
+                                                          NUM_EQUITY_DEBT, 
+                                                          NUM_YEARS, 1, 1)).transpose((3, 4, 0, 1, 2))                                                  
+        self.econ_depreciation = self._aggregate_variable(econ_depr,
+                                                          ASSET_AGGS,
+                                                          self.weights)
 
         self.req_before_tax_returns = self._aggregate_variable(
             self.calc.req_before_tax_returns, ASSET_AGGS, self.weights

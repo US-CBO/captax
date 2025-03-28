@@ -6,6 +6,10 @@ CBO uses its Capital Tax model (CBO-CapTax) to estimate the effects of federal t
 
 * A **uniformity perspective**, under which differences in aggregate EMTRs (say between C corporations and pass-through entities) only reflect how those groups are treated by the tax system, holding everything else equal. This latter perspective requires a different approach to weighting EMTRs, establishing the values of policy parameters, and determining appropriate after-tax rates of return.
 
+# Branch of CBO's Capital Tax Model (CapTax) Version 0.7.0
+
+This branch of CBO’s CapTax Model extends the policy parameters file to include historical values back to 2016. The environment parameters and weights have not been changed and are consistent with CBO’s January 2025 baseline projections for 2025-2035 (version 0.7.0 of the model).
+
 ## Documentation
 
 More detailed documentation for the model can be found in a CBO Working Paper: [“CBO’s Model for Estimating the Effect of Federal Taxes on Capital Income from New Investment"](https://cbo.gov/publication/57429).

@@ -77,6 +77,7 @@ class Writer:
             self.agg.req_after_tax_returns_investors,
             self.output.c_corp_tax_wedges,
             self.output.c_corp_EMTRs,
+            self.agg.econ_depreciation,
             self.agg.weights,
         ]
 
@@ -88,6 +89,7 @@ class Writer:
             self.agg.req_after_tax_returns_investors * 100,
             self.output.c_corp_tax_wedges * 100,
             self.output.c_corp_EMTRs * 100,
+            self.agg.econ_depreciation * 100,
             self.agg.weights,
         ]
 
@@ -99,6 +101,7 @@ class Writer:
             "req_after_tax_returns_investors",
             "c_corp_tax_wedges",
             "c_corp_EMTRs",
+            "econ_depreciation",
             "weights",
         ]
 
@@ -110,6 +113,7 @@ class Writer:
             "Required After-tax Returns to Investors",
             "C Corporation Tax Wedges",
             "C Corporation EMTRs",
+            "Economic Depreciation",
             "Weights (Asset Values)",
         ]
 
@@ -120,6 +124,7 @@ class Writer:
             "Percent",
             "Percent",
             "Percentage Points",
+            "Percent",
             "Percent",
             "Millions of Dollars",
         ]
@@ -188,9 +193,15 @@ class Writer:
         self._write_summary_metrics(self.metrics)
 
         if self.pol.perspective == "comprehensive":
-            self._write_values_biz(
-                self.metrics[id(self.agg.weights)], by_var="asset_type"
-            )
+             self._write_values_biz(
+                 self.metrics[id(self.agg.req_before_tax_returns)], by_var="asset_type"
+             )
+             self._write_values_biz(
+                 self.metrics[id(self.agg.econ_depreciation)], by_var="asset_type"
+                )
+             self._write_values_biz(
+                 self.metrics[id(self.agg.weights)], by_var="asset_type"
+             )
 
         self._write_values_biz(
             self.metrics[id(self.output.total_EMTRs)], by_var="asset_type"

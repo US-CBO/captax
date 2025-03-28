@@ -938,7 +938,8 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0 – 100.0
 >
->**File(s) Supplied**: </br>`recovery_periods_CLaw_perm.csv` (all years, reflecting 5-year amortization of R&D)
+>**File(s) Supplied**: </br>`recovery_periods_CLaw_temp.csv` (from 2016 to 2021, reflecting R&D expensing)
+</br>`recovery_periods_CLaw_perm.csv` (starting in 2022, reflecting 5-year amortization of R&D)
 >
 >**Dimensions**: Detailed industry (rows) by asset type (columns)
 >
@@ -1013,8 +1014,17 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**:</br>`other_expens_share_CLaw_2025.csv` (also reflecting 60% phaseout of bonus depreciation)
-</br>`other_expens_share_CLaw_2026.csv` (also reflecting 80% phaseout of bonus depreciation)
+>**File(s) Supplied**:</br>`other_expens_share_CLaw_2016.csv` (reflecting 50% bonus depreciation)
+</br>`other_expens_share_CLaw_2017.csv` (also reflecting 50% bonus depreciation)
+</br>`other_expens_share_CLaw_2018.csv` (reflecting 100% bonus depreciation)
+</br>`other_expens_share_CLaw_2019.csv` (also reflecting 100% bonus depreciation)
+</br>`other_expens_share_CLaw_2020.csv` (also reflecting 100% bonus depreciation)
+</br>`other_expens_share_CLaw_2021.csv` (also reflecting 100% bonus depreciation)
+</br>`other_expens_share_CLaw_2022.csv` (also reflecting 100% bonus depreciation)
+</br>`other_expens_share_CLaw_2023.csv` (reflecting 80% bonus depreciation)
+</br>`other_expens_share_CLaw_2024.csv` (reflecting 60% bonus depreciation)
+</br>`other_expens_share_CLaw_2025.csv` (reflecting 40% bonus depreciation)
+</br>`other_expens_share_CLaw_2026.csv` (reflecting 20% bonus depreciation)
 </br>`other_expens_share_CLaw_perm.csv` (2027 and beyond, reflecting full phaseout of bonus depreciation)
 >
 >**Dimensions**: Detailed industry (rows) by asset type (columns)
@@ -1031,7 +1041,16 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`itc_rates_CLaw_2025.csv` (2025 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
+>**File(s) Supplied**: </br>`itc_rates_CLaw_2016.csv` (2016 values for the solar and wind energy ITC, and the reduced R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2017.csv` (2017 values for the solar and wind energy ITC, and the reduced R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2018.csv` (2018 values for the solar and wind energy ITC, and the reduced R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2019.csv` (2019 values for the solar and wind energy ITC, and the reduced R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2020.csv` (2020 values for the solar and wind energy ITC, and the reduced R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2021.csv` (2021 values for the solar and wind energy ITC, and the reduced R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2022.csv` (2022 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2023.csv` (2023 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2024.csv` (2024 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
+</br>`itc_rates_CLaw_2025.csv` (2025 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
 </br>`itc_rates_CLaw_2026.csv` (2026 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
 </br>`itc_rates_CLaw_2027.csv` (2027 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
 </br>`itc_rates_CLaw_2028.csv` (2028 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
@@ -1072,7 +1091,16 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`ptc_rates_CLaw_2025.csv` (2025 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+>**File(s) Supplied**: </br>`ptc_rates_CLaw_2016.csv` (2016 values for the solar and wind energy PTC)
+</br>`ptc_rates_CLaw_2017.csv` (2017 values for the solar and wind energy PTC)
+</br>`ptc_rates_CLaw_2018.csv` (2018 values for the solar and wind energy PTC)
+</br>`ptc_rates_CLaw_2019.csv` (2019 values for the solar and wind energy PTC)
+</br>`ptc_rates_CLaw_2020.csv` (2020 values for the solar and wind energy PTC)
+</br>`ptc_rates_CLaw_2021.csv` (2021 values for the solar and wind energy PTC)
+</br>`ptc_rates_CLaw_2022.csv` (2022 values for the solar and wind energy PTC)
+</br>`ptc_rates_CLaw_2023.csv` (2023 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2024.csv` (2024 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2025.csv` (2025 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
 </br>`ptc_rates_CLaw_2026.csv` (2026 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
 </br>`ptc_rates_CLaw_2027.csv` (2027 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
 </br>`ptc_rates_CLaw_2028.csv` (2028 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
@@ -1117,13 +1145,12 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`industry_adjustments_CLaw_perm.csv` (values of 0.0 in all cells)
+>**File(s) Supplied**: </br>`industry_adjustments_CLaw_temp.csv` (2016-2017 values for the domestic production activities deduction)
+</br>`industry_adjustments_CLaw_perm.csv` (from 2018, values of 0.0 in all cells)
 >
 >**Dimensions**: Detailed industry
 >
 >**Source**: CBO, based on Internal Revenue Code
->
->**Note**: Available for simulating the pre-2017 deduction for domestic production activities
 
 #### `/tax_rate_adjustments/asset_adjustments_[POLICY_SUFFIX].csv`
 >**Description**: Two different parameters: </br>1. Share of net business income eligible for asset-type-specific adjustment
