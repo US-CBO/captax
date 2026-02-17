@@ -263,7 +263,7 @@ Each subdirectory contains `*.csv` files with values set to simulate current law
 >
 >**Source**: CBO
 >
->**Note**: Because differences between legal forms is driven by firm size, both `c_corp_interest_deductible_share` and `pass_thru_interest_deductible_share` should contain the same values under the tax uniformity perspective
+>**Note**: Because difference between legal forms is driven by firm size, both `c_corp_interest_deductible_share` and `pass_thru_interest_deductible_share` should contain the same values under the tax uniformity perspective
 
 #### `pass_thru_interest_deductible_share`
 >**Description**: Share of interest paid by pass-through entities that can be deducted in the year it is paid
@@ -276,7 +276,7 @@ Each subdirectory contains `*.csv` files with values set to simulate current law
 >
 >**Source**: CBO
 >
->**Note**: Because differences between legal forms is driven by firm size, both `c_corp_interest_deductible_share` and `pass_thru_interest_deductible_share` should contain the same values under the tax `uniformity` perspective
+>**Note**: Because difference between legal forms is driven by firm size, both `c_corp_interest_deductible_share` and `pass_thru_interest_deductible_share` should contain the same values under the tax `uniformity` perspective
 
 #### `mortg_interest_deductible_share`
 >**Description**: Share of interest paid by homeowners that can be deducted in the year it is paid
@@ -703,7 +703,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -716,7 +716,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -729,7 +729,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -742,7 +742,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -755,7 +755,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -768,7 +768,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -781,7 +781,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -794,7 +794,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -807,7 +807,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -820,7 +820,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -833,7 +833,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -846,7 +846,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -859,7 +859,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -872,7 +872,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -885,7 +885,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -898,7 +898,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -911,7 +911,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -924,7 +924,7 @@ The following 18 parameters represent the shares of marginal savings directed to
 >
 >**Dimensions**: Years
 >
->**Source**: CBO
+>**Source**: CBO, based on the Financial Accounts of the United States, SOI Accumulation and Distribution of Individual Retirement Arrangements, and CBO's Microsimulation Tax Model
 >
 >**Note**: For each legal-form/source-of-financing combination, the sum of the three account category values must equal 1.0000
 
@@ -938,7 +938,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0 – 100.0
 >
->**File(s) Supplied**: </br>`recovery_periods_CLaw_perm.csv` (all years, reflecting 5-year amortization of R&D)
+>**File(s) Supplied**: </br>`recovery_periods_CLaw_perm.csv` (all years, reflecting full expensing of R&D)
 >
 >**Dimensions**: Detailed industry (rows) by asset type (columns)
 >
@@ -1013,9 +1013,8 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**:</br>`other_expens_share_CLaw_2025.csv` (also reflecting 60% phaseout of bonus depreciation)
-</br>`other_expens_share_CLaw_2026.csv` (also reflecting 80% phaseout of bonus depreciation)
-</br>`other_expens_share_CLaw_perm.csv` (2027 and beyond, reflecting full phaseout of bonus depreciation)
+>**File(s) Supplied**:</br>`other_expens_share_CLaw_temp.csv` (reflecting permanent expensing for qualified investment and temporary expensing for manufacturing structures)
+</br>`other_expens_share_CLaw_perm.csv` (2029 and beyond, reflecting permanent expensing for qualified investment)
 >
 >**Dimensions**: Detailed industry (rows) by asset type (columns)
 >
@@ -1031,17 +1030,8 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`itc_rates_CLaw_2025.csv` (2025 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2026.csv` (2026 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2027.csv` (2027 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2028.csv` (2028 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2029.csv` (2029 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2030.csv` (2030 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2031.csv` (2031 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2032.csv` (2032 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2033.csv` (2033 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2034.csv` (2034 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
-</br>`itc_rates_CLaw_2035.csv` (2035 values for the solar and wind energy ITC, and the full R&E and orphan drug credits)
+>**File(s) Supplied**: </br>`itc_rates_CLaw_2026.csv` (reflecting 2026 values for the solar and wind energy ITC, the advanced manufacturing ITC, and the reduced R&E and orphan drug credits)
+</br>`itc_rates_CLaw_perm.csv` (2027 and beyond, reflecting the reduced R&E and orphan drug credits)
 >
 >**Dimensions**: Standard industry (rows) by asset type (columns)
 >
@@ -1072,17 +1062,15 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`ptc_rates_CLaw_2025.csv` (2025 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
-</br>`ptc_rates_CLaw_2026.csv` (2026 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
-</br>`ptc_rates_CLaw_2027.csv` (2027 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
-</br>`ptc_rates_CLaw_2028.csv` (2028 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
-</br>`ptc_rates_CLaw_2029.csv` (2029 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
-</br>`ptc_rates_CLaw_2030.csv` (2030 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
-</br>`ptc_rates_CLaw_2031.csv` (2031 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
-</br>`ptc_rates_CLaw_2032.csv` (2032 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
-</br>`ptc_rates_CLaw_2033.csv` (2033 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
-</br>`ptc_rates_CLaw_2034.csv` (2034 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
-</br>`ptc_rates_CLaw_2035.csv` (2035 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+>**File(s) Supplied**: </br>`ptc_rates_CLaw_2026.csv` (reflecting 2026 values for the solar and wind energy PTC, and the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2027.csv` (reflecting 2027 values for the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2028.csv` (reflecting 2028 values for the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2029.csv` (reflecting 2029 values for the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2030.csv` (reflecting 2030 values for the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2031.csv` (reflecting 2031 values for the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2032.csv` (reflecting 2032 values for the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_2033.csv` (reflecting 2033 values for the advanced manufacturing PTC)
+</br>`ptc_rates_CLaw_perm.csv` (2034 and beyond, reflecting no PTCs)
 >
 >**Dimensions**: Standard industry (rows) by asset type (columns)
 >
@@ -1101,8 +1089,7 @@ The files in this directory contain parameter matrices with policy suffixes in t
 >
 >**Permitted Range**: 0.0000 to 1.0000
 >
->**File(s) Supplied**: </br>`sec_199A_adjustments_CLaw_temp.csv` (2025, reflecting Section 199A deduction of 20%)
-</br>`sec_199A_adjustments_CLaw_perm.csv` (2026 and beyond, reflecting expiration of Section 199A)
+>**File(s) Supplied**: </br>`sec_199A_adjustments_CLaw_perm.csv` (reflecting Section 199A deduction of 20%)
 >
 >**Dimensions**: Detailed industry
 >

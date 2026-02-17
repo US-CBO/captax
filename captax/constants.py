@@ -10,7 +10,7 @@ CURRENT_PATH = os.path.abspath(os.path.dirname(__file__))
 # --------------------------------------------------------------------------------------
 NUM_YEARS = 11
 ALL_YEARS = np.arange(NUM_YEARS)
-START_YEAR = 2025
+START_YEAR = 2026
 END_YEAR = START_YEAR + NUM_YEARS - 1
 YEARS = np.arange(START_YEAR, START_YEAR + NUM_YEARS)
 
@@ -298,8 +298,8 @@ NUM_TAX_RATE_ADJUSTMENTS_COMPONENTS = len(TAX_RATE_ADJUSTMENTS_COMPONENTS)
 # DO NOT EDIT THESE.
 # --------------------------------------------------------------------------------------
 AGG_DEBT_SHARE = {
-    "financial_sector": 0.5094,
-    "nonfin_c_corp": 0.2743,
-    "nonfin_pass_thru": 0.3048,
-    "ooh": 0.4085,
+    "financial_sector": 0.4722,
+    "nonfin_c_corp": 0.2697,
+    "nonfin_pass_thru": 0.3047,
+    "ooh": 0.4013,
 }

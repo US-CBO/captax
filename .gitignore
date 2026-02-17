@@ -1,1 +1,36 @@
-__pycache__
+# Microsoft Office Files
+#*.xlsx
+*.docx
+*.pptx
+
+# PDF Files
+*.pdf
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[codz]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.envrc
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Visual Studio Code
+.vscode/
+
+# OS Nuisance Files
+Thumbs.db
+.DS_Store

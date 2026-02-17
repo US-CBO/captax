@@ -1,5 +1,14 @@
 # Change Log
 
+## Version 0.8.0 -- 2026-02-17
+* Updated [economic environment parameter values](docs/environment_parameters.md) consistent with [CBO’s February 2026 economic projections](https://www.cbo.gov/data/budget-economic-data#4).
+
+* Updated [policy parameter values](docs/policy_parameters.md) consistent with [data that supplement CBO’s February 2026 report](https://www.cbo.gov/data/budget-economic-data#10), [The Budget and Economic Outlook: 2026 to 2036](https://www.cbo.gov/publication/61882).
+
+* Incorporated tax provisions in the 2025 reconciliation act (Public Law 119-21).
+
+* Updated [weights data files](docs/weights_data.md) to reflect more recently available information.
+
 ## Version 0.7.0 -- 2025-01-17
 * Updated [economic environment parameter values](docs/environment_parameters.md) consistent with [CBO’s January 2025 economic projections](https://www.cbo.gov/data/budget-economic-data#4).
 
@@ -10,7 +19,6 @@
 * Refined [modeling of income forecast method](docs/updates_to_model.md) used to calculate depreciation deductions for entertainment, literary, and artistic (ELA) originals.
 
 ## Version 0.6.0 -- 2024-09-19
-
 * Incorporated intermediate changes in parameter values and model structure. (This model update is not associated with data supplementing CBO's Budget and Economic Outlook publication)
 
 * Updated [economic depreciation and debt financing shares files](docs/environment_parameters.md) to reflect more recently available information.
